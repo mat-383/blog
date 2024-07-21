@@ -1,4 +1,4 @@
-baseURL = 'https://mat383.github.io/'
+baseURL = 'https://mat383.com/'
 languageCode = 'en-us'
-title = 'mat383.com'
-theme = 'contrast-hugo'
+title = "mat383.com (under construction)"
+theme = 'lugo'
