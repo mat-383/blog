@@ -1,0 +1,4 @@
+[submodule "mat383/public"]
+	path = mat383/public
+	url = https://github.com/mat-383/mat383.github.io.git
+	branch = main

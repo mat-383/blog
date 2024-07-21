@@ -1,0 +1,4 @@
+baseURL = 'https://mat383.github.io/'
+languageCode = 'en-us'
+title = 'mat383.com'
+theme = 'contrast-hugo'
