@@ -5,34 +5,56 @@
 {{ define "main" -}}
 {{ .Content }}
 
+{{/* The logic for listing all pages/posts had to be duplicated because I couldn't figure out how to not have to do it. Setting variables in IF statements keeps those variables in the scope of the IF statement. I also tried using partials but I couldn't get it to work. If you have a solution for this, PLEASE HELP */}}
 
-{{- range .Site.RegularPages -}}
-{{- if eq (substr .RelPermalink 0 7) "/posts/" }}
-<div class="postpreview">
-	{{- if .Param "datesinlist" -}}
-		<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
-	{{- end -}}
-	<br>
+{{ if eq .RelPermalink "/" }}
+	{{- range where .Site.RegularPages "Section" "posts" }}
+		<div class="postpreview">
+			{{- if .Param "datesinlist" -}}
+				<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
+			{{- end -}}
+			<br>
 
-	{{- if .Param "authorsinlist" }}
-		{{ with .Params.authors }}
-    	by 
-    	{{ delimit . ", " " and " }}
-    {{end}}
+			{{- if .Param "authorsinlist" }}
+				{{ with .Params.authors }}
+				by 
+				{{ delimit . ", " " and " }}
+			{{end}}
 
-	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 
-	{{ if .Params.summary }}
-		<div class="postpreviewsummary">{{ .Params.summary }}</div>
-	{{ end }}
+			{{ if .Params.summary }}
+			<div class="postpreviewsummary">{{ .Params.summary }}</div>
+			{{ end }}
 
-	{{ if .Params.coverImage }}
-		<img src="{{ .Params.coverImage }}" class="postpreviewimg">
-	{{ end }}
+			{{ end -}}
+		</div>
+	{{- end }}
 
-    
-    {{ end -}}
-</div>
-{{- end }}
-{{- end }}
+{{ else }}
+
+	{{- range .Pages }}
+		<div class="postpreview">
+			{{- if .Param "datesinlist" -}}
+				<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
+			{{- end -}}
+			<br>
+
+			{{- if .Param "authorsinlist" }}
+				{{ with .Params.authors }}
+				by 
+				{{ delimit . ", " " and " }}
+			{{end}}
+
+			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+			{{ if .Params.summary }}
+			<div class="postpreviewsummary">{{ .Params.summary }}</div>
+			{{ end }}
+
+			{{ end -}}
+		</div>
+	{{- end }}
+{{ end }}
+
 {{- end }}
