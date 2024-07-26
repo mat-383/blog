@@ -1,42 +1,102 @@
+/* Defining common colours */
+:root {
+	--textwhite: #ccc;
+	--navbarbg: #202020;
+	--green: rgb(0, 180, 0);
+	--select: rgb(240, 240, 240);
+}
+
 html {
 	background-color: #121212;
 	font-family: sans-serif;
-	color: #ccc;
+	color: var(--textwhite);
+}
+
+
+
+/* Headerbar stuff */
+.navbar {
+	max-width: 800px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: var(--navbarbg);
+}
+.navbar a {
+	text-decoration: none;
+	color: var(--textwhite);
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	border-color: transparent;
+}
+.homelink {
+	order: 1;
+	font-size: 150%;
+	font-weight: bold;
+	color: var(--green);
+}
+.otherlinks {
+	display: flex;
+	gap: 20px;
+	order: 2;
+}
+/* Make the hover navbar link bright white */
+.navbar a:hover{
+	color: var(--select);
+}
+/* Give all the other navbar links the white underline */
+.otherlinks a:hover {
+	border-color: var(--select);
+	border-width: 0 0 2px 0;
+}
+/* Make the active page navbar link green */
+a.activepage {
+	color: var(--green);
+	border-color: var(--green);
+	border-width: 0 0 3px 0;
+}
+
+/* Adjust navbar on small screens */
+@media (max-width: 400px) {
+	.homelink {
+		font-size: 125%;
+	}
+	.homelink, .otherlinks {
+		gap: 10px;
+	}
+}
+@media (max-width: 340px) {
+	.navbar {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+/* Suuuuuper small screens, like smartwatches lol */
+@media (max-width: 170px) {
+	.homelink {
+		font-size: 100%;
+	}
+	.otherlinks {
+		flex-direction: column;
+		align-items: center;
+		row-gap: 4px;
+	}
+}
+
+
+
+a {
+	color: var(--green);
 }
 
 body {
-	margin: 0px;
-}
-
-/* Headerbar stuff */
-.headerbar ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 2px 20px 2px 10px;
-	overflow: hidden;
-	background-color: #202020;
-	height: 80px;
-	position: relative;
-}
-.headerbar li {
-	float: right;
-	margin: 0 0 0 10px;
-	position: relative;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-.headerbar a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+	margin: auto;
+	max-width: 800px;
 }
 
 main {
-	max-width: 800px ;
-	margin: auto ;
+	margin: auto 10px auto 10px;
 }
 
 img {
