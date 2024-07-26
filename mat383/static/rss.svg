@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 455.731 455.731" style="enable-background:new 0 0 455.731 455.731;" xml:space="preserve"><g><rect x="0" y="0" style="fill:#F78422;" width="455.731" height="455.731"/><g><path style="fill:#FFFFFF;" d="M296.208,159.16C234.445,97.397,152.266,63.382,64.81,63.382v64.348 c70.268,0,136.288,27.321,185.898,76.931c49.609,49.61,76.931,115.63,76.931,185.898h64.348 C391.986,303.103,357.971,220.923,296.208,159.16z"/><path style="fill:#FFFFFF;" d="M64.143,172.273v64.348c84.881,0,153.938,69.056,153.938,153.939h64.348 C282.429,270.196,184.507,172.273,64.143,172.273z"/><circle style="fill:#FFFFFF;" cx="109.833" cy="346.26" r="46.088"/></g></g></svg>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 456 456" width="456" height="456">
+	<title>rss-svg</title>
+	<style>
+		.s0 { fill: #cccccc } 
+	</style>
+	<g id="Layer">
+		<g id="Layer">
+			<path id="Layer" fill-rule="evenodd" class="s0" d="m0 0h455.7v455.7h-455.7zm296.2 159.2c-61.8-61.8-143.9-95.8-231.4-95.8v64.4c70.3 0 136.3 27.3 185.9 76.9 49.6 49.6 76.9 115.6 76.9 185.9h64.4c0-87.5-34-169.6-95.8-231.4zm-232.2 12.8v64.4c84.9 0 153.9 69 153.9 153.9h64.4c0-120.3-97.9-218.3-218.3-218.3zm91.9 174.3c0-25.5-20.6-46.1-46.1-46.1-25.5 0-46.1 20.6-46.1 46.1 0 25.5 20.6 46.1 46.1 46.1 25.5 0 46.1-20.6 46.1-46.1z"/>
+		</g>
+	</g>
+</svg>
