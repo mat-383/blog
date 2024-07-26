@@ -18,7 +18,7 @@
 <nav class="navbar">
 	<a href="/" class="homelink">mat383.com</a>
 	<div class="otherlinks"> <!--If the current page is equal to this URL, give it a CSS class (might have to change this later)-->
-		<a href="/blog" class="{{if eq .RelPermalink "/blog/" }}activepage{{ end }}">Blog</a>
+		<a href="/posts" class="{{if eq .RelPermalink "/blog/" }}activepage{{ end }}">Blog</a>
 		<a href="/projects" class="{{if eq .RelPermalink "/projects/" }}activepage{{ end }}">Projects</a>
 		<a href="/about" class="{{if eq .RelPermalink "/about/" }}activepage{{ end }}">About</a>
 	</div>
@@ -30,13 +30,12 @@
 	<p>This website is coming together, watch me make it in real-time!</p>
 	<p>Lorem ipsum dolor sit ads amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida arcu ac tortor dignissim convallis. Vel fringilla est ullamcorper eget nulla facilisi etiam. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Commodo nulla facilisi nullam vehicula ipsum a. Lacus sed viverra tellus in hac habitasse.</p>
 {{ end }}
-<article>
+
 {{ block "main" . }}
 {{ .Content }}
 {{ end }}
 {{ if .Param "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}}
 {{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
-</article>
 </main>
 {{ block "footer" . }}
 <footer>

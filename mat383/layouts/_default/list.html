@@ -1,20 +1,26 @@
 {{ define "title" -}}
 {{ .Title | title }}
 {{- end }}
+
 {{ define "main" -}}
 {{ .Content }}
-<ul>
-{{- range.Pages }}
-<li>
-	{{- if .Param "datesinlist" }}<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time> &ndash; {{ end -}}
+
+
+{{- range .Site.RegularPages -}}
+{{- if eq (substr .RelPermalink 0 7) "/posts/" }}
+<div class="postpreview">
+    {{- if .Param "datesinlist" -}}
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
+    {{- end -}}
+	<br>
 	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-	{{- if .Param "authorsinlist" }}
-	{{ with .Params.authors }}
-		by 
-		{{ delimit . ", " " and " }}
-	{{end}}
-	{{ end -}}
-</li>
+    {{- if .Param "authorsinlist" }}
+    {{ with .Params.authors }}
+        by 
+        {{ delimit . ", " " and " }}
+    {{end}}
+    {{ end -}}
+</div>
 {{- end }}
-</ul>
+{{- end }}
 {{- end }}
