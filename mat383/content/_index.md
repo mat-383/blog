@@ -1,7 +1,7 @@
 ---
 title: ""
 date: 2024-07-27T14:20:48+10:00
-summary: "Home page summary"
+summary: ""
 ---
 
 This website is coming together, watch me make it in real-time!

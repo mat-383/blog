@@ -1,8 +1,11 @@
 /* Defining common colours */
+/* 	TODO remove all these variables and hard-code the colours
+	apparently lots of old browsers and IE don't support css variables */
 :root {
 	--textwhite: #ccc;
 	--navbarbg: #202020;
 	--green: rgb(0, 180, 0);
+	--greenbg: rgba(0, 180, 0, 0.2);
 	--select: rgb(240, 240, 240);
 }
 
@@ -101,6 +104,22 @@ main {
 	margin: auto 10px auto 10px;
 }
 
+.pagetitle {
+	text-align: center;
+	font-weight: normal;
+	font-size: 48px;
+}
+
+.pagesummary {
+	font-style: italic;
+	margin: auto;
+	max-width: 500px;
+	padding: 0 25px 0 25px;
+	text-align: center;
+}
+
+
+
 /* Post previews */
 .postpreview {
 	list-style-type: none;
@@ -109,6 +128,23 @@ main {
 	border-width: 0px 0px 0px 3px;
 	border-style: solid;
 	border-color: var(--green);
+    display: inline-block;
+	flex-direction: column;
+	padding: 2px 10px 5px 8px;
+}
+.postpreview:hover {
+	background-color: var(--greenbg);
+	@supports (background-image: linear-gradient(to right, var(--greenbg), transparent)) {
+		background-color: transparent;
+		background-image: linear-gradient(to right, var(--greenbg), transparent);
+	}
+}
+.postpreviewlink {
+	text-decoration-line: none;
+	color: var(--textwhite);
+	.postpreviewtitle {
+		color: var(--green);
+	}
 }
 .postpreview time {
 	font-size: 10px;
@@ -116,7 +152,6 @@ main {
 .postpreviewsummary {
 	margin-top: 5px;
 }
-
 img {
 	max-width: 100% ;
 }
@@ -129,7 +164,6 @@ footer {
 /* For TAGLIST.HTML */
 .taglist {
 	text-align: center ;
-	clear: both ;
 }
 
 /* For NEXTPREV.HTML */

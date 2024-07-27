@@ -9,7 +9,7 @@
 
 {{ if eq .RelPermalink "/" }}
 	{{- range where .Site.RegularPages "Section" "posts" }}
-		<div class="postpreview">
+			<a href="{{ .RelPermalink }}" class="postpreviewlink"><div class="postpreview">
 			{{- if .Param "datesinlist" -}}
 				<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
 			{{- end -}}
@@ -21,20 +21,20 @@
 				{{ delimit . ", " " and " }}
 			{{end}}
 
-			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			<div class="postpreviewtitle">{{ .Title }}</div>
 
 			{{ if .Params.summary }}
 			<div class="postpreviewsummary">{{ .Params.summary }}</div>
 			{{ end }}
 
 			{{ end -}}
-		</div>
+		</div></a><br>
 	{{- end }}
 
 {{ else }}
 
 	{{- range .Pages }}
-		<div class="postpreview">
+		<a href="{{ .RelPermalink }}" class="postpreviewlink"><div class="postpreview">
 			{{- if .Param "datesinlist" -}}
 				<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
 			{{- end -}}
@@ -46,14 +46,14 @@
 				{{ delimit . ", " " and " }}
 			{{end}}
 
-			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			<div class="postpreviewtitle">{{ .Title }}</div>
 
 			{{ if .Params.summary }}
 			<div class="postpreviewsummary">{{ .Params.summary }}</div>
 			{{ end }}
 
 			{{ end -}}
-		</div>
+		</div></a><br>
 	{{- end }}
 {{ end }}
 
