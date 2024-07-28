@@ -146,6 +146,11 @@ main {
 		color: var(--green);
 	}
 }
+.postpreviewlink:hover {
+	.postpreviewtitle {
+		text-decoration: underline;
+	}
+}
 .postpreview time {
 	font-size: 10px;
 }
