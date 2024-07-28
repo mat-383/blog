@@ -9,12 +9,19 @@
 	--select: rgb(240, 240, 240);
 }
 
-
-
 html {
 	background-color: #121212;
 	font-family: sans-serif;
 	color: var(--textwhite);
+}
+
+a {
+	color: var(--green);
+	text-underline-offset: 3px;
+	text-decoration-line: none;
+}
+a:hover {	
+	text-decoration-line: underline;
 }
 
 
@@ -91,9 +98,7 @@ a.activepage {
 
 
 
-a {
-	color: var(--green);
-}
+
 
 body {
 	margin: auto;
