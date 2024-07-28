@@ -114,10 +114,26 @@ main {
 	margin: auto 10px auto 10px;
 }
 
+.posttags {
+	text-align: center;
+	margin-top: 20px;
+	opacity: 0.4;
+	a {
+		color: var(--textwhite)
+	}
+}
+.posttags:hover {
+	opacity: 1;
+	a {
+		color: var(--green)
+	}
+}
+
 .pagetitle {
 	text-align: center;
 	font-weight: normal;
 	font-size: 48px;
+	margin-top: 15px;
 }
 
 .pagesummary {
@@ -171,6 +187,9 @@ main {
 .postpreviewsummary {
 	padding-top: 5px;
 }
+
+
+
 img {
 	max-width: 100% ;
 }
