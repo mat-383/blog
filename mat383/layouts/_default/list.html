@@ -8,7 +8,7 @@
 {{/* The logic for listing all pages/posts had to be duplicated because I couldn't figure out how to not have to do it. Setting variables in IF statements keeps those variables in the scope of the IF statement. I also tried using partials but I couldn't get it to work. If you have a solution for this, PLEASE HELP */}}
 
 {{ if eq .RelPermalink "/" }}
-	{{- range where .Site.RegularPages "Section" "posts" }}
+	{{- range where .Site.RegularPages "Section" "blog" }}
 			<a href="{{ .RelPermalink }}" class="postpreviewlink"><div class="postpreview">
 			{{- if .Param "datesinlist" -}}
 				<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
