@@ -15,6 +15,13 @@ html {
 	font-family: sans-serif;
 	color: var(--textwhite);
 }
+.navbar a { /* Moved this navbar styling up here to maybe prevent the links from flickering on page load */
+	text-decoration: none;
+	color: var(--textwhite);
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	border-color: transparent;
+}
 a {
 	color: var(--green);
 	text-underline-offset: 3px;
@@ -34,13 +41,6 @@ a:hover:not(.postpreviewlink) {
 	align-items: center;
 	padding: 10px;
 	background-color: var(--navbarbg);
-}
-.navbar a {
-	text-decoration: none;
-	color: var(--textwhite);
-	border-style: solid;
-	border-width: 0 0 2px 0;
-	border-color: transparent;
 }
 .homelink {
 	order: 1;
