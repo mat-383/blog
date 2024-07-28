@@ -68,9 +68,10 @@ a.activepage {
 	color: var(--green);
 	border-color: var(--green);
 	border-width: 0 0 2px 0;
-	@supports (background-image: linear-gradient(to top, var(--greenbg), transparent)) {
+	@supports (background-image: linear-gradient(to top, var(--greenbg), transparent)) { 
 		background-color: transparent;
 		background-image: linear-gradient(to top, var(--greenbg), transparent);
+		/* I need to test if the @support query actually works and does what it should */
 	}
 }
 
@@ -177,12 +178,11 @@ main {
 	}
 }
 .postpreviewtime {
-	font-size: 10px;
 	padding-right: 4px;
 	padding-bottom: 3px;
 }
-.postpreviewtags {
-	font-size: 10px;
+.postpreviewtime, .postpreviewtags {
+	font-size: 12px;
 }
 .postpreviewsummary {
 	padding-top: 5px;
