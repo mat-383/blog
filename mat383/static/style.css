@@ -56,18 +56,21 @@ a:hover:not(.postpreviewlink) {
 /* Make the hover navbar link bright white */
 .navbar a:hover{
 	color: var(--select);
+	text-decoration-line: none;
 }
 /* Give all the other navbar links the white underline */
 .otherlinks a:hover {
 	border-color: var(--select);
 	border-width: 0 0 2px 0;
 	background-image: none;
+	text-decoration-line: none;
 }
 /* Make the active page navbar link green */
 a.activepage {
 	color: var(--green);
 	border-color: var(--green);
 	border-width: 0 0 2px 0;
+	text-decoration-line: none;
 	@supports (background-image: linear-gradient(to top, var(--greenbg), transparent)) { 
 		background-color: transparent;
 		background-image: linear-gradient(to top, var(--greenbg), transparent);
