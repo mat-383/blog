@@ -1,13 +1,11 @@
-        {{- if isset .Params "tags" -}}
-            {{- $tagsLen := len .Params.tags -}}
-            {{- if gt $tagsLen 0 -}}
-        <div class=taglist>
-		{{- with "Tags:" }}{{ . }} {{ end -}}
-                {{- range $k, $v := .Params.tags -}}
-                {{- $url := printf "tags/%s" (. | urlize | lower) -}}
-                <a id="tag_{{ . | lower }}" href="{{ $url | absURL }}">{{ . | title }}</a>
-                {{- if lt $k (sub $tagsLen 1) }} {{ end -}}
-                {{- end -}}
-        </div>
-            {{- end -}}
-        {{- end }}
+{{- if isset .Params "tags" -}}
+    {{- $tagsLen := len .Params.tags -}}
+    {{- if gt $tagsLen 0 -}}
+{{- with "" }}{{ . }} {{ end -}}
+    {{- range $k, $v := .Params.tags -}}
+    {{- $url := printf "tags/%s" (. | urlize | lower) -}}
+    <a style="display:inline-block;"id="tag_{{ . | lower }}" href="{{ $url | absURL }}">{{ . | title }}</a>
+    {{- if lt $k (sub $tagsLen 1) }} {{ end -}}
+    {{- end -}}
+{{- end -}}
+{{- end }}
