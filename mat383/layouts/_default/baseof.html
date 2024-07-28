@@ -27,7 +27,7 @@
 <!--{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}-->
 <main>
 <header>
-	{{ if .Param "tags" }}<div class="posttags"><p>Tags: {{ partial "taglist.html" . }}</p></div>{{ else }}<br>{{ end -}}
+	{{ if .Param "tags" }}<div class="posttags"><p>Tags: {{ partial "taglist.html" . }}</p></div>{{ else if not .IsHome }}<br>{{ end -}}
 	<h1 id="tag_{{ .Title }}" class="pagetitle">{{ block "title" . }}{{ end }}</h1>
 	{{ if .Param "summary" }}<p class="pagesummary">{{ .Summary }}</p>{{ end }}
 </header>
