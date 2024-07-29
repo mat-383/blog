@@ -1,5 +1,5 @@
-# Mat383.com Hugo Project
-This repository contains the source code for [my website](https://mat383.com), which uses the [Hugo static site generator](https://gohugo.io/).
+# [mat383.com](https://mat383.com) Hugo Project
+This repository contains the source code for my personal website, which uses the [Hugo static site generator](https://gohugo.io/).
 
 The static built files are [also in a repository](https://github.com/mat-383/mat383.github.io).
 ## Pre-requisites
