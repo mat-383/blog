@@ -44,11 +44,13 @@ To-do:
 - [ ] Test every single[^1] markdown feature
 [^1]: Even this one
 ##### Heading 5
-Below is a table, take a seat:
+Below is a table, take a seat:<div class="scrollabletable">
 | Syntax | Description |
 | ----------- | ----------- |
 | Header | Title |
 | Paragraph | Text | 
+</div>
+
 ###### Heading 6 (this is really small)
 Text
 > Block quote? Block quote.
