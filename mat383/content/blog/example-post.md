@@ -31,7 +31,7 @@ And here are some flowers:
 
 Hey, I found some more:
 
-<img src="/images/flowers.jpg" alt="flowers2" width="150" height="100" />
+<img src="/images/flowers.jpg" alt="flowers2" width="150"/>
 
 ### Heading 3
 Brb I have to draw a horizontal line in the middle of the page
