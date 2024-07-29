@@ -1,29 +1,27 @@
-/* Defining common colours */
-/* 	TODO remove all these variables and hard-code the colours
-	apparently lots of old browsers and IE don't support css variables */
-:root {
-	--textwhite: #ccc;
-	--navbarbg: #202020;
-	--green: rgb(0, 180, 0);
-	--greenbg: rgba(0, 180, 0, 0.2);
-	--select: rgb(240, 240, 240);
-	--selectbg: rgb(240, 240, 240, 0.2);
-}
+/* These are some common colors,
+replace all to edit them because some old browsers don't support CSS variables
+textwhite: #ccc;
+navbarbg: #202020;
+green: rgb(0, 180, 0);
+greenbg: rgba(0, 180, 0, 0.2);
+select: rgb(240, 240, 240);
+selectbg: rgb(240, 240, 240, 0.2);
+*/
 
 html {
 	background-color: #121212;
 	font-family: sans-serif;
-	color: var(--textwhite);
+	color: #ccc;
 }
 .navbar a { /* Moved this navbar styling up here to maybe prevent the links from flickering on page load */
 	text-decoration: none;
-	color: var(--textwhite);
+	color: #ccc;
 	border-style: solid;
 	border-width: 0 0 2px 0;
 	border-color: transparent;
 }
 a {
-	color: var(--green);
+	color: rgb(0, 180, 0);
 	text-underline-offset: 3px;
 	text-decoration-line: none;
 }
@@ -40,13 +38,13 @@ a:hover:not(.postpreviewlink) {
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px;
-	background-color: var(--navbarbg);
+	background-color: #202020;
 }
 .homelink {
 	order: 1;
 	font-size: 150%;
 	font-weight: bold;
-	color: var(--green);
+	color: rgb(0, 180, 0);
 }
 .otherlinks {
 	display: flex;
@@ -55,25 +53,25 @@ a:hover:not(.postpreviewlink) {
 }
 /* Make the hover navbar link bright white */
 .navbar a:hover{
-	color: var(--select);
+	color: rgb(240, 240, 240);
 	text-decoration-line: none;
 }
 /* Give all the other navbar links the white underline */
 .otherlinks a:hover {
-	border-color: var(--select);
+	border-color: rgb(240, 240, 240);
 	border-width: 0 0 2px 0;
 	background-image: none;
 	text-decoration-line: none;
 }
 /* Make the active page navbar link green */
 a.activepage {
-	color: var(--green);
-	border-color: var(--green);
+	color: rgb(0, 180, 0);
+	border-color: rgb(0, 180, 0);
 	border-width: 0 0 2px 0;
 	text-decoration-line: none;
-	@supports (background-image: linear-gradient(to top, var(--greenbg), transparent)) { 
+	@supports (background-image: linear-gradient(to top, rgba(0, 180, 0, 0.2), transparent)) { 
 		background-color: transparent;
-		background-image: linear-gradient(to top, var(--greenbg), transparent);
+		background-image: linear-gradient(to top, rgba(0, 180, 0, 0.2), transparent);
 		/* I need to test if the @support query actually works and does what it should */
 	}
 }
@@ -124,13 +122,13 @@ main {
 	width: fit-content;
 	opacity: 0.4;
 	a {
-		color: var(--textwhite)
+		color: #ccc
 	}
 }
 .posttags:hover {
 	opacity: 1;
 	a {
-		color: var(--green)
+		color: rgb(0, 180, 0)
 	}
 }
 
@@ -157,23 +155,23 @@ main {
 	margin: auto 20px 10px 20px;
 	border-width: 0px 0px 0px 3px;
 	border-style: solid;
-	border-color: var(--green);
+	border-color: rgb(0, 180, 0);
 	padding: 6px 10px 5px 8px;
     display: inline-block;
 	flex-direction: column;
 }
 .postpreview:hover {
-	background-color: var(--greenbg);
-	@supports (background-image: linear-gradient(to right, var(--greenbg), transparent)) {
+	background-color: rgba(0, 180, 0, 0.2);
+	@supports (background-image: linear-gradient(to right, rgba(0, 180, 0, 0.2), transparent)) {
 		background-color: transparent;
-		background-image: linear-gradient(to right, var(--greenbg), transparent);
+		background-image: linear-gradient(to right, rgba(0, 180, 0, 0.2), transparent);
 	}
 }
 .postpreviewlink {
 	text-decoration-line: none;
-	color: var(--textwhite);
+	color: #ccc;
 	.postpreviewtitle {
-		color: var(--green);
+		color: rgb(0, 180, 0);
 	}
 }
 .activateposttitleunderline:hover {
