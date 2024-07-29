@@ -30,6 +30,7 @@ And here are some flowers:
 <span class="figcaption">oh wow</span>
 
 Hey, I found some more:
+
 <img src="/images/flowers.jpg" alt="flowers2" width="150" height="100" />
 
 ### Heading 3
@@ -76,7 +77,8 @@ Here is an animated GIF:
 ![Fire](/images/fire.gif)
 
 And here is a video:
-<video src="/videos/firewatch.mp4" width="320" height="240" controls  preload="metadata"></video>
+
+<video src="/videos/firewatch.mp4" controls  preload="metadata"></video>
 
 
 This is the end of the page, here is a link to [get outta here](/).
