@@ -69,4 +69,12 @@ Dictionary of whats
 : whaat
 : whaaaaaaaaat
 
+## Some more images and videos
+Here is an animated GIF
+![Fire](/images/fire.gif)
+
+And here is a video
+<video src="/videos/firewatch.mp4" width="320" height="240" controls></video>
+
+
 This is the end of the page, here is a link to [get outta here](/).

@@ -230,7 +230,7 @@ em.green {
 	font-style: normal;
 }
 
-img {
+img, video {
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
