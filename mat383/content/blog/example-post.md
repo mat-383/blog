@@ -61,7 +61,8 @@ if (1 + 1 == 2):
     ping 192.168.0.1
     print("i_am_hacking_you!!!!")
 ```
-Throwback time! Here are those same flowers but in WebP format. The file is smaller, but some old browsers can't see them.
+Here are some more flowers but in WebP format. The file is smaller, but some old browsers can't see them.
+
 ![An image of some flowers](/images/flowers.webp)
 
 Dictionary of whats
@@ -70,11 +71,12 @@ Dictionary of whats
 : whaaaaaaaaat
 
 ## Some more images and videos
-Here is an animated GIF
+Here is an animated GIF:
+
 ![Fire](/images/fire.gif)
 
-And here is a video
-<video src="/videos/firewatch.mp4" width="320" height="240" controls></video>
+And here is a video:
+<video src="/videos/firewatch.mp4" width="320" height="240" controls  preload="metadata"></video>
 
 
 This is the end of the page, here is a link to [get outta here](/).
