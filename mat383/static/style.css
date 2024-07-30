@@ -8,6 +8,9 @@ select: rgb(240, 240, 240);
 selectbg: rgb(240, 240, 240, 0.2);
 */
 
+/* TODO minimise the amount of nested CSS rules,
+   old browsers don't support those */
+
 html {
 	background-color: #121212;
 	font-family: sans-serif;
@@ -89,6 +92,11 @@ main {
 	margin: auto 10px auto 10px;
 }
 
+
+.tagcloud {
+	margin-top: 16px;
+	font-size: 14px;
+}
 .tagcloud ul {
 	list-style: none;
 	padding: 0px;
