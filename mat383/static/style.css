@@ -214,6 +214,7 @@ footer {
 	text-align: center;
 	font-size: 14px;
 	clear: both;
+	margin-bottom: 100px;
 }
 .footerhover:not(:hover) {
 	opacity: 0.5;
