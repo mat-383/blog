@@ -1,5 +1,6 @@
 ---
 title: ""
+hidetitle: true
 date: 2024-07-27T14:20:48+10:00
 summary: ""
 tags: []

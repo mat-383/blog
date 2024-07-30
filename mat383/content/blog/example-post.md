@@ -1,5 +1,6 @@
 ---
 title: "Example Post Title"
+hidetitle: false
 date: 2024-07-27T14:33:43+10:00
 summary: "This post will be for testing how all the different markdown elements will be formatted."
 tags: ['tag1', 'tag3']

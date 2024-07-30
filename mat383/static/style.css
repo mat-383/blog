@@ -2,7 +2,7 @@
 replace all to edit them because some old browsers don't support CSS variables
 textwhite: #ccc;
 navbarbg: #202020;
-green: ;
+green: rgb(0, 180, 0);
 greenbg: rgba(0, 180, 0, 0.2);
 select: rgb(240, 240, 240);
 selectbg: rgb(240, 240, 240, 0.2);
@@ -89,19 +89,37 @@ main {
 	margin: auto 10px auto 10px;
 }
 
+.tagcloud ul {
+	list-style: none;
+	padding: 0px;
+	display: inline;
+}
+.tagcloud li {
+	display: inline-block;
+	margin: 0;
+}
+.tag, .tagcloud li {
+	background:rgba(0, 180, 0, 0.2);
+	border-radius: 3px;
+	padding: 4px 5px 4px 5px;
+	
+}
+
 .posttags {
 	text-align: center;
 	margin: 20px auto auto auto;
 	width: fit-content;
 	opacity: 0.4;
 	a {
-		color: #ccc
+		color: #ccc;
+		background: #303030;
 	}
 }
 .posttags:hover {
 	opacity: 1;
 	a {
-		color: rgb(0, 180, 0)
+		color: rgb(0, 180, 0);
+		background:rgba(0, 180, 0, 0.2);
 	}
 }
 .pagetitle {
@@ -169,6 +187,14 @@ img, video {
 	margin-right: auto;
 	display: block;
 }
+.inlineimage {
+	display: inline;
+	margin: 0 0 0 0;
+	width: 0.8em;
+}
+svg {
+	fill: green;
+}
 .figcaption {
 	text-align: center;
 	display: block;
@@ -189,7 +215,7 @@ footer {
 	border-width: 0px 0px 0px 3px;
 	border-style: solid;
 	border-color: rgb(0, 180, 0);
-	padding: 6px 10px 5px 8px;
+	padding: 3px 10px 5px 8px;
     display: inline-block;
 	flex-direction: column;
 }
@@ -205,6 +231,7 @@ footer {
 	color: #ccc;
 	.postpreviewtitle {
 		color: rgb(0, 180, 0);
+		padding-top: 4px;
 	}
 }
 .activateposttitleunderline:hover {
@@ -213,8 +240,14 @@ footer {
 	}
 }
 .postpreviewtime {
+	display: grid;
+	place-items: center;
 	padding-right: 4px;
-	padding-bottom: 3px;
+	padding-bottom: 2px;
+	padding: 1px 4px 0px 0;
+}
+.postpreviewtags .tag {
+	padding: 2px 3px 2px 3px;
 }
 .postpreviewtime, .postpreviewtags {
 	font-size: 12px;
