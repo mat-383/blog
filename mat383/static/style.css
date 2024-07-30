@@ -211,8 +211,18 @@ svg {
 }
 
 footer {
-	text-align: center ;
-	clear: both ;
+	text-align: center;
+	font-size: 14px;
+	clear: both;
+}
+.footerhover:not(:hover) {
+	opacity: 0.5;
+}
+footer a {
+	color: #ccc;
+}
+footer a:hover {
+	color: rgb(0, 180, 0);
 }
 
 

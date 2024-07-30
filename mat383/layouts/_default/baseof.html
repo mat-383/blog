@@ -41,8 +41,14 @@
 </main>
 {{ block "footer" . }}
 <footer>
-	{{- if .Param "showrss" }}<br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for new blog posts!"></a>{{ end }}
+	<br>
+	<br>
+	<p class="footerhover">Made with <a href="https://gohugo.io/">Hugo</a> | <a href="https://github.com/mat-383/blog">Source code</a> | <a href="/about">Contact me</p></a>
+	{{- if .Param "showrss" }}<a href="/index.xml" class="footerhover"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for new blog posts!"></a>{{ end }}
+	<br>
+	<a href="http://wiby.me/" class="footerhover"><img src="/images/wiby.gif"></a>
 </footer>
 {{ end }}
 </body>
 </html>
+
