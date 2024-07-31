@@ -292,9 +292,26 @@ footer a:hover {
 	max-width: 33% ;
 }
 
+.homeimage {
+	display: block;
+	float: right;
+}
+.homeimage2 {
+	display: none;
+	max-width: 135px;
+}
 
+@media (max-width: 550px) {
+	.homeimage {
+		max-width: 192px;
+	}
+}
 /* Adjust responsiveness on small screens */
 @media (max-width: 400px) {
+	.homeimage {
+		max-width: 135px;
+	}
+
 	.homelink {
 		font-size: 125%;
 	}
@@ -313,6 +330,17 @@ footer a:hover {
 	.navbar {
 		flex-direction: column;
 		align-items: center;
+	}
+	
+}
+@media (max-width: 300px) {
+	.homeimage {
+		display: none;
+	}
+	.homeimage2 {
+		display: block;
+		float: none;
+		object-fit: contain;
 	}
 }
 /* Suuuuuper small screens, like smartwatches lol */
