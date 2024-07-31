@@ -340,7 +340,6 @@ footer a:hover {
 	.homeimage2 {
 		display: block;
 		float: none;
-		object-fit: contain;
 	}
 }
 /* Suuuuuper small screens, like smartwatches lol */
