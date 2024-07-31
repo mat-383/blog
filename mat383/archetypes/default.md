@@ -5,5 +5,6 @@ date: {{ .Date }}
 tags: []
 summary: ""
 draft: true
+commentsenabled: false
 ---
 

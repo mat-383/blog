@@ -40,6 +40,25 @@
 </main>
 {{ block "footer" . }}
 <footer>
+	{{/* Don't show comments in these pages */}}
+	{{if or (and 
+		(not (hasPrefix .RelPermalink "/tags/"))
+		(not (eq .RelPermalink "/blog/"))
+		(not (eq .RelPermalink "/projects/"))
+		(not (hasPrefix .RelPermalink "/about/"))
+	) }}
+		<!--Remark42 comments-->
+		<script> 
+			var remark_config = {
+			host: 'http://comments.mat383.com',
+			site_id: 'comments.mat383.com',
+			theme: 'dark',
+			show_email_subscription: false,
+			};
+		</script>
+		<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+		<div id="remark42"></div>
+	{{ end }}
 	<br>
 	<br>
 	<p class="footerhover">Made with <a href="https://gohugo.io/">Hugo</a> | <a href="https://github.com/mat-383/blog">Source code</a> | <a href="/about">Contact me</p></a>
