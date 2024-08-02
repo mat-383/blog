@@ -16,7 +16,14 @@ html {
 	font-family: sans-serif;
 	color: #ccc;
 }
-.navbar a { /* Moved this navbar styling up here to maybe prevent the links from flickering on page load */
+main {
+	margin: auto;
+	max-width: 800px;
+}
+body {
+	margin: 0;
+}
+.navbarcontent a { /* Moved this navbar styling up here to maybe prevent the links from flickering on page load */
 	text-decoration: none;
 	color: #ccc;
 	border-style: solid;
@@ -35,12 +42,15 @@ a:hover:not(.postpreviewlink) {
 
 /* Headerbar stuff */
 .navbar {
-	max-width: 800px;
+	background-color: #202020;
+}
+.navbarcontent {
+	max-width: 900px;
+	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px;
-	background-color: #202020;
 }
 .homelink {
 	order: 1;
@@ -54,7 +64,7 @@ a:hover:not(.postpreviewlink) {
 	order: 2;
 }
 /* Make the hover navbar link bright white */
-.navbar a:hover{
+.navbarcontent a:hover{
 	color: rgb(240, 240, 240);
 	text-decoration-line: none;
 }
@@ -82,14 +92,7 @@ a.activepage {
 
 
 
-body {
-	margin: auto;
-	max-width: 800px;
-}
 
-main {
-	margin: auto 10px auto 10px;
-}
 
 
 .tagcloud {
@@ -328,7 +331,7 @@ footer a:hover {
 	}
 }
 @media (max-width: 340px) {
-	.navbar {
+	.navbarcontent {
 		flex-direction: column;
 		align-items: center;
 	}

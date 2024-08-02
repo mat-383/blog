@@ -16,11 +16,13 @@
 	<meta charset="utf-8">
 </head>
 <nav class="navbar">
-	<a href="/" class="homelink">mat383.com</a>
-	<div class="otherlinks"> <!--If the current page is equal to this URL, give it a CSS class (might have to change this later)-->
-		<a href="/blog" class="{{if or (hasPrefix .RelPermalink "/blog/") (hasPrefix .RelPermalink "/tags/") }}activepage{{ end }}">Blog</a>
-		<a href="/projects" class="{{if hasPrefix .RelPermalink "/projects/" }}activepage{{ end }}">Projects</a>
-		<a href="/contact" class="{{if hasPrefix .RelPermalink "/contact/" }}activepage{{ end }}">Contact</a>
+	<div class="navbarcontent">
+		<a href="/" class="homelink">mat383.com</a>
+		<div class="otherlinks"> <!--If the current page is equal to this URL, give it a CSS class (might have to change this later)-->
+			<a href="/blog" class="{{if or (hasPrefix .RelPermalink "/blog/") (hasPrefix .RelPermalink "/tags/") }}activepage{{ end }}">Blog</a>
+			<a href="/projects" class="{{if hasPrefix .RelPermalink "/projects/" }}activepage{{ end }}">Projects</a>
+			<a href="/contact" class="{{if hasPrefix .RelPermalink "/contact/" }}activepage{{ end }}">Contact</a>
+		</div>
 	</div>
 </nav>
 <body>
