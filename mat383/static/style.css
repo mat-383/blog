@@ -183,8 +183,9 @@ th, td {
 	border: 1px solid;
 }
 em.green {
-	color: rgb(125, 255, 125);
+	color: rgb(0, 180, 0);
 	font-style: normal;
+	font-weight: bold;
 }
 
 img, video {
