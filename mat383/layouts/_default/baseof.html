@@ -47,7 +47,7 @@
 		(not (eq .RelPermalink "/projects/"))
 		(not (hasPrefix .RelPermalink "/contact/"))
 	) }}
-		<!--Remark42 comments-->
+		<!--Remark42 comments, temporarily disabled
 		<script> 
 			var remark_config = {
 			host: 'http://remark42.mat383.com:8080',
@@ -57,14 +57,14 @@
 			};
 		</script>
 		<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
-		<div id="remark42"></div>
+		<div id="remark42"></div>-->
 	{{ end }}
 	<br>
 	<br>
 	<p class="footerhover">Made with <a href="https://gohugo.io/">Hugo</a> | <a href="https://github.com/mat-383/blog">Source code</a></p>
 	{{- if .Param "showrss" }}<a href="/index.xml" class="footerhover"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for new blog posts!"></a>{{ end }}
 	<br>
-	<a href="http://wiby.me/" class="footerhover"><img src="/images/wiby.gif"></a>
+	<a href="http://wiby.me/" class="footerhover"><img src="/images/wiby.gif" alt="Wiby, the classic search engine"></a>
 </footer>
 {{ end }}
 </body>
