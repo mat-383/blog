@@ -1,7 +1,9 @@
 ---
 title: "Blog"
 hidetitle: true
+hidesummary: true
 date: 
+summary: "Blog posts written by me"
 tags: []
 summary: ""
 ---

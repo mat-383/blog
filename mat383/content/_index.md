@@ -1,8 +1,9 @@
 ---
 title: ""
 hidetitle: true
+hidesummary: true
 date: 2024-07-27T14:20:48+10:00
-summary: ""
+summary: "The personal website of Mat383."
 tags: []
 ---
 <img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage"/>
