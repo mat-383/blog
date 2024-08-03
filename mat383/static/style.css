@@ -38,10 +38,14 @@ a {
 	text-underline-offset: 3px;
 	text-decoration-line: none;
 }
-
+h1, h2, h3, h4, h5, h6 {
+	line-height: 35px;
+}
 a:hover:not(.postpreviewlink) {	
 	text-decoration-line: underline;
 }
+
+
 
 /* Headerbar stuff */
 .navbar {
@@ -116,7 +120,6 @@ a.activepage {
 	background:rgba(0, 180, 0, 0.2);
 	border-radius: 3px;
 	padding: 1px 6px 1px 6px;
-	
 }
 
 .posttags {
@@ -142,6 +145,7 @@ a.activepage {
 	font-size: 48px;
 	margin-top: 15px;
 	margin-bottom: 45px;
+	line-height: 35px;
 }
 .pagesummary {
 	font-style: italic;
