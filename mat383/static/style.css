@@ -39,7 +39,7 @@ a {
 	text-decoration-line: none;
 }
 h1, h2, h3, h4, h5, h6 {
-	line-height: 35px;
+	line-height: normal;
 }
 a:hover:not(.postpreviewlink) {	
 	text-decoration-line: underline;
@@ -145,7 +145,7 @@ a.activepage {
 	font-size: 48px;
 	margin-top: 15px;
 	margin-bottom: 45px;
-	line-height: 35px;
+	line-height: normal;
 }
 .pagesummary {
 	font-style: italic;
