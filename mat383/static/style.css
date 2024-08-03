@@ -236,7 +236,9 @@ footer a {
 footer a:hover {
 	color: rgb(0, 180, 0);
 }
-
+.footerbadges a {
+	display: inline-block;
+}
 
 /* Post previews */
 .postpreview {
