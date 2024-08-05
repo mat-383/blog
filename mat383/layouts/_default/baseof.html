@@ -19,9 +19,9 @@
 	<div class="navbarcontent">
 		<a href="/" class="homelink">mat383.com</a>
 		<div class="otherlinks"> <!--If the current page is equal to this URL, give it a CSS class (might have to change this later)-->
-			<a href="/blog" class="{{if or (hasPrefix .RelPermalink "/blog/") (hasPrefix .RelPermalink "/tags/") }}activepage{{ end }}">Blog</a>
-			<a href="/projects" class="{{if hasPrefix .RelPermalink "/projects/" }}activepage{{ end }}">Projects</a>
-			<a href="/contact" class="{{if hasPrefix .RelPermalink "/contact/" }}activepage{{ end }}">Contact</a>
+			<a href="/blog" class="{{if or (hasPrefix .RelPermalink "/blog/") (hasPrefix .RelPermalink "/tags/")}}activepage{{end}}">Blog</a>
+			<a href="/projects" class="{{if hasPrefix .RelPermalink "/projects/"}}activepage{{end}}">Projects</a>
+			<a href="/contact" class="{{if hasPrefix .RelPermalink "/contact/"}}activepage{{end}}">Contact</a>
 		</div>
 	</div>
 </nav>
@@ -29,9 +29,10 @@
 <!--{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}-->
 <main>
 <header>
-	{{ if .Param "tags" }}<div class="posttags"><p>Tags: {{ partial "taglist.html" . }}</p></div>{{ else if not (.Param "hidetitle")}}<br>{{ end -}}
-	{{ if not (.Param "hidetitle") }}<h1 id="tag_{{ .Title }}" class="pagetitle">{{ block "title" . }}{{ end }}</h1>{{ end }}
-	{{ if not (.Param "hidesummary") }}<p class="pagesummary">{{ .Summary }}</p>{{ end }}
+	{{if .Param "tags"}}<div class="posttags"><p>Tags: {{partial "taglist.html" .}}</p></div>{{else if not (.Param "hidetitle")}}<br>{{end -}}
+	{{if not (.Param "hidetitle")}}<h1 id="tag_{{.Title}}" class="pagetitle">{{block "title" .}}{{end}}</h1>{{end}}
+	{{if not (.Param "hidesummary")}}<p class="pagesummary">{{.Summary}}</p>{{end}}
+	{{if (and (not (.Param "hidedate")) (not (hasPrefix .RelPermalink "/tags/")))}}<p class="datewritten {{if not (.Param "centerdate")}}classicdatewritten{{end}}"><time>{{if .Param "datelabelupdated"}}Updated{{else}}Date written{{end}}: {{.Date.Format "02 Jan. 2006"}}</time></p>{{end}}
 </header>
 {{ if .IsHome }}
 {{ end }}

@@ -2,11 +2,13 @@
 title: "Building this website"
 hidetitle: false
 hidesummary: false
+hidedate: false
 date: 2024-08-03T04:23:38+10:00
+centerdate: true
 tags: [ 'website' ]
 summary: "Let me tell you why I made it and what tools I used."
-draft: false
 commentsenabled: true
+draft: false
 ---
 
 ***TLDR:*** *I wanted to get into game development and have a website with a shiny custom domain to blog on. I built it with Hugo and it's being hosted on Cloudflare Pages with a Cloudflare domain.*

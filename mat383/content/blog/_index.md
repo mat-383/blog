@@ -2,6 +2,7 @@
 title: "Blog"
 hidetitle: true
 hidesummary: true
+hidedate: true
 date: 
 summary: "Blog posts written by me"
 tags: []

@@ -2,6 +2,7 @@
 title: ""
 hidetitle: true
 hidesummary: true
+hidedate: true
 date: 2024-07-27T14:20:48+10:00
 summary: "The personal website of Mat383."
 tags: []
@@ -9,7 +10,7 @@ commentsenabled: true
 ---
 <img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage"/>
 
-<p style="font-size:20px;">Howdy, I'm <em class="green">Matt</em>. I also go by Mat383 or just Mat.</p>
+<p style="font-size:20px;">Howdy, I'm <a href="/now"><em class="green">Matt</em></a>. I also go by Mat383 or just Mat.</p>
 
 <img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage2"/>
 
