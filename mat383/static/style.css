@@ -65,7 +65,7 @@ a:hover:not(.postpreviewlink) {
 	font-size: 150%;
 	font-weight: bold;
 	color: rgb(0, 180, 0);
-	transition: 0.4s;
+	transition: color 0.4s;
 }
 .otherlinks {
 	display: flex;
@@ -381,7 +381,7 @@ footer a:hover {
 		color: #ccc;
 		transition: 0.3s;
 	}
-	transition: 0.3s;
+	transition: border 0.3s;
 }
 .loadcommentsbutton:hover {
 	.loadcommentsicons {
