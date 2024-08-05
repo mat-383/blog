@@ -361,17 +361,17 @@ footer a:hover {
 	border: 2px solid transparent;
 	.loadcommentsicon1 {
 		opacity: 1;
-		transition: 0.2s;
+		transition: 0.3s;
 	}
 	.loadcommentsicon2 {
 		opacity: 0;
-		transition: 0.2s;
+		transition: 0.3s;
 	}
 	p {
 		color: #ccc;
-		transition: 0.2s;
+		transition: 0.3s;
 	}
-	transition: 0.2s;
+	transition: 0.3s;
 }
 .loadcommentsbutton:hover {
 	.loadcommentsicons {

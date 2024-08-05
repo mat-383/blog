@@ -39,7 +39,11 @@
 {{ block "main" . }}
 {{ .Content }}
 {{ end }}
-<!--{{ if .Param "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}}-->
+{{if .IsHome}}
+	<hr>
+	<h2>Guestbook</h2>
+	<p>Once you've had a look around, feel free to leave a comment in my guestbook:</p>
+{{end}}
 </main>
 {{ block "footer" . }}
 <footer>
@@ -51,10 +55,15 @@
 		(not (hasPrefix .RelPermalink "/contact/"))
 	)}}
 		<button id="loadComments" class="loadcommentsbutton">
-			<p>Load Comments</p>
+			<p>Load {{if .IsHome}}Guestbook{{else}}Comments{{end}}</p>
 			<div class="loadcommentsicons">
-				<img class="loadcommentsicon1" src="/comments.svg">
-				<img class="loadcommentsicon2" src="/comments-green.svg">
+				{{if .IsHome}}
+					<img class="loadcommentsicon1" src="/icons/guestbook.svg">
+					<img class="loadcommentsicon2" src="/icons/guestbook-green.svg">
+				{{else}}
+					<img class="loadcommentsicon1" src="/icons/comments.svg">
+					<img class="loadcommentsicon2" src="/icons/comments-green.svg">
+				{{end}}
 			</div>
 		</button>
 		<script>
