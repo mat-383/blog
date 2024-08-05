@@ -5,6 +5,7 @@ hidesummary: true
 date: 2024-07-27T14:20:48+10:00
 summary: "The personal website of Mat383."
 tags: []
+commentsenabled: true
 ---
 <img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage"/>
 

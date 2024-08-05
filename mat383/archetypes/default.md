@@ -5,7 +5,7 @@ hidesummary: false
 date: {{ .Date }}
 tags: []
 summary: ""
-commentsenabled: false
+commentsenabled: true
 draft: true
 ---
 

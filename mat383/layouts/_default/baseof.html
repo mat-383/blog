@@ -53,6 +53,7 @@
 		(not (eq .RelPermalink "/blog/"))
 		(not (eq .RelPermalink "/projects/"))
 		(not (hasPrefix .RelPermalink "/contact/"))
+		((.Param "commentsenabled"))
 	)}}
 		<button id="loadComments" class="loadcommentsbutton">
 			<p>Load {{if .IsHome}}Guestbook{{else}}Comments{{end}}</p>
