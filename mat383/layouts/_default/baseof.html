@@ -43,24 +43,66 @@
 </main>
 {{ block "footer" . }}
 <footer>
-	{{/* Don't show comments in these pages */}}
+	<!-- Don't show comments in these pages -->
 	{{if or (and 
 		(not (hasPrefix .RelPermalink "/tags/"))
 		(not (eq .RelPermalink "/blog/"))
 		(not (eq .RelPermalink "/projects/"))
 		(not (hasPrefix .RelPermalink "/contact/"))
-	) }}
-		<!--Remark42 comments, temporarily disabled
-		<script> 
+	)}}
+		<button id="loadComments" class="loadcommentsbutton">
+			<p>Load Comments</p>
+			<div class="loadcommentsicons">
+				<img class="loadcommentsicon1" src="/comments.svg">
+				<img class="loadcommentsicon2" src="/comments-green.svg">
+			</div>
+		</button>
+		<script>
+			// Remark42 settings
 			var remark_config = {
-			host: 'http://remark42.mat383.com:8080',
-			site_id: 'remark42.mat383.com',
-			theme: 'dark',
-			show_email_subscription: false,
+				host: 'http://remark42.mat383.com',
+				site_id: 'remark',
+				theme: 'dark',
+				show_email_subscription: false,
+				show_rss_subscription: true,
 			};
+			// Function to dynamically load Remark42 scripts
+			function loadRemark42() {
+				var components = remark_config.components || ["embed"];
+				var head = document.head || document.body;
+				
+				for (var i = 0; i < components.length; i++) {
+					var script = document.createElement("script");
+					var extension = ".js";
+					
+					// Check if the current environment supports ES modules
+					if ("noModule" in script) {
+						script.type = "module";
+						extension = ".mjs";
+					}
+					
+					script.async = true;
+					script.defer = true;
+					script.src = remark_config.host + "/web/" + components[i] + extension;
+					head.appendChild(script);
+
+					// Remove the "Load Comments" button 200ms after it was pressed (so touchscreen users can see the cool animation)
+					setTimeout(function() { 
+						var loadCommentsButton = document.getElementById('loadComments');
+						loadCommentsButton.parentNode.removeChild(loadCommentsButton);
+					}, 200);
+					
+					
+				}
+			}
+			// Attach click event listener to the button
+			document.getElementById('loadComments').addEventListener('click', function() {
+				loadRemark42();
+			});
 		</script>
-		<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
-		<div id="remark42"></div>-->
+
+		<!-- Placeholder for comment box -->
+		<div id="remark42" class="remark42"></div>
 	{{ end }}
 	<br>
 	<br>
