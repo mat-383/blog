@@ -8,11 +8,17 @@ summary: "The personal website of Mat383."
 tags: []
 commentsenabled: true
 ---
-<img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage u-photo"/>
+<div class="homeimages homeimages1">
+    <img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage1"/>
+    <img src="/images/mat383 icon.jpg" alt="Glitchy M" class="u-photo homeimage2"/>
+</div>
 
 <p style="font-size:20px;">Howdy, I'm <a href="/now"><em class="green">Matt</em></a>. I also go by Mat383 or just Mat.</p>
 
-<img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage2"/>
+<div class="homeimages homeimages2">
+    <img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage1"/>
+    <img src="/images/mat383 icon.jpg" alt="Glitchy M" class="u-photo homeimage2"/>
+</div>
 
 <p class="p-note">I'm an amateur programmer who's currently exploring his hobbies. I started this website to document and share my journey.</p>
 

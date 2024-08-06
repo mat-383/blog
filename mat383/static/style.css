@@ -12,10 +12,9 @@ selectbg: rgb(240, 240, 240, 0.2);
    old browsers don't support those */
 
 html {
-	background-color: #121212;
 	font-family: sans-serif;
-	color: #ccc;
 	line-height: 25px;
+	/*some more things in top of the html itself*/
 }
 main {
 	margin: auto;
@@ -333,20 +332,40 @@ footer a:hover {
 	text-align: left ;
 }
 #nextart {
-	float: right ;
-	text-align: right ;
+	float: right;
+	text-align: right;
 }
 #nextart,#prevart {
 	max-width: 33% ;
 }
 
-.homeimage {
+.homeimages {
+	position: relative;
+	max-width: 220px;
+}
+.homeimages1 {
 	display: block;
 	float: right;
+	margin: 0px 10px 10px 20px;
 }
-.homeimage2 {
+.homeimages2 {
 	display: none;
 	max-width: 135px;
+	margin: auto;
+}
+.homeimage1 {
+	position: relative;
+	z-index: 0;
+}
+.homeimage2 {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	opacity: 0;
+    animation-name: fadein;
+	animation-delay: 1.7s;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
 }
 
 /* Load comments button styling */
@@ -421,13 +440,13 @@ footer a:hover {
 }
 
 @media (max-width: 550px) {
-	.homeimage {
+	.homeimages1 {
 		max-width: 192px;
 	}
 }
 /* Adjust responsiveness on small screens */
 @media (max-width: 400px) {
-	.homeimage {
+	.homeimages1 {
 		max-width: 135px;
 	}
 
@@ -453,10 +472,10 @@ footer a:hover {
 	
 }
 @media (max-width: 300px) {
-	.homeimage {
+	.homeimages1 {
 		display: none;
 	}
-	.homeimage2 {
+	.homeimages2 {
 		display: block;
 		float: none;
 	}
@@ -503,4 +522,9 @@ footer a:hover {
 	30% { transform: rotate(-35deg) scale(0.75); }
 	80% { transform: rotate(5deg); }
 	100% { transform: rotate(0deg)  scale(1); }
+}
+
+@keyframes fadein {
+    from { opacity: 0; filter: blur(5px); }
+    to { opacity: 1; filter: blur(0px); }
 }
