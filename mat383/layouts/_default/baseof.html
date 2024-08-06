@@ -28,12 +28,19 @@
 <body>
 <!--{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}-->
 <main>
-<header>
-	{{if .Param "tags"}}<div class="posttags"><p>Tags: {{partial "taglist.html" .}}</p></div>{{else if not (.Param "hidetitle")}}<br>{{end -}}
-	{{if not (.Param "hidetitle")}}<h1 id="tag_{{.Title}}" class="pagetitle">{{block "title" .}}{{end}}</h1>{{end}}
-	{{if not (.Param "hidesummary")}}<p class="pagesummary">{{.Summary}}</p>{{end}}
-	{{if (and (not (.Param "hidedate")) (not (hasPrefix .RelPermalink "/tags/")))}}<p class="datewritten {{if not (.Param "centerdate")}}classicdatewritten{{end}}"><time>{{if .Param "datelabelupdated"}}Updated{{else}}Date written{{end}}: {{.Date.Format "02 Jan. 2006"}}</time></p>{{end}}
-</header>
+{{if not (hasPrefix .RelPermalink "/tags/")}}
+	<header>
+		{{if .Param "tags"}}<div class="posttags"><p>Tags: {{partial "taglist.html" .}}</p></div>{{else if not (.Param "hidetitle")}}<br>{{end -}}
+		{{if (and (not (.Param "hidetitle")) (not (hasPrefix .RelPermalink "/tags/")))}}<h1 id="tag_{{.Title}}" class="pagetitle">{{block "title" .}}{{end}}</h1>{{end}}
+		{{if not (.Param "hidesummary")}}<p class="pagesummary">{{.Summary}}</p>{{end}}
+		{{if (and (not (.Param "hidedate")) (not (hasPrefix .RelPermalink "/tags/")))}}<p class="datewritten {{if not (.Param "centerdate")}}classicdatewritten{{end}}"><time>{{if .Param "datelabelupdated"}}Updated{{else}}Date written{{end}}: {{.Date.Format "02 Jan. 2006"}}</time></p>{{end}}
+	</header>
+{{end}}
+{{if eq .RelPermalink "/tags/"}}
+	{{partial "tagsite.html" .}}
+{{else if hasPrefix .RelPermalink "/tags/"}}
+	<h2>Showing all posts tagged with <a href="{{.RelPermalink}}"><b class="tag">{{block "title" .}}{{end}}</b></a>:</h2>
+{{end}}
 {{ if .IsHome }}
 {{ end }}
 
@@ -55,7 +62,7 @@
 		(not (eq .RelPermalink "/projects/"))
 		(not (hasPrefix .RelPermalink "/contact/"))
 		((.Param "commentsenabled"))
-	)}}
+	) (eq .RelPermalink "/tags/")}}
 		<button id="loadComments" class="loadcommentsbutton">
 			<p>Load {{if .IsHome}}Guestbook{{else}}Comments{{end}}</p>
 			<div class="loadcommentsicons">
