@@ -359,7 +359,7 @@ footer a:hover {
     animation-name: fadein;
 	animation-delay: 0.5s;
     animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 }
 .homeimage2 {
 	position: absolute;
