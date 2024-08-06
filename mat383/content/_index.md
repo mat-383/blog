@@ -8,13 +8,13 @@ summary: "The personal website of Mat383."
 tags: []
 commentsenabled: true
 ---
-<img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage"/>
+<img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage u-photo"/>
 
 <p style="font-size:20px;">Howdy, I'm <a href="/now"><em class="green">Matt</em></a>. I also go by Mat383 or just Mat.</p>
 
 <img src="/images/glitchy m.gif" alt="Glitchy M" class="homeimage2"/>
 
-I'm an amateur programmer who's currently exploring his hobbies. I started this website to document and share my journey.
+<p class="p-note">I'm an amateur programmer who's currently exploring his hobbies. I started this website to document and share my journey.</p>
 
 I'll write more about myself in this page when I've gotten used to this whole personal website thing. It's still in development, so keep watching this space!
 

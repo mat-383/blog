@@ -19,7 +19,7 @@
 </head>
 <nav class="navbar">
 	<div class="navbarcontent">
-		<a href="/" class="homelink">mat383.com</a>
+		<a href="/" class="homelink h-card" rel="me">mat383.com</a>
 		<div class="otherlinks"> <!--If the current page is equal to this URL, give it a CSS class (might have to change this later)-->
 			<a href="/blog" class="{{if or (hasPrefix .RelPermalink "/blog/") (hasPrefix .RelPermalink "/tags/")}}activepage{{end}}">Blog</a>
 			<a href="/projects" class="{{if hasPrefix .RelPermalink "/projects/"}}activepage{{end}}">Projects</a>
@@ -127,7 +127,6 @@
 	<br>
 	<br>
 
-	<a href="http://mat383.com/" class="h-card footerhover" rel="me">Mat383</a>
 	<p class="footerhover">Made with <a href="https://gohugo.io/">Hugo</a> | <a href="https://github.com/mat-383/blog">Source code</a></p>
 	{{- if .Param "showrss" }}<a href="/index.xml" class="footerhover"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for new blog posts!"></a>{{ end }}
 	<br>
