@@ -356,13 +356,17 @@ footer a:hover {
 .homeimage1 {
 	position: relative;
 	z-index: 0;
+    animation-name: fadein;
+	animation-delay: 0.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 .homeimage2 {
 	position: absolute;
 	top: 0;
 	z-index: 1;
 	opacity: 0;
-    animation-name: fadein;
+    animation-name: fadeinblur;
 	animation-delay: 1.7s;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
@@ -525,6 +529,11 @@ footer a:hover {
 }
 
 @keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeinblur {
     from { opacity: 0; filter: blur(5px); }
     to { opacity: 1; filter: blur(0px); }
 }
