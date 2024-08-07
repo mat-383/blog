@@ -101,6 +101,8 @@ It's not completely finished yet, but I'm quite happy with this website.
 
 I also moved my website off Vultr and onto Cloudflare Pages. I won't have to worry about forgetting to pay for hosting there because it's free.
 
+**EDIT:** I'm going to be moving away from Cloudflare entirely soon. While I don't consider myself a privacy enthusiast (you shouldn't need to be an "enthusiast" to care about your privacy), I want to respect those who do.
+
 # Ok, what now?
 
 Before I start developing games, I want to polish up this website and add a couple features. Adding comment support to this website is my number one priority right now, I wasn't able to finish it in time (I just *had* to write this post on the third day of the eighth month).
