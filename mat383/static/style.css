@@ -531,18 +531,18 @@ footer a:hover {
 	z-index: 383;
 	bottom: 0;
 	width: 0vw;
-	height: 0vw;
+	height: 0vh;
 	background-color: #121212;
     animation-name: uncoveranimation;
-    animation-duration: 0.5s;
+    animation-duration: 0.65s;
 	animation-timing-function: ease-in-out;
 	border:green solid;
 	border-width: 5px 0 0 0;
 }
 
 @keyframes uncoveranimation {
-	0% { width: 100vw; height: 100vw; border-width: 20px 0 0 0; }
-	100% { width: 100vw; height: 0vw; border-width: 1px 0 0 0; }
+	0% { width: 100vw; height: 100vh; border-width: 20px 0 0 0; box-shadow: 0 0 200px rgb(0, 180, 0); }
+	100% { width: 100vw; height: 0vh; border-width: 1px 0 0 0;box-shadow: 0 0 0px rgb(0, 180, 0); }
 }
 
 @keyframes shake {
