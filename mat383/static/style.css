@@ -535,14 +535,14 @@ footer a:hover {
 	background-color: #121212;
     animation-name: uncoveranimation;
     animation-duration: 0.5s;
-	animation-timing-function: ease-out;
+	animation-timing-function: ease-in-out;
 	border:green solid;
 	border-width: 5px 0 0 0;
 }
 
 @keyframes uncoveranimation {
-	0% { width: 100vw; height: 100vw; box-shadow: 0 0 200px rgb(0, 180, 0); border-width: 20px 0 0 0;}
-	100% { width: 100vw; height: 0vw; box-shadow: 0 0 0px rgb(0, 180, 0); border-width: 1px 0 0 0; }
+	0% { width: 100vw; height: 100vw; border-width: 20px 0 0 0; }
+	100% { width: 100vw; height: 0vw; border-width: 1px 0 0 0; }
 }
 
 @keyframes shake {
