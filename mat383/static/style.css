@@ -536,13 +536,13 @@ footer a:hover {
     animation-name: uncoveranimation;
     animation-duration: 0.65s;
 	animation-timing-function: ease-in-out;
-	border:green solid;
+	border:rgba(0, 180, 0) solid;
 	border-width: 5px 0 0 0;
 }
 
 @keyframes uncoveranimation {
-	0% { width: 100vw; height: 100vh; border-width: 20px 0 0 0; box-shadow: 0 0 200px rgb(0, 180, 0); }
-	100% { width: 100vw; height: 0vh; border-width: 1px 0 0 0;box-shadow: 0 0 0px rgb(0, 180, 0); }
+	0% { width: 100vw; height: 100vh; border-width: 30px 0 0 0; /*box-shadow: 0 0 200px rgb(0, 180, 0);*/ }
+	100% { width: 100vw; height: 0vh; border-width: 1px 0 0 0;/*box-shadow: 0 0 0px rgb(0, 180, 0);*/ }
 }
 
 @keyframes shake {
