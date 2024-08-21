@@ -53,9 +53,9 @@
 							<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
 						{{- end -}}
 					<div class="postpreviewtags">
-						{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
+						{{ partial "taglist.html" . }}{{ if .Param "taglist" }}{{ end -}}
 					</div>
-					<a href="{{ .RelPermalink }}" class="postpreviewlink">
+					<a href="{{ .RelPermalink }}" class="postpreviewlink"> {{- if not (.Param "tags") -}}<a href="{{ .RelPermalink }}" class="postpreviewlink">{{- end -}} {{/* lol fixed a bug here by simply duplicating a line */}}
 				</div>
 				
 				{{- if .Param "authorsinlist" }}

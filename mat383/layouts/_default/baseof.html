@@ -20,11 +20,11 @@
 <div class="uncoveranimation"></div>
 <nav class="navbar">
 	<div class="navbarcontent">
-		<a href="/" class="homelink h-card" rel="me">mat383.com</a>
+		<a href="/" class="homelink h-card" rel="me" style="color:#ccc">mat383.com</a>
 		<div class="otherlinks"> <!--If the current page is equal to this URL, give it a CSS class (might have to change this later)-->
-			<a href="/blog" class="{{if or (hasPrefix .RelPermalink "/blog/") (hasPrefix .RelPermalink "/tags/")}}activepage{{end}}">Blog</a>
-			<a href="/projects" class="{{if hasPrefix .RelPermalink "/projects/"}}activepage{{end}}">Projects</a>
-			<a href="/contact" class="{{if hasPrefix .RelPermalink "/contact/"}}activepage{{end}}">Contact</a>
+			<a href="/blog" style="color:#ccc" class="{{if or (hasPrefix .RelPermalink "/blog/") (hasPrefix .RelPermalink "/tags/")}}activepage{{end}}">Blog</a>
+			<a href="/projects" style="color:#ccc" class="{{if hasPrefix .RelPermalink "/projects/"}}activepage{{end}}">Projects</a>
+			<a href="/contact" style="color:#ccc" class="{{if hasPrefix .RelPermalink "/contact/"}}activepage{{end}}">Contact</a>
 		</div>
 	</div>
 </nav>
@@ -41,8 +41,8 @@
 {{end}}
 {{if eq .RelPermalink "/tags/"}}
 	{{partial "tagsite.html" .}}
-{{else if hasPrefix .RelPermalink "/tags/"}}
-	<h2>Showing all posts tagged with <a href="{{.RelPermalink}}"><b class="tag">{{block "title" .}}{{end}}</b></a>:</h2>
+{{else if hasPrefix .RelPermalink "/tags/"}} {{/* to specify new tag colours, modify the line below, the one in tagcloud.html, and the one in taglist.html */}}
+	<h2>Showing all posts tagged with <b class="tag {{if eq .Title "outside"}}tagoutside{{else}}{{if eq .Title "website"}}tagwebsite{{end}}{{end}}">{{block "title" .}}{{end}}</b>:</h2>
 {{end}}
 {{ if .IsHome }}
 {{ end }}

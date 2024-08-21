@@ -65,25 +65,19 @@ a:hover:not(.postpreviewlink) {
 	align-items: center;
 	padding: 10px;
 }
-.homelink {
-	order: 1;
-	font-size: 150%;
-	font-weight: bold;
-	color: rgb(0, 180, 0);
-	transition: color 0.4s;
+.navbarcontent a:hover{
+	color: rgb(240, 240, 240) !important;
+	border-color: #ccc !important;
+	text-decoration-line: none;
 }
 .otherlinks {
 	display: flex;
 	gap: 20px;
 	order: 2;
 }
-.navbarcontent a:hover{
-	color: rgb(240, 240, 240);
-	text-decoration-line: none;
-}
 a.activepage {
-	color: rgb(0, 180, 0);
-	border-color: rgb(0, 180, 0);
+	color: rgb(0, 180, 0) !important;
+	border-color: rgb(0, 180, 0) !important;
 	border-width: 0 0 2px 0;
 	text-decoration-line: none;
 }
@@ -94,7 +88,7 @@ a.activepage {
 	text-decoration-line: none;
 }
 .otherlinks a:not(.activepage):not(:hover) {
-	border-color: transparent;
+	border-color: transparent !important;
 	border-width: 0 0 2px 0;
 	background-image: none;
 	text-decoration-line: none;
@@ -107,6 +101,14 @@ a.activepage {
 		background-image: linear-gradient(to top, rgba(0, 180, 0, 0.2), transparent);
 	}
 	transition: 0.4s;
+}
+.homelink {
+	order: 1;
+	font-size: 150%;
+	font-weight: bold;
+	color: rgb(0, 180, 0);
+	transition: color 0.4s;
+	border: none !important;
 }
 
 
@@ -151,11 +153,24 @@ a.activepage {
 .posttags:not(:hover) {
 	opacity: 0.5;
 	transition: 0.4s;
+	transition-property: background, color, opacity;
 	a {
-		background: #303030;
-		color: #ccc;
+		background: #303030 !important;
+		color: #ccc !important;
 		opacity: 0.75;
 	}
+}
+
+/* different coloured post tags */
+.tagoutside {
+	color: rgb(98, 217, 255) !important;
+	background-color: rgba(0, 100, 255, 0.4) !important;
+	a {color: rgb(98, 217, 255);}
+}
+.tagwebsite {
+	color: rgb(0, 180, 0) !important;
+	background:rgba(0, 180, 0, 0.2) !important;
+	a {color: rgb(0, 180, 0);}
 }
 
 
@@ -439,6 +454,11 @@ footer a:hover {
 	top: 0;
 }
 
+.pannellum {
+	width: 100%;
+	aspect-ratio: 16/9;
+}
+
 /* Remark42 comment box styling (can't really style it much yet) */
 .remark42 {
 	margin: auto;
@@ -521,6 +541,7 @@ footer a:hover {
 		padding-right: 5px;
 	}
 }
+
 
 .uncoveranimation {
 	/*not allowing the div to cover the screen unless it will pinky promise to get out of the way*/
