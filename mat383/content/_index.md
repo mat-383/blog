@@ -24,6 +24,8 @@ commentsenabled: true
 
 I'll write more about myself in this page when I've gotten used to this whole personal website thing. It's still in development, so keep watching this space!
 
+**Currently fiddling around with the backend, this site might be down for a couple hours or days.**
+
 ---
 
 ## Read my recent posts! ↓
