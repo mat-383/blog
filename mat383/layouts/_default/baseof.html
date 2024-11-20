@@ -42,7 +42,7 @@
 {{if eq .RelPermalink "/tags/"}}
 	{{partial "tagsite.html" .}}
 {{else if hasPrefix .RelPermalink "/tags/"}} {{/* to specify new tag colours, modify the line below, the one in tagcloud.html, and the one in taglist.html */}}
-	<h2>Showing all posts tagged with <b class="tag {{if eq .Title "outside"}}tagoutside{{else}}{{if eq .Title "website"}}tagwebsite{{end}}{{end}}">{{block "title" .}}{{end}}</b>:</h2>
+	<h2>Showing all posts tagged with <b class="tag {{if eq .Title "Outside"}}tagoutside{{else}}{{if eq .Title "Website"}}tagwebsite{{end}}{{end}}">{{block "title" .}}{{end}}</b>:</h2>
 {{end}}
 {{ if .IsHome }}
 {{ end }}
