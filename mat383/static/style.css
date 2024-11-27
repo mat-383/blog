@@ -86,6 +86,8 @@ div.balls-bg {
 	background-size:cover;
 	image-rendering: smooth;
 	z-index:-2;
+
+	opacity: 0.2;
 }
 
 .particle-container .particle:nth-child(1){
@@ -218,7 +220,7 @@ div.balls-bg {
 	animation-delay: -2.5s;
 }
 
-@keyframes particle-motion {
+/*@keyframes particle-motion {
     0%{
         transform: translate(0);
         opacity: 0;
@@ -233,7 +235,7 @@ div.balls-bg {
         transform: translate(50%, -100%);
         opacity: 0;
     }
-}
+}*/
 
 
 /* Make the background scale with
