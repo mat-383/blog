@@ -78,6 +78,7 @@ div.balls-bg {
     position: fixed;
 	width: 10%;
 	aspect-ratio: 1;
+	translate: -30% 0;
 	
     border-radius: 50%;
 	background-image: url("images/particle1.png");
@@ -747,9 +748,9 @@ footer a:hover {
 }
 
 
-.uncoveranimation {
+/*.uncoveranimation {*/
 	/*not allowing the div to cover the screen unless it will pinky promise to get out of the way*/
-	@supports (animation-name: uncoveranimation) {
+	/*@supports (animation-name: uncoveranimation) {
 		width: 100vw;
 		height: 100vh;
 	}
@@ -767,15 +768,16 @@ footer a:hover {
 	border-top-width: 30px;
 }
 
+
 @keyframes uncoveranimation {
 	0% { transform: scaleY(1); }
 	100% { transform: scaleY(0); }
 }
 
 @keyframes uncoveranimation2 {
-	0% { width: 100vw; height: 100vh; /*box-shadow: 0 0 200px rgb(0, 180, 0);*/ }
-	100% { width: 100vw; height: 0vh; /*box-shadow: 0 0 0px rgb(0, 180, 0);*/ }
-}
+	0% { width: 100vw; height: 100vh; }
+	100% { width: 100vw; height: 0vh; }
+}*/
 
 @keyframes shake {
 	0% { transform: rotate(0deg) scale(1); }
