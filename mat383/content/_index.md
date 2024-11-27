@@ -22,9 +22,9 @@ commentsenabled: true
 
 <p class="p-note">I'm an amateur programmer who's currently exploring his hobbies. I started this website to document and share my journey.</p>
 
-I'll write more about myself in this page when I've gotten used to this whole personal website thing. It's still in development, so keep watching this space!
+I'll write more about myself in this page when I've gotten used to this whole personal website thing. It's still in development, so keep watching this space.
 
-**Just finished messed around with the backend, lemme know if anything's broken.**
+**Currently redesigning this site, don't be surprised if something looks weird!**
 
 ---
 

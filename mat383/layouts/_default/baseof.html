@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language }}" style="background-color: #121212 !important; color: #ccc;">
+<html lang="{{ .Site.Language }}" style="background-color: #121212; color: #ccc;">
 <head>
 	<title>{{ if not .IsHome }}{{ .Title | title }} - {{ end }}{{ .Site.Title }}</title>
 	<link rel="canonical" href="{{ .Site.BaseURL }}">
@@ -17,6 +17,7 @@
 
 	<link rel="me" href="https://github.com/mat-383"/>
 </head>
+<div class="balls-bg"></div>
 <div class="uncoveranimation"></div>
 <nav class="navbar">
 	<div class="navbarcontent">
@@ -31,6 +32,30 @@
 <body>
 <!--{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}-->
 <main>
+
+<!-- Particle background -->
+<div class="particle-container">
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+</div>
 {{if not (hasPrefix .RelPermalink "/tags/")}}
 	<header>
 		{{if .Param "tags"}}<div class="posttags"><p>Tags: {{partial "taglist.html" .}}</p></div>{{else if not (.Param "hidetitle")}}<br>{{end -}}

@@ -12,10 +12,13 @@ selectbg: rgb(240, 240, 240, 0.2);
 /* TODO minimise the amount of nested CSS rules,
    old browsers don't support those */
 
+/* TODO add support for @media (prefers-reduced-motion) */
+
 html {
 	font-family: sans-serif;
 	line-height: 25px;
-	/*some more things in top of the html itself*/
+	background-color: #000000;
+	color: #ccc;
 }
 main {
 	margin: auto;
@@ -50,9 +53,209 @@ a:hover:not(.postpreviewlink) {
 
 
 
+
+/* Balls background */
+div.balls-bg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index:-100;
+	background-color: #000000;
+	background-image: url("images/circles-bg.svg");
+    background-repeat: repeat;
+	background-size: 100%;
+	filter:blur(4.5vw);
+}
+
+
+
+
+
+
+
+/* Animated particle background */
+.particle-container .particle{
+    position: fixed;
+	width: 10%;
+	aspect-ratio: 1;
+	
+    border-radius: 50%;
+	background-image: url("images/particle1.png");
+	background-repeat:no-repeat;
+	background-size:cover;
+	image-rendering: smooth;
+	z-index:-2;
+}
+
+.particle-container .particle:nth-child(1){
+    top: 12%;
+    left: 42%;
+	scale: 0.5;
+    animation: particle-motion 5s linear infinite;
+	animation-delay: -2s;
+}
+.particle-container .particle:nth-child(2){
+    top: 70%;
+    left: 50%;
+	scale: 0.75;
+    animation: particle-motion 4.5s linear infinite;
+	animation-delay: -3s;
+}
+.particle-container .particle:nth-child(3){
+    top: 17%;
+    left: 6%;
+	scale: 0.9;
+    animation: particle-motion 5.5s linear infinite;
+	animation-delay: -1s;
+}
+.particle-container .particle:nth-child(4){
+    top: 20%;
+    left: 60%;
+	scale: 0.7;
+    animation: particle-motion 6s linear infinite;
+	animation-delay: -5s;
+}
+.particle-container .particle:nth-child(5){
+    top: 67%;
+    left: 10%;
+	scale: 1.1;
+    animation: particle-motion 6.5s linear infinite;
+	animation-delay: -2s;
+}
+.particle-container .particle:nth-child(6){
+    top: 80%;
+    left: 70%;
+	scale: 1.2;
+    animation: particle-motion 7s linear infinite;
+	animation-delay: -9.5s;
+}
+.particle-container .particle:nth-child(7){
+    top: 60%;
+    left: 80%;
+	scale: 1.3;
+    animation: particle-motion 7.5s linear infinite;
+}
+.particle-container .particle:nth-child(8){
+    top: 32%;
+    left: 25%;
+    animation: particle-motion 8s linear infinite;
+}
+.particle-container .particle:nth-child(9){
+    top: 90%;
+    left: 25%;
+    animation: particle-motion 8.5s linear infinite;
+}
+.particle-container .particle:nth-child(10){
+    top: 10%;
+    left: 80%;
+	scale: 0.8;
+    animation: particle-motion 9s linear infinite;
+	animation-delay: -6.5s;
+}
+
+.particle-container .particle:nth-child(11){
+    top: 24%;
+    left: 82%;
+	scale: 1.1;
+    animation: particle-motion 9.5s linear infinite;
+}
+
+.particle-container .particle:nth-child(12){
+    top: 97%;
+    left: 5%;
+	scale: 0.7;
+    animation: particle-motion 10s linear infinite;
+}
+.particle-container .particle:nth-child(13){
+    top: 97%;
+    left: 60%;
+	scale: 0.9;
+    animation: particle-motion 10.5s linear infinite;
+}
+.particle-container .particle:nth-child(14){
+    top: 30%;
+    left: 40%;
+	scale: 1.2;
+    animation: particle-motion 11s linear infinite;
+}
+.particle-container .particle:nth-child(15){
+    top: 47%;
+    left: 55%;
+	scale: 1.4;
+    animation: particle-motion 11.5s linear infinite;
+}
+.particle-container .particle:nth-child(16){
+    top: 70%;
+    left: 80%;
+	scale: 0.5;
+    animation: particle-motion 12s linear infinite;
+}
+.particle-container .particle:nth-child(17){
+    top: 40%;
+    left: 40%;
+	scale: 1.2;
+    animation: particle-motion 12.5s linear infinite;
+}
+.particle-container .particle:nth-child(18){
+    top: 23%;
+    left: 15%;
+    animation: particle-motion 6s linear infinite;
+	animation-delay: -1s;
+}
+.particle-container .particle:nth-child(19){
+    top: 90%;
+    left: 90%;
+	scale: 0.6;
+    animation: particle-motion 7s linear infinite;
+	animation-delay: -4.3s;
+}
+.particle-container .particle:nth-child(20){
+    top: 85%;
+    left: 95%;
+	scale: 0.3;
+    animation: particle-motion 8s linear infinite;
+	animation-delay: -2.5s;
+}
+
+@keyframes particle-motion {
+    0%{
+        transform: translate(0);
+        opacity: 0;
+    }
+    30%{
+        opacity: 0.25;
+    }
+    75%{
+        opacity: 0.25;
+    }
+    100%{
+        transform: translate(50%, -100%);
+        opacity: 0;
+    }
+}
+
+
+/* Make the background scale with
+the screen on lower resolutions */
+@media (max-width: 2000px) {
+	div.balls-bg {
+		background-size: 100em;
+		filter:blur(6em);
+	}
+	.particle-container .particle{
+		width: 10em;
+	}
+}
+
+
+
+
+
+
+
 /* Headerbar stuff */
 .navbar {
-	background-color: #202020;
+	background-color: #00000036;
 	padding-top: 2px;
 	position: relative;
 	z-index: 1000;
@@ -160,6 +363,7 @@ a.activepage {
 		opacity: 0.75;
 	}
 }
+
 
 /* different coloured post tags */
 .tagoutside {
