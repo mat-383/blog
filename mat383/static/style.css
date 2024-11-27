@@ -23,8 +23,12 @@ html {
 main {
 	margin: auto;
 	max-width: 800px;
-	padding-left: 10px;
-	padding-right: 10px;
+}
+.contentbg {
+	background-color: #00000057;
+	box-shadow: 0px 0px 20px 10px #0000006c;
+	padding: 20px;
+	margin: 25px;
 }
 body {
 	margin: 0;
@@ -114,7 +118,7 @@ div.balls-bg {
     translate: 70vw 100vh;
 	scale: 0.5;
     animation: particle-motion2 12.5s linear -3s infinite, particle-fade1 11s linear 3s infinite;
-}
+} /*TODO add more particles for desktop mode*/ 
 .particle-container .particle:nth-child(6){
     top: 80%;
     left: 70%;
@@ -268,6 +272,7 @@ the screen on lower resolutions */
 	padding-top: 2px;
 	position: relative;
 	z-index: 1000;
+	margin-bottom: 80px;
 }
 .navbarcontent {
 	max-width: 900px;
@@ -602,9 +607,15 @@ footer a:hover {
     animation-fill-mode: forwards;
 }
 
-/* Load comments button styling */
+/* Comments button styling */
+#commentSection {
+	text-align: center;
+}
 .loadcommentsbutton {
 	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 	padding: 2px 13px 2px 13px;
 	max-width: 800px;
 	border-radius: 5px;
@@ -678,9 +689,25 @@ footer a:hover {
 	max-width: 800px;
 }
 
+@media (max-width: 850px) {
+	.navbar {
+		margin-bottom: 40px;
+	}
+}
+
 @media (max-width: 550px) {
 	.homeimages1 {
 		max-width: 192px;
+	}
+	.navbar {
+		margin-bottom: 0px;
+		background-color: #00000050;
+	}
+	.contentbg {
+		background-color: #0000001f;
+		box-shadow: 0px 0px 0px 0px #0000006c;
+		padding: 10px;
+		margin: 0px;
 	}
 }
 /* Adjust responsiveness on small screens */
@@ -730,6 +757,9 @@ footer a:hover {
 	.loadcommentsicons img {
 		max-height: 2em;
 	}
+	.contentbg {
+		padding: 5px;
+	}
 }
 @media (max-width: 200px) {
 	.loadcommentsbutton p {
@@ -749,9 +779,8 @@ footer a:hover {
 		align-items: center;
 		row-gap: 4px;
 	}
-	main {
-		padding-left: 5px;
-		padding-right: 5px;
+	.contentbg {
+		padding: 3px;
 	}
 }
 

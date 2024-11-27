@@ -55,7 +55,7 @@
 <body>
 <!--{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}-->
 <main>
-
+<div class="contentbg">
 
 {{if not (hasPrefix .RelPermalink "/tags/")}}
 	<header>
@@ -81,83 +81,84 @@
 	<h2>Guestbook</h2>
 	<p>Once you've had a look around, feel free to leave a comment in my guestbook:</p>
 {{end}}
+<!-- Don't show comments in these pages -->
+{{if or (and 
+	(not (hasPrefix .RelPermalink "/tags/"))
+	(not (eq .RelPermalink "/blog/"))
+	(not (eq .RelPermalink "/projects/"))
+	(not (hasPrefix .RelPermalink "/contact/"))
+	((.Param "commentsenabled"))
+) (eq .RelPermalink "/tags/")}}
+	<div id="commentSection">
+		<button id="loadComments" class="loadcommentsbutton">
+			<p>Load {{if .IsHome}}Guestbook{{else}}Comments{{end}}</p>
+			<div class="loadcommentsicons">
+				{{if .IsHome}}
+					<img class="loadcommentsicon1" src="/icons/guestbook.svg">
+					<img class="loadcommentsicon2" src="/icons/guestbook-green.svg">
+				{{else}}
+					<img class="loadcommentsicon1" src="/icons/comments.svg">
+					<img class="loadcommentsicon2" src="/icons/comments-green.svg">
+				{{end}}
+			</div>
+		</button>
+	</div>
+	<script>
+		// Remark42 settings
+		var remark_config = {
+			host: 'https://remark42.mat383.com',
+			site_id: 'remark',
+			theme: 'dark',
+			show_email_subscription: false,
+			show_rss_subscription: true,
+		};
+		// Function to dynamically load Remark42 scripts
+		function loadRemark42() {
+			if (window.location.protocol !== 'https:') {
+				document.getElementById('commentSection').innerHTML = '<p style="color: #ff5b5b;">Please use HTTPS to view comments.</p>';
+				return;
+			}
+			
+			var components = remark_config.components || ["embed"];
+			var head = document.head || document.body;
+			
+			for (var i = 0; i < components.length; i++) {
+				var script = document.createElement("script");
+				var extension = ".js";
+				
+				// Check if the current environment supports ES modules
+				if ("noModule" in script) {
+					script.type = "module";
+					extension = ".mjs";
+				}
+				
+				script.async = true;
+				script.defer = true;
+				script.src = remark_config.host + "/web/" + components[i] + extension;
+				head.appendChild(script);
+
+				// Remove the "Load Comments" button 200ms after it was pressed (so touchscreen users can see the cool animation)
+				setTimeout(function() { 
+					var loadCommentsButton = document.getElementById('loadComments');
+					loadCommentsButton.parentNode.removeChild(loadCommentsButton);
+				}, 200);
+				
+				
+			}
+		}
+		// Attach click event listener to the button
+		document.getElementById('loadComments').addEventListener('click', function() {
+			loadRemark42();
+		});
+	</script>
+
+	<!-- Placeholder for comment box -->
+	<div id="remark42" class="remark42"></div>
+{{ end }}
 </main>
 {{ block "footer" . }}
 <footer>
-	<!-- Don't show comments in these pages -->
-	{{if or (and 
-		(not (hasPrefix .RelPermalink "/tags/"))
-		(not (eq .RelPermalink "/blog/"))
-		(not (eq .RelPermalink "/projects/"))
-		(not (hasPrefix .RelPermalink "/contact/"))
-		((.Param "commentsenabled"))
-	) (eq .RelPermalink "/tags/")}}
-		<div id="commentSection">
-			<button id="loadComments" class="loadcommentsbutton">
-				<p>Load {{if .IsHome}}Guestbook{{else}}Comments{{end}}</p>
-				<div class="loadcommentsicons">
-					{{if .IsHome}}
-						<img class="loadcommentsicon1" src="/icons/guestbook.svg">
-						<img class="loadcommentsicon2" src="/icons/guestbook-green.svg">
-					{{else}}
-						<img class="loadcommentsicon1" src="/icons/comments.svg">
-						<img class="loadcommentsicon2" src="/icons/comments-green.svg">
-					{{end}}
-				</div>
-			</button>
-		</div>
-		<script>
-			// Remark42 settings
-			var remark_config = {
-				host: 'https://remark42.mat383.com',
-				site_id: 'remark',
-				theme: 'dark',
-				show_email_subscription: false,
-				show_rss_subscription: true,
-			};
-			// Function to dynamically load Remark42 scripts
-			function loadRemark42() {
-				if (window.location.protocol !== 'https:') {
-					document.getElementById('commentSection').innerHTML = '<p style="color: #ff5b5b;">Please use HTTPS to view comments.</p>';
-					return;
-				}
-				
-				var components = remark_config.components || ["embed"];
-				var head = document.head || document.body;
-				
-				for (var i = 0; i < components.length; i++) {
-					var script = document.createElement("script");
-					var extension = ".js";
-					
-					// Check if the current environment supports ES modules
-					if ("noModule" in script) {
-						script.type = "module";
-						extension = ".mjs";
-					}
-					
-					script.async = true;
-					script.defer = true;
-					script.src = remark_config.host + "/web/" + components[i] + extension;
-					head.appendChild(script);
-
-					// Remove the "Load Comments" button 200ms after it was pressed (so touchscreen users can see the cool animation)
-					setTimeout(function() { 
-						var loadCommentsButton = document.getElementById('loadComments');
-						loadCommentsButton.parentNode.removeChild(loadCommentsButton);
-					}, 200);
-					
-					
-				}
-			}
-			// Attach click event listener to the button
-			document.getElementById('loadComments').addEventListener('click', function() {
-				loadRemark42();
-			});
-		</script>
-
-		<!-- Placeholder for comment box -->
-		<div id="remark42" class="remark42"></div>
-	{{ end }}
+	
 	<br>
 	<br>
 
@@ -174,6 +175,7 @@
 	</div>
 </footer>
 {{ end }}
+</div>
 </body>
 </html>
 
