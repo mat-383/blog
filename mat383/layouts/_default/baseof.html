@@ -29,10 +29,6 @@
 		</div>
 	</div>
 </nav>
-<body>
-<!--{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}-->
-<main>
-
 <!-- Particle background -->
 <div class="particle-container">
 	<div class="particle"></div>
@@ -56,6 +52,11 @@
 	<div class="particle"></div>
 	<div class="particle"></div>
 </div>
+<body>
+<!--{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}-->
+<main>
+
+
 {{if not (hasPrefix .RelPermalink "/tags/")}}
 	<header>
 		{{if .Param "tags"}}<div class="posttags"><p>Tags: {{partial "taglist.html" .}}</p></div>{{else if not (.Param "hidetitle")}}<br>{{end -}}

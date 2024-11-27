@@ -78,163 +78,169 @@ div.balls-bg {
     position: fixed;
 	width: 10%;
 	aspect-ratio: 1;
-	translate: -30% 0;
 	
     border-radius: 50%;
-	background-image: url("images/particle1.png");
+	background-image: url("images/particle2.png");
 	background-repeat:no-repeat;
 	background-size:cover;
-	image-rendering: smooth;
+	image-rendering:auto;
 	z-index:-2;
 
 	opacity: 0.2;
 }
 
+
 .particle-container .particle:nth-child(1){
-    top: 12%;
-    left: 42%;
+	translate: 20vw 100vh;
 	scale: 0.5;
-    animation: particle-motion 5s linear infinite;
-	animation-delay: -2s;
+    animation: particle-motion2 10s linear -5s infinite, particle-fade1 8s linear -4s infinite;
 }
 .particle-container .particle:nth-child(2){
-    top: 70%;
-    left: 50%;
-	scale: 0.75;
-    animation: particle-motion 4.5s linear infinite;
-	animation-delay: -3s;
+	translate: 15vw 100vh;
+	scale: 1;
+    animation: particle-motion1 7.5s linear -1s infinite, particle-fade1 10.2s linear -1s infinite;
 }
 .particle-container .particle:nth-child(3){
-    top: 17%;
-    left: 6%;
-	scale: 0.9;
-    animation: particle-motion 5.5s linear infinite;
-	animation-delay: -1s;
+	translate: -10vw 100vh;
+	scale: 1;
+    animation: particle-motion1 5.5s linear -1s infinite, particle-fade1 12s linear -7s infinite;
 }
 .particle-container .particle:nth-child(4){
-    top: 20%;
-    left: 60%;
-	scale: 0.7;
-    animation: particle-motion 6s linear infinite;
-	animation-delay: -5s;
+	translate: 60vw 100vh;
+	scale: 1;
+    animation: particle-motion1 8.5s linear 1s infinite, particle-fade1 9s linear 0s infinite;
 }
 .particle-container .particle:nth-child(5){
-    top: 67%;
-    left: 10%;
-	scale: 1.1;
-    animation: particle-motion 6.5s linear infinite;
-	animation-delay: -2s;
+    translate: 70vw 100vh;
+	scale: 0.5;
+    animation: particle-motion2 12.5s linear -3s infinite, particle-fade1 11s linear 3s infinite;
 }
 .particle-container .particle:nth-child(6){
     top: 80%;
     left: 70%;
 	scale: 1.2;
-    animation: particle-motion 7s linear infinite;
+    animation: particle-motion1 7s linear infinite;
 	animation-delay: -9.5s;
+	display:none;
 }
 .particle-container .particle:nth-child(7){
     top: 60%;
     left: 80%;
 	scale: 1.3;
-    animation: particle-motion 7.5s linear infinite;
+    animation: particle-motion1 7.5s linear infinite;
+	display:none;
 }
 .particle-container .particle:nth-child(8){
     top: 32%;
     left: 25%;
-    animation: particle-motion 8s linear infinite;
+    animation: particle-motion1 8s linear infinite;
+	display:none;
 }
 .particle-container .particle:nth-child(9){
     top: 90%;
     left: 25%;
-    animation: particle-motion 8.5s linear infinite;
+    animation: particle-motion1 8.5s linear infinite;
+	display:none;
 }
 .particle-container .particle:nth-child(10){
     top: 10%;
     left: 80%;
 	scale: 0.8;
-    animation: particle-motion 9s linear infinite;
+    animation: particle-motion1 9s linear infinite;
 	animation-delay: -6.5s;
+	display:none;
 }
 
 .particle-container .particle:nth-child(11){
     top: 24%;
     left: 82%;
 	scale: 1.1;
-    animation: particle-motion 9.5s linear infinite;
+    animation: particle-motion1 9.5s linear infinite;
+	display:none;
 }
 
 .particle-container .particle:nth-child(12){
     top: 97%;
     left: 5%;
 	scale: 0.7;
-    animation: particle-motion 10s linear infinite;
+    animation: particle-motion1 10s linear infinite;
+	display:none;
 }
 .particle-container .particle:nth-child(13){
     top: 97%;
     left: 60%;
 	scale: 0.9;
-    animation: particle-motion 10.5s linear infinite;
+    animation: particle-motion1 10.5s linear infinite;
+	display:none;
 }
 .particle-container .particle:nth-child(14){
     top: 30%;
     left: 40%;
 	scale: 1.2;
-    animation: particle-motion 11s linear infinite;
+    animation: particle-motion1 11s linear infinite;
+	display:none;
 }
 .particle-container .particle:nth-child(15){
     top: 47%;
     left: 55%;
 	scale: 1.4;
-    animation: particle-motion 11.5s linear infinite;
+    animation: particle-motion1 11.5s linear infinite;
+	display:none;
 }
 .particle-container .particle:nth-child(16){
     top: 70%;
     left: 80%;
 	scale: 0.5;
-    animation: particle-motion 12s linear infinite;
+    animation: particle-motion1 12s linear infinite;
+	display:none;
 }
 .particle-container .particle:nth-child(17){
     top: 40%;
     left: 40%;
 	scale: 1.2;
-    animation: particle-motion 12.5s linear infinite;
+    animation: particle-motion1 12.5s linear infinite;
+	display:none;
 }
 .particle-container .particle:nth-child(18){
     top: 23%;
     left: 15%;
-    animation: particle-motion 6s linear infinite;
+    animation: particle-motion1 6s linear infinite;
 	animation-delay: -1s;
+	display:none;
 }
 .particle-container .particle:nth-child(19){
     top: 90%;
     left: 90%;
 	scale: 0.6;
-    animation: particle-motion 7s linear infinite;
+    animation: particle-motion1 7s linear infinite;
 	animation-delay: -4.3s;
+	display:none;
 }
 .particle-container .particle:nth-child(20){
     top: 85%;
     left: 95%;
 	scale: 0.3;
-    animation: particle-motion 8s linear infinite;
+    animation: particle-motion1 8s linear infinite;
 	animation-delay: -2.5s;
+	display:none;
 }
 
-@keyframes particle-motion {
-    0%{
-        transform: translate(0);
-        opacity: 0;
-    }
-    30%{
-        opacity: 0.25;
-    }
-    75%{
-        opacity: 0.25;
-    }
-    100%{
-        transform: translate(50%, -100%);
-        opacity: 0;
-    }
+@keyframes particle-fade1 {
+    0%{opacity:0.2;}
+	60%{opacity:0.2;}
+	65%{opacity:0;}
+    95%{opacity:0;}
+    100%{opacity:0.2;}
+}
+
+@keyframes particle-motion1 {
+    0%{transform: translate(0);}
+    100%{transform: translate(20vw, -125vh);}
+}
+
+@keyframes particle-motion2 {
+    0%{transform: translate(0);}
+    100%{transform: translate(80vw, -250vh);}
 }
 
 
