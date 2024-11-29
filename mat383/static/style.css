@@ -29,7 +29,17 @@ main {
 	box-shadow: 0px 0px 20px 10px #0000006c;
 	padding: 20px;
 	margin: 25px;
+	animation-name: floatin;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+	animation-fill-mode: both;
 }
+
+@keyframes floatin {
+    0%{opacity: 0; transform: translateY(-30px)}
+    100%{opacity: 1;}
+}
+
 body {
 	margin: 0;
 }
@@ -259,7 +269,6 @@ the screen on lower resolutions */
 		width: 10em;
 	}
 }
-
 
 
 
@@ -785,37 +794,84 @@ footer a:hover {
 	}
 }
 
-
-/*.uncoveranimation {*/
+/* now-unused uncover animation
+.uncoveranimation {
 	/*not allowing the div to cover the screen unless it will pinky promise to get out of the way*/
 	/*@supports (animation-name: uncoveranimation) {
 		width: 100vw;
 		height: 100vh;
+		background-color: #000000;
 	}
-
+	
+	pointer-events: none;
 	position: fixed;
-	z-index: 383;
+	z-index: -383;
 	bottom: 0;
-	background-color: #121212;
-	transform-origin: bottom;
+	transform-origin: top;
 	animation-name: uncoveranimation;
-	animation-duration: 0.65s;
+	animation-duration: 2.5s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
-	border-top: 5px solid rgba(0, 180, 0);
-	border-top-width: 30px;
+
+	width: 100%;
+	height: 100%;
+	position: fixed;
+    background-repeat: repeat;
+	background-size: 100%;
 }
 
 
 @keyframes uncoveranimation {
-	0% { transform: scaleY(1); }
-	100% { transform: scaleY(0); }
+	0% { transform: scaleY(0); }
+	100% { transform: scaleY(1); }
 }
 
 @keyframes uncoveranimation2 {
 	0% { width: 100vw; height: 100vh; }
 	100% { width: 100vw; height: 0vh; }
+}
+
+@keyframes uncoveranimation3 {
+	0% { clip-path: inset(0vh 0 0 0); }
+	100% { clip-path: inset(100vh 0 0 0); }
 }*/
+
+
+
+/* Tried to make a wipe effect that only worked in Chrome, not Firefox.
+FF couldn't animate CSS variables at the time. Would've kept this, but
+this implementation scales with the length of pages which is a big no no.
+@property --wipe-position {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 100%;
+}
+
+.uncoveranimation {
+	width:100%;
+	height:100%;
+	padding:100px;
+	margin:-100px;
+    --wipe-position: 100%;
+    --gradient-length: 20%;
+    -webkit-mask-image: linear-gradient(
+      to bottom, black var(--wipe-position), transparent calc(var(--wipe-position) + var(--gradient-length)), transparent
+    );
+
+    animation: wipeAnimation 2s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@keyframes wipeAnimation {
+    0%, 10% { 
+		--wipe-position: calc(-1 * var(--gradient-length)); 
+    }
+    100% { 
+        --wipe-position: 100%; 
+    }
+}*/
+
+
+
 
 @keyframes shake {
 	0% { transform: rotate(0deg) scale(1); }
