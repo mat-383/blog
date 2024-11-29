@@ -97,27 +97,27 @@ div.balls-bg {
 .particle-container .particle:nth-child(1){
 	translate: 20vw 100vh;
 	scale: 0.5;
-    animation: particle-motion2 10s linear -5s infinite, particle-fade1 8s linear -4s infinite;
+    animation: particle-motion2 14s linear -5s infinite, particle-fade1 8s linear -4s infinite;
 }
 .particle-container .particle:nth-child(2){
 	translate: 15vw 100vh;
 	scale: 1;
-    animation: particle-motion1 7.5s linear -1s infinite, particle-fade1 10.2s linear -1s infinite;
+    animation: particle-motion1 11.5s linear -1s infinite, particle-fade1 10.2s linear -1s infinite;
 }
 .particle-container .particle:nth-child(3){
 	translate: -10vw 100vh;
 	scale: 1;
-    animation: particle-motion1 5.5s linear -1s infinite, particle-fade1 12s linear -7s infinite;
+    animation: particle-motion1 9.5s linear -1s infinite, particle-fade1 12s linear -7s infinite;
 }
 .particle-container .particle:nth-child(4){
 	translate: 60vw 100vh;
 	scale: 1;
-    animation: particle-motion1 8.5s linear 1s infinite, particle-fade1 9s linear 0s infinite;
+    animation: particle-motion1 12.5s linear 1s infinite, particle-fade1 9s linear 0s infinite;
 }
 .particle-container .particle:nth-child(5){
     translate: 70vw 100vh;
 	scale: 0.5;
-    animation: particle-motion2 12.5s linear -3s infinite, particle-fade1 11s linear 3s infinite;
+    animation: particle-motion2 16.5s linear -3s infinite, particle-fade1 11s linear 3s infinite;
 } /*TODO add more particles for desktop mode*/ 
 .particle-container .particle:nth-child(6){
     top: 80%;
@@ -238,13 +238,13 @@ div.balls-bg {
 }
 
 @keyframes particle-motion1 {
-    0%{transform: translate(0);}
-    100%{transform: translate(20vw, -125vh);}
+    0%{transform: translate(0,50vh);}
+    100%{transform: translate(20vw, -175vh);}
 }
 
 @keyframes particle-motion2 {
-    0%{transform: translate(0);}
-    100%{transform: translate(80vw, -250vh);}
+    0%{transform: translate(0, 100vh);}
+    100%{transform: translate(80vw, -300vh);}
 }
 
 
@@ -704,8 +704,9 @@ footer a:hover {
 		background-color: #00000050;
 	}
 	.contentbg {
-		background-color: #0000001f;
-		box-shadow: 0px 0px 0px 0px #0000006c;
+		background-color: #0000003a;
+		box-shadow: 0px 0px 20px 20px #0000003a;
+		clip-path: inset(0 0 -100px 0);
 		padding: 10px;
 		margin: 0px;
 	}
