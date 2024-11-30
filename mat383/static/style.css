@@ -127,28 +127,25 @@ div.balls-bg {
 .particle-container .particle:nth-child(5){
     translate: 70vw 100vh;
 	scale: 0.5;
-    animation: particle-motion2 16.5s linear -3s infinite, particle-fade1 11s linear 3s infinite;
+    animation: particle-motion2 16.5s linear -3s infinite, particle-fade1 11s linear -3s infinite;
 } /*TODO add more particles for desktop mode*/ 
 .particle-container .particle:nth-child(6){
-    top: 80%;
-    left: 70%;
-	scale: 1.2;
-    animation: particle-motion1 7s linear infinite;
-	animation-delay: -9.5s;
-	display:none;
+    translate: 20vw 100vh;
+	scale: 3;
+	filter: brightness(1.5);
+    animation: particle-motion3 20s linear -3s infinite, particle-fade2 12s linear -4s infinite;
 }
 .particle-container .particle:nth-child(7){
-    top: 60%;
-    left: 80%;
-	scale: 1.3;
-    animation: particle-motion1 7.5s linear infinite;
-	display:none;
+    translate: -20vw 100vh;
+	scale: 3;
+	filter: brightness(1.5);
+    animation: particle-motion3 15s linear -6s infinite, particle-fade2 17s linear 0s infinite;
 }
 .particle-container .particle:nth-child(8){
-    top: 32%;
-    left: 25%;
-    animation: particle-motion1 8s linear infinite;
-	display:none;
+    translate: 60vw 100vh;
+	scale: 3;
+	filter: brightness(1.5);
+    animation: particle-motion3 14s linear -8s infinite, particle-fade2 19s linear -2s infinite;
 }
 .particle-container .particle:nth-child(9){
     top: 90%;
@@ -247,6 +244,14 @@ div.balls-bg {
     100%{opacity:0.2;}
 }
 
+@keyframes particle-fade2 {
+    0%{opacity:0.125;}
+	60%{opacity:0.125;}
+	70%{opacity:0;}
+    90%{opacity:0;}
+    100%{opacity:0.125;}
+}
+
 @keyframes particle-motion1 {
     0%{transform: translate(0,50vh);}
     100%{transform: translate(20vw, -175vh);}
@@ -255,6 +260,11 @@ div.balls-bg {
 @keyframes particle-motion2 {
     0%{transform: translate(0, 100vh);}
     100%{transform: translate(80vw, -300vh);}
+}
+
+@keyframes particle-motion3 {
+    0%{transform: translate(0,25vh);}
+    100%{transform: translate(20vw, -75vh);}
 }
 
 
@@ -726,6 +736,17 @@ footer a:hover {
 	}
 	div.balls-bg {
 		opacity: 0.7;
+	}
+	/* stop rendering these large balls on smaller screens
+	because it's not worth the performance hit */
+	.particle-container .particle:nth-child(6){
+		display: none;
+	}
+	.particle-container .particle:nth-child(7){
+		display: none;
+	}
+	.particle-container .particle:nth-child(8){
+		display: none;
 	}
 }
 /* Adjust responsiveness on small screens */
