@@ -509,6 +509,10 @@ footer a:hover {
 .footerbadges a {
 	display: inline-block;
 }
+.badgesize1 {
+	width: 88px;
+	height: 31px;
+}
 
 /* Post previews */
 .postpreview {
@@ -586,6 +590,7 @@ footer a:hover {
 .homeimages {
 	position: relative;
 	max-width: 220px;
+	max-height: 220px;
 }
 .homeimages1 {
 	display: block;

@@ -94,11 +94,11 @@
 			<p>Load {{if .IsHome}}Guestbook{{else}}Comments{{end}}</p>
 			<div class="loadcommentsicons">
 				{{if .IsHome}}
-					<img class="loadcommentsicon1" src="/icons/guestbook.svg">
-					<img class="loadcommentsicon2" src="/icons/guestbook-green.svg">
+					<img class="loadcommentsicon1" src="/icons/guestbook.svg" alt="Guestbook icon" style="height:36px; width: 40px;">
+					<img class="loadcommentsicon2" src="/icons/guestbook-green.svg" alt="Guestbook icon" style="height:36px; width: 40px;">
 				{{else}}
-					<img class="loadcommentsicon1" src="/icons/comments.svg">
-					<img class="loadcommentsicon2" src="/icons/comments-green.svg">
+					<img class="loadcommentsicon1" src="/icons/comments.svg" alt="Comments icon" style="height:36px; width: 40px;">
+					<img class="loadcommentsicon2" src="/icons/comments-green.svg" alt="Comments icon" style="height:36px; width: 40px;">
 				{{end}}
 			</div>
 		</button>
@@ -163,15 +163,15 @@
 	<br>
 
 	<p class="footerhover">Made with <a href="https://gohugo.io/">Hugo</a> | <a href="https://github.com/mat-383/blog">Source code</a></p>
-	{{- if .Param "showrss" }}<a href="/index.xml"><img src="/rss.svg" class="sizeanimation" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for new blog posts!"></a>{{ end }}
+	{{- if .Param "showrss" }}<a href="/index.xml"><img src="/rss.svg" class="sizeanimation" style="height:1.5em; width: 1.5em;" alt="RSS Feed" title="Subscribe via RSS for new blog posts!"></a>{{ end }}
 	<br>
 
 	<div class="footerbadges">
-		<a href="https://mat383.com/fanclub" class="sizeanimation"><img src="/images/fanclub.gif" alt="Mat383 Fanclub!!"></a>
-		<a href="https://512kb.club/" class="sizeanimation"><img src="/images/green-team.gif" alt="The 512KB Club"></a>
-		<a href="http://wiby.me/" class="sizeanimation"><img src="/images/wiby.gif" alt="Wiby, the classic search engine"></a>
+		<a href="https://mat383.com/fanclub" class="sizeanimation"><img src="/images/fanclub.gif" alt="Mat383 Fanclub!!" class="badgesize1"></a>
+		<a href="https://512kb.club/" class="sizeanimation"><img src="/images/green-team.gif" alt="The 512KB Club" class="badgesize1"></a>
+		<a href="http://wiby.me/" class="sizeanimation"><img src="/images/wiby.gif" alt="Wiby, the classic search engine" class="badgesize1"></a>
 		<br>
-		<a href="http://250kb.club/" class="sizeanimation"><img src="/images/250kb-club.png" alt="The 250KB Club", style="max-width:160px;"></a>
+		<a href="http://250kb.club/" class="sizeanimation"><img src="/images/250kb-club.png" alt="The 250KB Club", style="width:160px; height: 24px;"></a>
 	</div>
 </footer>
 {{ end }}
