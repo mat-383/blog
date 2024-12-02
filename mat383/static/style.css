@@ -1,84 +1,78 @@
 /* These are some common colors,
 replace all to edit them because some old browsers don't support CSS variables
-bg: #121212;
-textwhite: #ccc;
-navbarbg: #202020;
-green: rgb(0, 180, 0);
-greenbg: rgba(0, 180, 0, 0.2);
-select: rgb(240, 240, 240);
-selectbg: rgb(240, 240, 240, 0.2);
+bg:#121212;
+textwhite:#ccc;
+navbarbg:#202020;
+green:rgb(0, 180, 0);
+greenbg:rgba(0, 180, 0, 0.2);
+select:rgb(240, 240, 240);
+selectbg:rgb(240, 240, 240, 0.2);
 */
 
-/* TODO minimise the amount of nested CSS rules,
-   old browsers don't support those */
+/* TODO:
+- add support for @media (prefers-reduced-motion)
+- double check graceful degradation
+*/
 
-/* TODO add support for @media (prefers-reduced-motion) */
-
-html {
-	font-family: sans-serif;
-	line-height: 25px;
-	background-color: #000000;
-	color: #ccc;
+html{
+	font-family:sans-serif;
+	line-height:25px;
+	background-color:#000000;
+	color:#ccc;
 }
-main {
-	margin: auto;
-	max-width: 800px;
+main{
+	margin:auto;
+	max-width:800px;
 }
-.contentbg {
-	background-color: #00000057;
-	box-shadow: 0px 0px 20px 10px #0000006c;
-	padding: 20px;
-	margin: 25px;
-	animation-name: floatin;
-	animation-duration: 1s;
-	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-	animation-fill-mode: both;
+.contentbg{
+	background-color:#00000057;
+	box-shadow:0px 0px 20px 10px #0000006c;
+	padding:20px;
+	margin:25px;
 }
-
-@keyframes floatin {
-    0%{opacity: 0; transform: translateY(-30px)}
-    100%{opacity: 1;}
+.float-in{
+	animation-name:float-in;
+	animation-duration:1s;
+	animation-timing-function:cubic-bezier(0.16, 1, 0.3, 1);
+	animation-fill-mode:both;
 }
-
-body {
-	margin: 0;
+body{
+	margin:0;
 }
-nav {
-	
+.navbarcontent a{
+	text-decoration:none;
+	color:#ccc;
+	border-style:solid;
+	border-width:0 0 2px 0;
+	border-color:transparent;
 }
-.navbarcontent a { /* Moved this navbar styling up here to maybe prevent the links from flickering on page load */
-	text-decoration: none;
-	color: #ccc;
-	border-style: solid;
-	border-width: 0 0 2px 0;
-	border-color: transparent;
+a{
+	color:rgb(0, 180, 0);
+	text-underline-offset:3px;
+	text-decoration-line:none;
 }
-a {
-	color: rgb(0, 180, 0);
-	text-underline-offset: 3px;
-	text-decoration-line: none;
+h1, h2, h3, h4, h5, h6{
+	line-height:normal;
+	color:white;
 }
-h1, h2, h3, h4, h5, h6 {
-	line-height: normal;
-}
-a:hover:not(.postpreviewlink) {	
-	text-decoration-line: underline;
+a:hover:not(.postpreviewlink){	
+	text-decoration-line:underline;
 }
 
 
 
 
-/* Balls background */
-div.balls-bg {
-	width: 100%;
-	height: 100%;
-	position: fixed;
+/*--- Static particle background ---*/
+div.balls-bg{
+	width:100%;
+	height:100%;
+	position:fixed;
 	z-index:-100;
-	background-color: #000000;
-	background-image: url("images/circles-bg.svg");
-    background-repeat: repeat;
-	background-size: 100%;
-	filter:blur(4.5vw);
+	background-color:#000000;
+	background-image:url("images/circles-bg.svg");
+    background-repeat:repeat;
+	background-size:100%;
+	filter:blur(4.5vw) brightness(125%);
 }
 
 
@@ -87,196 +81,75 @@ div.balls-bg {
 
 
 
-/* Animated particle background */
+/*--- Animated particle background ---*/
 .particle-container .particle{
-    position: fixed;
-	width: 10%;
-	aspect-ratio: 1;
-	
-    border-radius: 50%;
-	background-image: url("images/particle2.png");
+    position:fixed;
+	width:10%;
+	aspect-ratio:1;
+    border-radius:50%;
+	background-image:url("images/particle2.png");
 	background-repeat:no-repeat;
 	background-size:cover;
 	image-rendering:auto;
 	z-index:-2;
-
-	opacity: 0.2;
+	opacity:0.2;
 }
-
-
 .particle-container .particle:nth-child(1){
-	translate: 20vw 100vh;
-	scale: 0.5;
-    animation: particle-motion2 14s linear -5s infinite, particle-fade1 8s linear -4s infinite;
+	translate:20vw 100vh;
+	scale:0.5;
+    animation:particle-motion2 14s linear -5s infinite, particle-fade1 8s linear -4s infinite;
 }
 .particle-container .particle:nth-child(2){
-	translate: 15vw 100vh;
-	scale: 1;
-    animation: particle-motion1 11.5s linear -1s infinite, particle-fade1 10.2s linear -1s infinite;
+	translate:15vw 100vh;
+	scale:1;
+    animation:particle-motion1 11.5s linear -1s infinite, particle-fade1 10.2s linear -1s infinite;
 }
 .particle-container .particle:nth-child(3){
-	translate: -10vw 100vh;
-	scale: 1;
-    animation: particle-motion1 9.5s linear -1s infinite, particle-fade1 12s linear -7s infinite;
+	translate:-10vw 100vh;
+	scale:1;
+    animation:particle-motion1 9.5s linear -1s infinite, particle-fade1 12s linear -7s infinite;
 }
 .particle-container .particle:nth-child(4){
-	translate: 60vw 100vh;
-	scale: 1;
-    animation: particle-motion1 12.5s linear 1s infinite, particle-fade1 9s linear 0s infinite;
+	translate:60vw 100vh;
+	scale:1;
+    animation:particle-motion1 12.5s linear 1s infinite, particle-fade1 9s linear 0s infinite;
 }
 .particle-container .particle:nth-child(5){
-    translate: 70vw 100vh;
-	scale: 0.5;
-    animation: particle-motion2 16.5s linear -3s infinite, particle-fade1 11s linear -3s infinite;
-} /*TODO add more particles for desktop mode*/ 
+    translate:70vw 100vh;
+	scale:0.5;
+    animation:particle-motion2 16.5s linear -3s infinite, particle-fade1 11s linear -3s infinite;
+}
 .particle-container .particle:nth-child(6){
-    translate: 20vw 100vh;
-	scale: 3;
-	filter: brightness(1.5);
-    animation: particle-motion3 20s linear -3s infinite, particle-fade2 12s linear -4s infinite;
+    translate:20vw 100vh;
+	scale:3;
+	filter:brightness(1.5);
+    animation:particle-motion3 20s linear -3s infinite, particle-fade2 12s linear -4s infinite;
 }
 .particle-container .particle:nth-child(7){
-    translate: -20vw 100vh;
-	scale: 3;
-	filter: brightness(1.5);
-    animation: particle-motion3 15s linear -6s infinite, particle-fade2 17s linear 0s infinite;
+    translate:-20vw 100vh;
+	scale:3;
+	filter:brightness(1.5);
+    animation:particle-motion3 15s linear -6s infinite, particle-fade2 17s linear 0s infinite;
 }
 .particle-container .particle:nth-child(8){
-    translate: 60vw 100vh;
-	scale: 3;
-	filter: brightness(1.5);
-    animation: particle-motion3 14s linear -8s infinite, particle-fade2 19s linear -2s infinite;
+    translate:60vw 100vh;
+	scale:3;
+	filter:brightness(1.5);
+    animation:particle-motion3 14s linear -8s infinite, particle-fade2 19s linear -2s infinite;
 }
-.particle-container .particle:nth-child(9){
-    top: 90%;
-    left: 25%;
-    animation: particle-motion1 8.5s linear infinite;
-	display:none;
-}
-.particle-container .particle:nth-child(10){
-    top: 10%;
-    left: 80%;
-	scale: 0.8;
-    animation: particle-motion1 9s linear infinite;
-	animation-delay: -6.5s;
-	display:none;
-}
-
-.particle-container .particle:nth-child(11){
-    top: 24%;
-    left: 82%;
-	scale: 1.1;
-    animation: particle-motion1 9.5s linear infinite;
-	display:none;
-}
-
-.particle-container .particle:nth-child(12){
-    top: 97%;
-    left: 5%;
-	scale: 0.7;
-    animation: particle-motion1 10s linear infinite;
-	display:none;
-}
-.particle-container .particle:nth-child(13){
-    top: 97%;
-    left: 60%;
-	scale: 0.9;
-    animation: particle-motion1 10.5s linear infinite;
-	display:none;
-}
-.particle-container .particle:nth-child(14){
-    top: 30%;
-    left: 40%;
-	scale: 1.2;
-    animation: particle-motion1 11s linear infinite;
-	display:none;
-}
-.particle-container .particle:nth-child(15){
-    top: 47%;
-    left: 55%;
-	scale: 1.4;
-    animation: particle-motion1 11.5s linear infinite;
-	display:none;
-}
-.particle-container .particle:nth-child(16){
-    top: 70%;
-    left: 80%;
-	scale: 0.5;
-    animation: particle-motion1 12s linear infinite;
-	display:none;
-}
-.particle-container .particle:nth-child(17){
-    top: 40%;
-    left: 40%;
-	scale: 1.2;
-    animation: particle-motion1 12.5s linear infinite;
-	display:none;
-}
-.particle-container .particle:nth-child(18){
-    top: 23%;
-    left: 15%;
-    animation: particle-motion1 6s linear infinite;
-	animation-delay: -1s;
-	display:none;
-}
-.particle-container .particle:nth-child(19){
-    top: 90%;
-    left: 90%;
-	scale: 0.6;
-    animation: particle-motion1 7s linear infinite;
-	animation-delay: -4.3s;
-	display:none;
-}
-.particle-container .particle:nth-child(20){
-    top: 85%;
-    left: 95%;
-	scale: 0.3;
-    animation: particle-motion1 8s linear infinite;
-	animation-delay: -2.5s;
-	display:none;
-}
-
-@keyframes particle-fade1 {
-    0%{opacity:0.2;}
-	60%{opacity:0.2;}
-	65%{opacity:0;}
-    95%{opacity:0;}
-    100%{opacity:0.2;}
-}
-
-@keyframes particle-fade2 {
-    0%{opacity:0.125;}
-	60%{opacity:0.125;}
-	70%{opacity:0;}
-    90%{opacity:0;}
-    100%{opacity:0.125;}
-}
-
-@keyframes particle-motion1 {
-    0%{transform: translate(0,50vh);}
-    100%{transform: translate(20vw, -175vh);}
-}
-
-@keyframes particle-motion2 {
-    0%{transform: translate(0, 100vh);}
-    100%{transform: translate(80vw, -300vh);}
-}
-
-@keyframes particle-motion3 {
-    0%{transform: translate(0,25vh);}
-    100%{transform: translate(20vw, -75vh);}
-}
-
-
-/* Make the background scale with
-the screen on lower resolutions */
-@media (max-width: 2000px) {
-	div.balls-bg {
-		background-size: 100em;
-		filter:blur(6em);
+@keyframes particle-fade1{0%{opacity:0.2;}60%{opacity:0.2;}65%{opacity:0;}95%{opacity:0;}100%{opacity:0.2;}}
+@keyframes particle-fade2{0%{opacity:0.125;}60%{opacity:0.125;}70%{opacity:0;}90%{opacity:0;}100%{opacity:0.125;}}
+@keyframes particle-motion1{from{transform:translate(0,50vh);}to{transform:translate(20vw, -175vh);}}
+@keyframes particle-motion2{from{transform:translate(0, 100vh);}to{transform:translate(80vw, -300vh);}}
+@keyframes particle-motion3{from{transform:translate(0,25vh);}to{transform:translate(20vw, -75vh);}}
+/* Make the background scale with the screen on lower resolutions */
+@media (max-width:2000px){
+	div.balls-bg{
+		background-size:100em;
+		filter:blur(6em) brightness(125%);
 	}
 	.particle-container .particle{
-		width: 10em;
+		width:10em;
 	}
 }
 
@@ -285,66 +158,71 @@ the screen on lower resolutions */
 
 
 
-/* Headerbar stuff */
-.navbar {
-	background-color: #00000036;
-	padding-top: 2px;
-	position: relative;
-	z-index: 1000;
-	margin-bottom: 80px;
+
+
+
+
+
+/*--- Headerbar stuff ---*/
+.navbar{
+	background-color:#00000036;
+	padding-top:2px;
+	position:relative;
+	z-index:1000;
+	margin-bottom:80px;
 }
-.navbarcontent {
-	max-width: 900px;
-	margin: auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px;
+.navbarcontent{
+	max-width:900px;
+	margin:auto;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:10px;
 }
 .navbarcontent a:hover{
-	color: rgb(240, 240, 240) !important;
-	border-color: #ccc !important;
-	text-decoration-line: none;
+	color:rgb(240, 240, 240) !important;
+	border-color:#ccc !important;
+	text-decoration-line:none;
 }
-.otherlinks {
-	display: flex;
-	gap: 20px;
-	order: 2;
+.otherlinks{
+	display:flex;
+	gap:20px;
+	order:2;
 }
-a.activepage {
-	color: rgb(0, 180, 0) !important;
-	border-color: rgb(0, 180, 0) !important;
-	border-width: 0 0 2px 0;
-	text-decoration-line: none;
+a.activepage{
+	color:rgb(0, 180, 0) !important;
+	border-color:rgb(0, 180, 0) !important;
+	border-width:0 0 2px 0;
+	text-decoration-line:none;
 }
-.otherlinks a {
-	border-color: rgb(240, 240, 240);
-	border-width: 0 0 2px 0;
-	background-image: none;
-	text-decoration-line: none;
+.otherlinks a{
+	border-color:rgb(240, 240, 240);
+	border-width:0 0 2px 0;
+	background-image:none;
+	text-decoration-line:none;
 }
-.otherlinks a:not(.activepage):not(:hover) {
-	border-color: transparent !important;
-	border-width: 0 0 2px 0;
-	background-image: none;
-	text-decoration-line: none;
-	transition: 0.4s;
+.otherlinks a:not(.activepage):not(:hover){
+	border-color:transparent !important;
+	border-width:0 0 2px 0;
+	background-image:none;
+	text-decoration-line:none;
+	transition:0.4s;
 }
-.activepage:not(:hover) {
-	border-color: rgb(0, 180, 0);
-	@supports (background-image: linear-gradient(to top, rgba(0, 180, 0, 0.2), transparent)) { 
-		background-color: transparent;
-		background-image: linear-gradient(to top, rgba(0, 180, 0, 0.2), transparent);
+.activepage:not(:hover){
+	border-color:rgb(0, 180, 0);
+	@supports (background-image:linear-gradient(to top, rgba(0, 180, 0, 0.2), transparent)){ 
+		background-color:transparent;
+		background-image:linear-gradient(to top, rgba(0, 180, 0, 0.2), transparent);
 	}
-	transition: 0.4s;
+	transition:0.4s;
 }
-.homelink {
-	order: 1;
-	font-size: 150%;
-	font-weight: bold;
-	color: rgb(0, 180, 0);
-	transition: color 0.4s;
-	border: none !important;
+.homelink{
+	order:1;
+	font-size:150%;
+	font-weight:bold;
+	color:rgb(0, 180, 0);
+	transition:color 0.4s;
+	border:none !important;
 }
 
 
@@ -354,605 +232,630 @@ a.activepage {
 
 
 
-.tagcloud {
-	margin-top: 16px;
-	font-size: 14px;
+
+
+
+
+
+
+/*--- Tags ---*/
+.tagcloud{
+	margin-top:16px;
+	font-size:14px;
 }
-.tagcloud ul {
-	list-style: none;
-	padding: 0px;
-	display: inline;
+.tagcloud ul{
+	list-style:none;
+	padding:0px;
+	display:inline;
 }
-.tagcloud li {
-	display: inline-block;
-	margin: 0;
+.tagcloud li{
+	display:inline-block;
+	margin:0;
 }
-.tag, .tagcloud li {
+.tag, .tagcloud li{
 	background:rgba(0, 180, 0, 0.2);
-	border-radius: 3px;
-	padding: 1px 6px 1px 6px;
+	border-radius:3px;
+	padding:1px 6px 1px 6px;
 }
 
-.posttags {
-	text-align: center;
-	margin: 30px auto 30px auto;
-	width: fit-content;
-	opacity: 0.4;
+.posttags{
+	text-align:center;
+	margin:30px auto 30px auto;
+	width:fit-content;
+	opacity:0.4;
 }
-.posttags {
-	opacity: 1;
-	a { /* I don't want to use nested CSS for compatibility reasons, but I can't think of a way to achieve this without nesting */
-		color: rgb(0, 180, 0);
+.posttags{
+	opacity:1;
+	a{
+		color:rgb(0, 180, 0);
 		background:rgba(0, 180, 0, 0.2);
 	}
 }
-.posttags:not(:hover) {
-	opacity: 0.5;
-	transition: 0.4s;
-	transition-property: background, color, opacity;
-	a {
-		background: #303030 !important;
-		color: #ccc !important;
-		opacity: 0.75;
+.posttags:not(:hover){
+	opacity:0.5;
+	transition:0.4s;
+	transition-property:background, color, opacity;
+	a{
+		background:#303030 !important;
+		color:#ccc !important;
+		opacity:0.75;
 	}
 }
-
-
 /* different coloured post tags */
-.tagoutside {
-	color: rgb(98, 217, 255) !important;
-	background-color: rgba(0, 100, 255, 0.4) !important;
-	a {color: rgb(98, 217, 255);}
+.tagoutside{
+	color:rgb(98, 217, 255) !important;
+	background-color:rgba(0, 100, 255, 0.4) !important;
+	a{color:rgb(98, 217, 255);}
 }
-.tagwebsite {
-	color: rgb(0, 180, 0) !important;
+.tagwebsite{
+	color:rgb(0, 180, 0) !important;
 	background:rgba(0, 180, 0, 0.2) !important;
-	a {color: rgb(0, 180, 0);}
+	a{color:rgb(0, 180, 0);}
 }
 
 
-.pagetitle {
-	text-align: center;
-	font-weight: normal;
-	font-size: 48px;
-	margin-top: 15px;
-	margin-bottom: 30px;
-	line-height: normal;
-}
-.pagesummary {
-	font-style: italic;
-	margin: auto auto 20px auto;
-	max-width: 500px;
-	padding: 0 25px 0 25px;
-	text-align: center;
-}
-.datewritten {
-	opacity: 0.6;
-	font-size: smaller;
-	text-align: center;
-	margin-bottom: 20px;
-}
-.classicdatewritten {
-	text-align: left;
-	margin-bottom: -10px;
-}
-li {
-	margin-bottom: 8px;
-}
-code {
-	padding: 8px;
-	background-color: #202020;
-	border-style: solid;
-	border-color: #585858;
-	border-radius: 10px;
-	display: block;
-	max-width: fit-content;
-	text-wrap: wrap;
-	word-wrap: break-word;
-}
-dt {
-	margin-bottom: 5px;
-}
-dd, blockquote {
-	margin: 0 20px 0 20px;
-	border-width: 0px 0px 0px 3px;
-	border-style: solid;
-	border-color: #ccc;
-	padding: 2px 10px 2px 8px;
-}
-blockquote {
-	margin-left: 30px;
-	padding-left: 15px;
-}
-.scrollabletable {
-	overflow-x: auto;
-}
-table, th, td {
-	padding: 5px;
-	border: 2px solid;
-	border-color: #ccc;
-	border-collapse: collapse;
-}
-th, td {
-	border: 1px solid;
-}
-em.green {
-	color: rgb(0, 180, 0);
-	font-style: normal;
-	font-weight: bold;
-}
-
-img, video {
-	max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
-.inlineimage {
-	display: inline;
-	margin: 0 0 0 0;
-	width: 0.8em;
-}
-svg {
-	fill: green;
-}
-.figcaption {
-	text-align: center;
-	display: block;
-	margin: 8px auto 8px auto;
-	font-style: italic;
-}
 
 
-footer {
-	text-align: center;
-	font-size: 14px;
-	clear: both;
-	margin-bottom: 100px;
+
+
+
+
+
+/*--- Other generic styles ---*/
+.pagetitle{
+	text-align:center;
+	font-weight:normal;
+	font-size:48px;
+	margin-top:15px;
+	margin-bottom:30px;
+	line-height:normal;
 }
-footer a {
-	color: #ccc;
+.pagesummary{
+	font-style:italic;
+	margin:auto auto 20px auto;
+	max-width:500px;
+	padding:0 25px 0 25px;
+	text-align:center;
 }
-footer a:hover {
-	color: rgb(0, 180, 0);
+.datewritten{
+	opacity:0.6;
+	font-size:smaller;
+	text-align:center;
+	margin-bottom:20px;
 }
-.footerbadges a {
-	display: inline-block;
+.classicdatewritten{
+	text-align:left;
+	margin-bottom:-10px;
 }
-.badgesize1 {
-	width: 88px;
-	height: 31px;
+li{
+	margin-bottom:8px;
 }
+code{
+	padding:8px;
+	background-color:#202020;
+	border-style:solid;
+	border-color:#585858;
+	border-radius:10px;
+	display:block;
+	max-width:fit-content;
+	text-wrap:wrap;
+	word-wrap:break-word;
+}
+dt{
+	margin-bottom:5px;
+}
+dd, blockquote{
+	margin:0 20px 0 20px;
+	border-width:0px 0px 0px 3px;
+	border-style:solid;
+	border-color:#ccc;
+	padding:2px 10px 2px 8px;
+}
+blockquote{
+	margin-left:30px;
+	padding-left:15px;
+}
+.scrollabletable{
+	overflow-x:auto;
+}
+table, th, td{
+	padding:5px;
+	border:2px solid;
+	border-color:#ccc;
+	border-collapse:collapse;
+}
+th, td{
+	border:1px solid;
+}
+em.green{
+	color:rgb(0, 180, 0);
+	font-style:normal;
+	font-weight:bold;
+}
+
+img, video{
+	max-width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+.inlineimage{
+	display:inline;
+	margin:0 0 0 0;
+	width:0.8em;
+}
+svg{
+	fill:green;
+}
+.figcaption{
+	text-align:center;
+	display:block;
+	margin:8px auto 8px auto;
+	font-style:italic;
+}
+.pannellum{
+	width:100%;
+	aspect-ratio:16/9;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Post previews */
-.postpreview {
-	list-style-type: none;
-	margin: auto 20px 10px 10px;
-	border-width: 0px 0px 0px 3px;
-	border-style: solid;
-	border-color: rgb(0, 180, 0);
-	padding: 2px 10px 4px 8px;
-    display: inline-block;
-	flex-direction: column; /* this may not be necessary */
-	background-size: 20px auto;
-	transition: margin-left 0.1s, background-size 0.3s;
+.postpreview{
+	list-style-type:none;
+	margin:auto 20px 10px 10px;
+	border-width:0px 0px 0px 3px;
+	border-style:solid;
+	border-color:rgb(0, 180, 0);
+	padding:2px 10px 4px 8px;
+    display:inline-block;
+	flex-direction:column; /* this may not be necessary */
+	background-size:20px auto;
+	transition:margin-left 0.1s, background-size 0.3s;
 }
-.postpreview:hover {
-	margin-left: 15px;
-	transition-timing-function: ease-out;
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	background-color: rgba(0, 180, 0, 0.2);
-	@supports (background-image: linear-gradient(to right, rgba(0, 180, 0, 0.2), transparent)) {
-		background-color: transparent;
-		background-image: linear-gradient(to right, rgba(0, 180, 0, 0.2), transparent);
+.postpreview:hover{
+	margin-left:15px;
+	transition-timing-function:ease-out;
+	background-size:100% auto;
+	background-repeat:no-repeat;
+	background-color:rgba(0, 180, 0, 0.2);
+	@supports (background-image:linear-gradient(to right, rgba(0, 180, 0, 0.2), transparent)){
+		background-color:transparent;
+		background-image:linear-gradient(to right, rgba(0, 180, 0, 0.2), transparent);
 	}
 }
-.postpreviewlink {
-	text-decoration-line: none;
-	color: #ccc;
+.postpreviewlink{
+	text-decoration-line:none;
+	color:#ccc;
 }
-.postpreviewtitle {
-	color: rgb(0, 180, 0);
-	padding-top: 0px;
+.postpreviewtitle{
+	color:rgb(0, 180, 0);
+	padding-top:0px;
 }
-.activateposttitleunderline:hover .postpreviewtitle {
-	text-decoration: underline;
+.activateposttitleunderline:hover .postpreviewtitle{text-decoration:underline;}
+.postpreviewtime{
+	display:grid;
+	place-items:center;
+	padding-right:4px;
+	padding-bottom:2px;
+	padding:0px 4px 0 0;
 }
-.postpreviewtime {
-	display: grid;
-	place-items: center;
-	padding-right: 4px;
-	padding-bottom: 2px;
-	padding: 0px 4px 0 0;
-}
-.postpreviewtags .tag {
-	padding: 0 4px 0 4px;
-}
-.postpreviewtime, .postpreviewtags {
-	font-size: 12px;
-}
-.postpreviewsummary {
-	padding-top: 0px;
-}
-
-/* For TAGLIST.HTML */
-.taglist {
-	text-align: center ;
-}
-
-/* For NEXTPREV.HTML */
-#nextprev {
-	/* The container for both the previous and next articles. */
-}
-#prevart {
-	float: left ;
-	text-align: left ;
-}
-#nextart {
-	float: right;
-	text-align: right;
-}
-#nextart,#prevart {
-	max-width: 33% ;
-}
-
-.homeimages {
-	position: relative;
-	max-width: 220px;
-	max-height: 220px;
-}
-.homeimages1 {
-	display: block;
-	float: right;
-	margin: 0px 10px 10px 20px;
-}
-.homeimages2 {
-	display: none;
-	max-width: 135px;
-	margin: auto;
-}
-.homeimage1 {
-	position: relative;
-	z-index: 0;
-    animation-name: fadein;
-	animation-delay: 0.5s;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-}
-.homeimage2 {
-	position: absolute;
-	top: 0;
-	z-index: 1;
-	opacity: 0;
-    animation-name: fadeinblur;
-	animation-delay: 1.7s;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-}
-
-/* Comments button styling */
-#commentSection {
-	text-align: center;
-}
-.loadcommentsbutton {
-	margin-top: 15px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	padding: 2px 13px 2px 13px;
-	max-width: 800px;
-	border-radius: 5px;
-	background-color: #202020;
-	border: 2px solid rgb(0, 180, 0);
-	.loadcommentsicon1 {
-		opacity: 0;
-	}
-	.loadcommentsicon2 {
-		opacity: 1;
-	}
-	p {
-		color: rgb(0, 180, 0);
-	}
-}
-.loadcommentsbutton:not(:hover) {
-	border: 2px solid transparent;
-	.loadcommentsicon1 {
-		opacity: 1;
-		transition: 0.3s;
-	}
-	.loadcommentsicon2 {
-		opacity: 0;
-		transition: 0.3s;
-	}
-	p {
-		color: #ccc;
-		transition: 0.3s;
-	}
-	transition: border 0.3s;
-}
-.loadcommentsbutton:hover {
-	.loadcommentsicons {
-		animation: shake 0.15s;
-		animation-timing-function: linear;
-	}
-}
-.loadcommentsbutton p {
-	display: inline-block;
-	text-align: center;
-	font-size: large;
-	vertical-align: middle;
-}
-.loadcommentsicons {
-	display: inline-block;
-	vertical-align: middle;
-	margin-left: 7px;
-	position: relative;
-}
-.loadcommentsicons img {
-	max-height: 2.75em;
-}
-.loadcommentsicon1 {
-	opacity: 1;
-	position: relative;
-}
-.loadcommentsicon2 {
-	opacity: 0;
-	position: absolute;
-	top: 0;
-}
-
-.pannellum {
-	width: 100%;
-	aspect-ratio: 16/9;
-}
-
-/* Remark42 comment box styling (can't really style it much yet) */
-.remark42 {
-	margin: auto;
-	max-width: 800px;
-}
-
-@media (max-width: 850px) {
-	.navbar {
-		margin-bottom: 40px;
-	}
-}
-
-@media (max-width: 550px) {
-	.homeimages1 {
-		max-width: 192px;
-	}
-	.navbar {
-		margin-bottom: 0px;
-		background-color: #00000050;
-	}
-	.contentbg {
-		background-color: transparent;
-		box-shadow: none;
-		clip-path: inset(0 0 -100px 0);
-		padding: 10px;
-		margin: 0px;
-	}
-	div.balls-bg {
-		opacity: 0.7;
-	}
-	/* stop rendering these large balls on smaller screens
-	because it's not worth the performance hit */
-	.particle-container .particle:nth-child(6){
-		display: none;
-	}
-	.particle-container .particle:nth-child(7){
-		display: none;
-	}
-	.particle-container .particle:nth-child(8){
-		display: none;
-	}
-}
-/* Adjust responsiveness on small screens */
-@media (max-width: 400px) {
-	.homeimages1 {
-		max-width: 135px;
-	}
-
-	.homelink {
-		font-size: 125%;
-	}
-	.homelink, .otherlinks {
-		gap: 10px;
-	}
-
-	.pagetitle {
-		font-size: 34px;
-	}
-	.pagesummary {
-		padding: 0 0 0 0;
-	}
-}
-@media (max-width: 340px) {
-	.navbarcontent {
-		flex-direction: column;
-		align-items: center;
-	}
-	
-}
-@media (max-width: 300px) {
-	.homeimages1 {
-		display: none;
-	}
-	.homeimages2 {
-		display: block;
-		float: none;
-	}
-	.loadcommentsbutton {
-		padding: 0px 5px 0px 5px;
-	}
-	.loadcommentsbutton p {
-		font-size: medium;
-	}
-	.loadcommentsicons {
-		margin-left: 4px;
-	}
-	.loadcommentsicons img {
-		max-height: 2em;
-	}
-	.contentbg {
-		padding: 5px;
-	}
-}
-@media (max-width: 200px) {
-	.loadcommentsbutton p {
-		margin: 7px;
-	}
-	.loadcommentsicons {
-		display: none; /* screw this */
-	}
-}
-/* Suuuuuper small screens, like smartwatches lol */
-@media (max-width: 170px) {
-	.homelink {
-		font-size: 100%;
-	}
-	.otherlinks {
-		flex-direction: column;
-		align-items: center;
-		row-gap: 4px;
-	}
-	.contentbg {
-		padding: 3px;
-	}
-}
-
-/* now-unused uncover animation
-.uncoveranimation {
-	/*not allowing the div to cover the screen unless it will pinky promise to get out of the way*/
-	/*@supports (animation-name: uncoveranimation) {
-		width: 100vw;
-		height: 100vh;
-		background-color: #000000;
-	}
-	
-	pointer-events: none;
-	position: fixed;
-	z-index: -383;
-	bottom: 0;
-	transform-origin: top;
-	animation-name: uncoveranimation;
-	animation-duration: 2.5s;
-	animation-timing-function: ease-in-out;
-	animation-fill-mode: both;
-
-	width: 100%;
-	height: 100%;
-	position: fixed;
-    background-repeat: repeat;
-	background-size: 100%;
-}
-
-
-@keyframes uncoveranimation {
-	0% { transform: scaleY(0); }
-	100% { transform: scaleY(1); }
-}
-
-@keyframes uncoveranimation2 {
-	0% { width: 100vw; height: 100vh; }
-	100% { width: 100vw; height: 0vh; }
-}
-
-@keyframes uncoveranimation3 {
-	0% { clip-path: inset(0vh 0 0 0); }
-	100% { clip-path: inset(100vh 0 0 0); }
-}*/
+.postpreviewtags .tag{padding:0 4px 0 4px;}
+.postpreviewtime, .postpreviewtags{font-size:12px;}
+.postpreviewsummary{padding-top:0px;}
 
 
 
-/* Tried to make a wipe effect that only worked in Chrome, not Firefox.
-FF couldn't animate CSS variables at the time. Would've kept this, but
-this implementation scales with the length of pages which is a big no no.
-@property --wipe-position {
-    syntax: "<percentage>";
-    inherits: false;
-    initial-value: 100%;
-}
 
-.uncoveranimation {
+
+
+
+
+
+
+
+
+
+
+
+/*--- Home page hero section ---*/
+.hero{
+	display:flex;
+	flex-direction:row;
+	margin:0 auto 50px auto;
+	width:auto;
+	max-width:700px;
+	height:250px;
+	padding:0 50px 50px 50px;
+	justify-content:center;
+	/*border:blue solid 1px;div{border:red solid 1px;}*/
+}
+.heroimage{
+	position:relative;
+	flex-grow:2.75;
+	margin:auto;
+	aspect-ratio:1/1.045;
+}
+.heroimagestack div{
+	position:absolute;
+}
+.heroimage{
+	transition:0.25s scale;
+	animation-delay:0.5s;
+}
+.heroimage:hover{scale:1.05;}
+.hero svg{scale:1.5;}
+.hero .m{
+	fill:#026300;
+	stroke:white;
 	width:100%;
-	height:100%;
-	padding:100px;
-	margin:-100px;
-    --wipe-position: 100%;
-    --gradient-length: 20%;
-    -webkit-mask-image: linear-gradient(
-      to bottom, black var(--wipe-position), transparent calc(var(--wipe-position) + var(--gradient-length)), transparent
-    );
-
-    animation: wipeAnimation 2s cubic-bezier(0, 0.55, 0.45, 1);
+	stroke-opacity:1;
+    stroke-width:80px;
+	stroke-linecap:round;
+	stroke-linejoin:round;
+	paint-order:stroke fill;
+	animation:float-hover 2s infinite alternate both;
+	animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1);
+}
+.hero .m2{
+	fill:url(#m-gradient) #026300;
+	filter:drop-shadow(0 0 80px rgba(255, 255, 255, 1));
+	stroke:none;
+	animation:m-fade 1s both 2s;
+}
+.hero .s{
+	position:absolute;
+	stroke:white;
+	width:100%;
+	stroke-opacity:1;
+	stroke-linecap:round;
+	stroke-linejoin:round;
+	paint-order:stroke fill;
+	filter:drop-shadow(0 0 40px #00ff25);
+	stroke-dasharray:1;
+	stroke-dashoffset:0;
+	animation:float-hover 2s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate both 0.5s;
+}
+.hero .s1{animation:swirl1 1s cubic-bezier(.87,.07,.29,.91) both 1.5s;stroke-width:10px;}
+.hero .s2{animation:swirl2 1s cubic-bezier(.87,.07,.29,.91) both 1.5s;stroke-width:16px;}
+.hero .s3{animation:swirl3 1s cubic-bezier(.45, 0, .55, 1) both 1.5s;stroke-width:18px;}
+.hero .s4{animation:swirl4 1s cubic-bezier(.45, 0, .55, 1) both 1.5s;stroke-width:10px;}
+.hero .s5{animation:swirl5 1s cubic-bezier(.45, 0, .55, 1) both 1.5s;stroke-width:5px;}
+@keyframes swirl1{0%{stroke-dashoffset:1;}25%{stroke-dashoffset:0;}100%{stroke-dashoffset:0;}}
+@keyframes swirl2{0%{stroke-dashoffset:1;}25%{stroke-dashoffset:1;}45%{stroke-dashoffset:0;}}
+@keyframes swirl3{0%{stroke-dashoffset:1;}45%{stroke-dashoffset:1;}75%{stroke-dashoffset:0;}}
+@keyframes swirl4{0%{stroke-dashoffset:1;}75%{stroke-dashoffset:1;}90%{stroke-dashoffset:0;}}
+@keyframes swirl5{0%{stroke-dashoffset:1;}90%{stroke-dashoffset:1;}100%{stroke-dashoffset:0;}}
+@keyframes m-fade{from{opacity:0;}to{opacity:1;}}
+@keyframes float-hover{from{translate:0 -5px;}to{translate:0 5px;}}
+.herotext{
+	flex-grow:1;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+.hero p{
+	color:white;
+	text-align:left;
+	line-height:1.85ch;
+	margin:0;
+}
+.hero p:nth-child(1){
+	font-size:3em;
+}
+.hero p:nth-child(2){
+	font-size:1.5em;
+	margin-top:0.25em;
+}
+.hero p:nth-child(3){
+	font-size:0.75em;
+	margin-top:0.75em;
+}
+.hero p:nth-child(3):hover{
+	animation:shake 0.25s infinite; 
+}
+.homecontent{
+	padding-top:1px;
+	animation-delay:0.25s;
 }
 
-@keyframes wipeAnimation {
-    0%, 10% { 
-		--wipe-position: calc(-1 * var(--gradient-length)); 
-    }
-    100% { 
-        --wipe-position: 100%; 
-    }
-}*/
 
 
 
 
-@keyframes shake {
-	0% { transform: rotate(0deg) scale(1); }
-	2% { transform: rotate(30deg) scale(0.75); }
-	30% { transform: rotate(-35deg) scale(0.75); }
-	80% { transform: rotate(5deg); }
-	100% { transform: rotate(0deg)  scale(1); }
+
+
+
+
+
+
+
+
+
+
+/*--- Comments styling ---*/
+
+#commentSection{
+	text-align:center;
 }
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.loadcommentsbutton{
+	margin-top:15px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	padding:2px 13px 2px 13px;
+	max-width:800px;
+	border-radius:5px;
+	background-color:#202020;
+	border:2px solid rgb(0, 180, 0);
+	p{
+		color:rgb(0, 180, 0);
+	}
+	.loadcommentsicon{
+		filter:saturate(100%) brightness(100%);
+	}
 }
-
-@keyframes fadeinblur {
-    from { opacity: 0; filter: blur(5px); }
-    to { opacity: 1; filter: blur(0px); }
+.loadcommentsbutton:not(:hover){
+	border:2px solid transparent;
+	p{
+		color:#ccc;
+		transition:0.3s color;
+	}
+	.loadcommentsicon{
+		filter:saturate(0%) brightness(175%);
+		transition:0.3s filter;
+	}
+	transition:border 0.3s;
 }
-
-.footerhover {
+.loadcommentsbutton:hover{
+	.loadcommentsicon{
+		animation:shake-pop 0.15s both;
+		animation-timing-function:linear;
+	}
+}
+.loadcommentsbutton p{
 	display:inline-block;
-	margin-bottom: 15px;
+	text-align:center;
+	font-size:large;
+	vertical-align:middle;
+}
+.loadcommentsicon{
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:7px;
+	position:relative;
+	filter:saturate(0%) brightness(175%);
+}
+.loadcommentsicon img{
+	max-height:2.75em;
+}
+/* TODO figure out how to style remark42 more */
+.remark42{
+	margin:auto;
+	max-width:800px;
 }
 
-.footerhover:not(:hover) {
-	opacity: 0.5;
-	transition: 0.2s;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--- Footer ---*/
+footer{
+	text-align:center;
+	font-size:14px;
+	clear:both;
+	margin-bottom:100px;
+}
+footer a{
+	color:#ccc;
+}
+footer a:hover{
+	color:rgb(0, 180, 0);
+}
+.footerbadges a{
+	display:inline-block;
+}
+.badgesize1{
+	width:88px;
+	height:31px;
+}
+.footerhover{
+	display:inline-block;
+	margin-bottom:15px;
+}
+.footerhover:not(:hover){
+	opacity:0.5;
+	transition:0.2s;
+}
+.sizeanimation:not(:hover){
+	opacity:0.5;
+	animation-name:sizeanimationreverse;
+	animation-duration:0.2s;
+	animation-fill-mode:both;
+	animation-timing-function:ease-out;
+}
+.sizeanimation:hover{
+	animation-name:sizeanimation;
+	animation-duration:0.1s;
+	animation-fill-mode:both;
+	animation-timing-function:ease-out;
 }
 
-.sizeanimation:not(:hover) {
-	opacity: 0.5;
-	animation-name: sizeanimationreverse;
-	animation-duration: 0.2s;
-	animation-fill-mode: both;
-	animation-timing-function: ease-out;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--- Animations ---*/
+
+@keyframes sizeanimation{
+    0%{ transform:scale(1); opacity:0.5; }
+	1%{ opacity:1; }
+    50%{ transform:scale(1.2); }
+    100%{ transform:scale(1.1); opacity:1; }
+}
+@keyframes sizeanimationreverse{
+    0%{ transform:scale(1.1); opacity:1; }
+    100%{ transform:scale(1); opacity:0.5; }
+}
+@keyframes shake-pop{
+	0%{ transform:rotate(0deg) scale(1);}
+	2%{ transform:rotate(30deg) scale(0.75); }
+	30%{ transform:rotate(-35deg) scale(0.75); }
+	80%{ transform:rotate(5deg); }
+	100%{ transform:rotate(0deg)  scale(1);}
+}
+@keyframes shake{
+	0%{ transform:translate(0.5px, 0.5px); }
+	10%{ transform:translate(-0.5px, -1px); }
+	20%{ transform:translate(-1.5px, 0px); }
+	30%{ transform:translate(1.5px, 1px); }
+	40%{ transform:translate(0.5px, -0.5px); }
+	50%{ transform:translate(-0.5px, 1px); }
+	60%{ transform:translate(-1.5px, 0.5px); }
+	70%{ transform:translate(1.5px, 0.5px); }
+	80%{ transform:translate(-0.5px, -0.5px); }
+	90%{ transform:translate(0.5px, 1px); }
+	100%{ transform:translate(0.5px, -1px); }
+}
+@keyframes fadein{
+    from{ opacity:0; }
+    to{ opacity:1; }
+}
+@keyframes fadeinblur{
+    from{ opacity:0; filter:blur(5px); }
+    to{ opacity:1; filter:blur(0px); }
+}
+@keyframes float-in{
+    0%{opacity:0; transform:translateY(-30px)}
+    100%{opacity:1;}
 }
 
-.sizeanimation:hover {
-	animation-name: sizeanimation;
-	animation-duration: 0.1s;
-	animation-fill-mode: both;
-	animation-timing-function: ease-out;
-}
 
-@keyframes sizeanimation {
-    0% { transform: scale(1); opacity: 0.5; }
-	1% { opacity: 1; }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1.1); opacity: 1; }
-}
 
-@keyframes sizeanimationreverse {
-    0% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.5; }
+
+
+
+
+
+
+
+/*--- Responsiveness ---*/
+
+@media (max-width:850px){
+	.navbar{
+		margin-bottom:40px;
+	}
+	.hero svg{scale:1.4;}
+	.hero{margin-bottom:0px;}
+}
+@media (max-width:650px){
+	.hero svg{scale:1.5;}
+	.hero p:nth-child(1){font-size:2em;}
+	.hero p:nth-child(2){font-size:1.15em;}
+	.hero p:nth-child(3){font-size:0.75em;}
+}
+@media (max-width:550px){
+	.navbar{
+		margin-bottom:0px;
+		background-color:#00000050;
+	}
+	.contentbg{
+		background-color:transparent;
+		box-shadow:none;
+		clip-path:inset(0 0 -100px 0);
+		padding:10px;
+		margin:0px;
+	}
+	.hero{
+		flex-direction:column-reverse;
+		height:auto;
+		align-items:center;
+		padding:50px 75px 0 75px;
+		margin-bottom:50px;
+	}
+	.heroimage{
+		flex-grow:0;
+		height:100%;
+		width:100%;
+		max-width:300px;
+		animation-delay:0s;
+	}
+	.herotext{
+		flex-grow:0;
+		margin:0 -25px 0 -25px;
+		animation-delay:0.25s;
+		p{
+			text-align:center;
+		}
+	}
+	.homecontent{
+		animation-delay:0.5s;
+	}
+	div.balls-bg{opacity:0.7;}
+	.particle-container .particle:nth-child(6){display:none;}
+	.particle-container .particle:nth-child(7){display:none;}
+	.particle-container .particle:nth-child(8){display:none;}
+}
+@media (max-width:400px){
+	.homelink{font-size:125%;}
+	.homelink, .otherlinks{gap:10px;}
+
+	.pagetitle{font-size:34px;}
+	.pagesummary{padding:0 0 0 0;}
+}
+@media (max-width:340px){
+	.navbarcontent{flex-direction:column;align-items:center;}	
+	.hero{margin-top:-15px;margin-bottom:25px;}
+}
+@media (max-width:300px){
+	.hero{padding:50px 50px 0 50px;}
+	.herotext{margin:0 -40px 0 -40px;}
+	.loadcommentsbutton{padding:0px 5px 0px 5px;}
+	.loadcommentsbutton p{font-size:medium;}
+	.loadcommentsicon{margin-left:4px;}
+	.loadcommentsicon img{max-height:2em;}
+	.contentbg{padding:5px;}
+}
+@media (max-width:200px){
+	.loadcommentsbutton p{margin:7px;}
+	.loadcommentsicon{display:none;}
+}
+@media (max-width:170px){
+	.homelink{font-size:100%;}
+	.otherlinks{
+		flex-direction:column;
+		align-items:center;
+		row-gap:4px;
+	}
+	.contentbg{padding:3px;}
 }

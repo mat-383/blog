@@ -19,3 +19,5 @@ I haven't written much yet, so I'll come up with a better page description later
 <div class="tagcloud">Filter by tag: {{< tagcloud >}}</div>
 
 <br>
+
+{{< list section="blog" >}}

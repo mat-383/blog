@@ -9,7 +9,7 @@
 
 {{/* Also this file and the CSS for the post preview may have gotten really bloated, it's a bit messy and some code might be redundant */}}
 
-
+{{/*
 {{ if eq .RelPermalink "/" }}
 	{{- range where .Site.RegularPages "Section" "blog" }}
 		<a href="{{ .RelPermalink }}" class="postpreviewlink postpreviewtime">
@@ -21,7 +21,7 @@
 					<div class="postpreviewtags">
 						{{ partial "taglist.html" . }}{{ if .Param "taglist" }}{{ end -}}
 					</div>
-					<a href="{{ .RelPermalink }}" class="postpreviewlink"> {{- if not (.Param "tags") -}}<a href="{{ .RelPermalink }}" class="postpreviewlink">{{- end -}} {{/* lol fixed a bug here by simply duplicating a line */}}
+					<a href="{{ .RelPermalink }}" class="postpreviewlink"> {{- if not (.Param "tags") -}}<a href="{{ .RelPermalink }}" class="postpreviewlink">{{- end -}} 
 				</div>
 				
 				{{- if .Param "authorsinlist" }}
@@ -55,7 +55,7 @@
 					<div class="postpreviewtags">
 						{{ partial "taglist.html" . }}{{ if .Param "taglist" }}{{ end -}}
 					</div>
-					<a href="{{ .RelPermalink }}" class="postpreviewlink"> {{- if not (.Param "tags") -}}<a href="{{ .RelPermalink }}" class="postpreviewlink">{{- end -}} {{/* lol fixed a bug here by simply duplicating a line */}}
+					<a href="{{ .RelPermalink }}" class="postpreviewlink"> {{- if not (.Param "tags") -}}<a href="{{ .RelPermalink }}" class="postpreviewlink">{{- end -}} 
 				</div>
 				
 				{{- if .Param "authorsinlist" }}
@@ -77,5 +77,6 @@
 		</a>
 	{{- end }}
 {{ end }}
+*/}}
 
 {{- end }}

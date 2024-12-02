@@ -1,0 +1,32 @@
+{{ $section := .Get "section" | default "blog" }}
+{{- range where .Site.RegularPages "Section" $section }}
+	<a href="{{ .RelPermalink }}" class="postpreviewlink postpreviewtime">
+		<div class="postpreview activateposttitleunderline">
+			<div style="display: grid;grid-template-columns: auto auto 1fr;" class=" activateposttitleunderline">
+					{{- if .Param "datesinlist" -}}
+						<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
+					{{- end -}}
+				<div class="postpreviewtags">
+					{{ partial "taglist.html" . }}{{ if .Param "taglist" }}{{ end -}}
+				</div>
+				<a href="{{ .RelPermalink }}" class="postpreviewlink"> {{- if not (.Param "tags") -}}<a href="{{ .RelPermalink }}" class="postpreviewlink">{{- end -}} {{/* lol fixed a bug here by simply duplicating a line */}}
+			</div>
+			
+			{{- if .Param "authorsinlist" }}
+				{{ with .Params.authors }}
+				by 
+				{{ delimit . ", " " and " }}
+			{{end}}
+
+			<div class="postpreviewtitle">
+				{{ .Title }}
+			</div>
+
+			{{ if .Params.summary }}
+				<div class="postpreviewsummary">{{ .Params.summary }}</div>
+			{{ end }}
+
+			{{ end -}}
+		</div>
+	</a>
+{{- end }}

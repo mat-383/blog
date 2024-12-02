@@ -39,23 +39,13 @@
 	<div class="particle"></div>
 	<div class="particle"></div>
 	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-</div><!--<div class="uncoveranimation"></div>-->
+</div>
 <body>
 <!--{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}-->
 <main>
+{{ if not (.Param "hidecontentbg")}}
 <div class="contentbg">
+{{end -}}
 
 {{if not (hasPrefix .RelPermalink "/tags/")}}
 	<header>
@@ -67,8 +57,10 @@
 {{end}}
 {{if eq .RelPermalink "/tags/"}}
 	{{partial "tagsite.html" .}}
+	{{partial "list.html" .}}
 {{else if hasPrefix .RelPermalink "/tags/"}} {{/* to specify new tag colours, modify the line below, the one in tagcloud.html, and the one in taglist.html */}}
 	<h2>Showing all posts tagged with <b class="tag {{if eq .Title "Outside"}}tagoutside{{else}}{{if eq .Title "Website"}}tagwebsite{{end}}{{end}}">{{block "title" .}}{{end}}</b>:</h2>
+	{{partial "list.html" .}}
 {{end}}
 {{ if .IsHome }}
 {{ end }}
@@ -77,9 +69,7 @@
 {{ .Content }}
 {{ end }}
 {{if .IsHome}}
-	<hr>
-	<h2>Guestbook</h2>
-	<p>Once you've had a look around, feel free to leave a comment in my guestbook:</p>
+	
 {{end}}
 <!-- Don't show comments in these pages -->
 {{if or (and 
@@ -89,72 +79,59 @@
 	(not (hasPrefix .RelPermalink "/contact/"))
 	((.Param "commentsenabled"))
 ) (eq .RelPermalink "/tags/")}}
-	<div id="commentSection">
-		<button id="loadComments" class="loadcommentsbutton">
-			<p>Load {{if .IsHome}}Guestbook{{else}}Comments{{end}}</p>
-			<div class="loadcommentsicons">
-				{{if .IsHome}}
-					<img class="loadcommentsicon1" src="/icons/guestbook.svg" alt="Guestbook icon" style="height:36px; width: 40px;">
-					<img class="loadcommentsicon2" src="/icons/guestbook-green.svg" alt="Guestbook icon" style="height:36px; width: 40px;">
-				{{else}}
-					<img class="loadcommentsicon1" src="/icons/comments.svg" alt="Comments icon" style="height:36px; width: 40px;">
-					<img class="loadcommentsicon2" src="/icons/comments-green.svg" alt="Comments icon" style="height:36px; width: 40px;">
-				{{end}}
-			</div>
-		</button>
-	</div>
-	<script>
-		// Remark42 settings
-		var remark_config = {
-			host: 'https://remark42.mat383.com',
-			site_id: 'remark',
-			theme: 'dark',
-			show_email_subscription: false,
-			show_rss_subscription: true,
-		};
-		// Function to dynamically load Remark42 scripts
-		function loadRemark42() {
-			if (window.location.protocol !== 'https:') {
-				document.getElementById('commentSection').innerHTML = '<p style="color: #ff5b5b;">Please use HTTPS to view comments.</p>';
-				return;
-			}
-			
-			var components = remark_config.components || ["embed"];
-			var head = document.head || document.body;
-			
-			for (var i = 0; i < components.length; i++) {
-				var script = document.createElement("script");
-				var extension = ".js";
-				
-				// Check if the current environment supports ES modules
-				if ("noModule" in script) {
-					script.type = "module";
-					extension = ".mjs";
-				}
-				
-				script.async = true;
-				script.defer = true;
-				script.src = remark_config.host + "/web/" + components[i] + extension;
-				head.appendChild(script);
-
-				// Remove the "Load Comments" button 200ms after it was pressed (so touchscreen users can see the cool animation)
-				setTimeout(function() { 
-					var loadCommentsButton = document.getElementById('loadComments');
-					loadCommentsButton.parentNode.removeChild(loadCommentsButton);
-				}, 200);
-				
-				
-			}
-		}
-		// Attach click event listener to the button
-		document.getElementById('loadComments').addEventListener('click', function() {
-			loadRemark42();
-		});
-	</script>
-
-	<!-- Placeholder for comment box -->
-	<div id="remark42" class="remark42"></div>
+	<!--Contains the load comments button and comment section div-->
+	{{partial "comments.html" .}}
 {{ end }}
+<!--Remark42 stuff, doesn't actually get shown unless the 
+comments partial/shortcode is loaded-->
+<script>
+	// Remark42 settings
+	var remark_config = {
+		host: 'https://remark42.mat383.com',
+		site_id: 'remark',
+		theme: 'dark',
+		show_email_subscription: false,
+		show_rss_subscription: true,
+	};
+	// Function to dynamically load Remark42 scripts
+	function loadRemark42() {
+		if (window.location.protocol !== 'https:') {
+			document.getElementById('commentSection').innerHTML = '<p style="color: #ff5b5b;">Please use HTTPS to view comments.</p>';
+			return;
+		}
+		
+		var components = remark_config.components || ["embed"];
+		var head = document.head || document.body;
+		
+		for (var i = 0; i < components.length; i++) {
+			var script = document.createElement("script");
+			var extension = ".js";
+			
+			// Check if the current environment supports ES modules
+			if ("noModule" in script) {
+				script.type = "module";
+				extension = ".mjs";
+			}
+			
+			script.async = true;
+			script.defer = true;
+			script.src = remark_config.host + "/web/" + components[i] + extension;
+			head.appendChild(script);
+
+			// Remove the "Load Comments" button 200ms after it was pressed (so touchscreen users can see the cool animation)
+			setTimeout(function() { 
+				var loadCommentsButton = document.getElementById('loadComments');
+				loadCommentsButton.parentNode.removeChild(loadCommentsButton);
+			}, 200);
+			
+			
+		}
+	}
+	// Attach click event listener to the button
+	document.getElementById('loadComments').addEventListener('click', function() {
+		loadRemark42();
+	});
+</script>
 </main>
 {{ block "footer" . }}
 <footer>
@@ -175,7 +152,11 @@
 	</div>
 </footer>
 {{ end }}
+
+{{ if not (.Param "hidecontentbg")}}
 </div>
+{{end -}}
+
 </body>
 </html>
 
