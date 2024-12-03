@@ -61,13 +61,17 @@ I'll write more about myself in this page when I've gotten used to this whole pe
 
 **Currently redesigning this site, don't be surprised if something looks weird!**
 
----
+</div>
+<div class="float-in homecontent contentmargin">
 
 ## Read my recent posts! ↓
 
 {{< list section="blog" >}}
 
-<hr>
+</div>
+
+<br>
+<div class="homecontent contentbg float-in">
 <h2>Guestbook</h2>
 <p>Once you've had a look around, feel free to leave a comment in my guestbook:</p>
 

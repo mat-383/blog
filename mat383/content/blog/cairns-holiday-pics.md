@@ -7,6 +7,7 @@ centerdate: true
 datelabelupdated: false
 date: 2024-08-21T05:54:00+10:00
 tags: ["outside"]
+coverimg: "cairns-holiday-pics"
 summary: "I took heaps of landscape pics while I was there. Here, take some!"
 commentsenabled: true
 draft: false

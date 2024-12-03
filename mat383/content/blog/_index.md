@@ -3,11 +3,14 @@ title: "Blog"
 hidetitle: true
 hidesummary: true
 hidedate: true
+hidecontentbg: true
 date: 
 summary: "Blog posts written by me"
 tags: []
 summary: ""
 ---
+<div class="contentbg float-in">
+
 # Blog
 I haven't written much yet, so I'll come up with a better page description later.
 
@@ -18,6 +21,10 @@ I haven't written much yet, so I'll come up with a better page description later
 
 <div class="tagcloud">Filter by tag: {{< tagcloud >}}</div>
 
-<br>
+</div>
+
+<div class="contentmargin float-in">
 
 {{< list section="blog" >}}
+
+</div>

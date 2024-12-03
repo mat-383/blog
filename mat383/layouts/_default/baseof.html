@@ -4,7 +4,7 @@
 	<title>{{ if not .IsHome }}{{ .Title | title }} - {{ end }}{{ .Site.Title }}</title>
 	<link rel="canonical" href="{{ .Site.BaseURL }}">
 	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
-	<link rel='stylesheet' type='text/css' href='/styles.css'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<meta name="description" content="{{ .Summary }}{{ if .IsHome }}{{ end }}">
 	<!--<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">-->
@@ -43,12 +43,26 @@
 <body>
 <!--{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}-->
 <main>
+
 {{ if not (.Param "hidecontentbg")}}
-<div class="contentbg float-in">
+<div class="{{if not (hasPrefix .RelPermalink "/tags/")}}contentbg{{else}}contentmargin{{end}} float-in">
 {{end -}}
 
+
 {{if not (hasPrefix .RelPermalink "/tags/")}}
-	<header>
+	<header class="{{if not .Params.coverimg}}headernocoverimg{{end -}}">
+		{{if .Params.coverimg}}
+			<div class="coverimgcontainer">
+				<div class="coverimgcontainer2">
+					<div class="coverimg">
+						<picture>
+							<source srcset="/images/covers/{{ .Params.coverimg }}.avif" type="image/avif">
+							<img src="{{ .Params.coverimg }}.jpg" width="800" height="400">
+						</picture>
+					</div>
+				</div>
+			</div>
+		{{end -}}
 		{{if .Param "tags"}}<div class="posttags"><p>Tags: {{partial "taglist.html" .}}</p></div>{{else if not (.Param "hidetitle")}}<br>{{end -}}
 		{{if (and (not (.Param "hidetitle")) (not (hasPrefix .RelPermalink "/tags/")))}}<h1 id="tag_{{.Title}}" class="pagetitle">{{block "title" .}}{{end}}</h1>{{end}}
 		{{if not (.Param "hidesummary")}}<p class="pagesummary">{{.Summary}}</p>{{end}}
@@ -59,7 +73,7 @@
 	{{partial "tagsite.html" .}}
 	{{partial "list.html" .}}
 {{else if hasPrefix .RelPermalink "/tags/"}} {{/* to specify new tag colours, modify the line below, the one in tagcloud.html, and the one in taglist.html */}}
-	<h2>Showing all posts tagged with <b class="tag {{if eq .Title "Outside"}}tagoutside{{else}}{{if eq .Title "Website"}}tagwebsite{{end}}{{end}}">{{block "title" .}}{{end}}</b>:</h2>
+	<h2 style="margin-bottom:50px">Showing all posts tagged with <b class="tag {{if eq .Title "Outside"}}tagoutside{{else}}{{if eq .Title "Website"}}tagwebsite{{end}}{{end}}">{{block "title" .}}{{end}}</b>:</h2>
 	{{partial "list.html" .}}
 {{end}}
 {{ if .IsHome }}
@@ -123,8 +137,6 @@ comments partial/shortcode is loaded-->
 				var loadCommentsButton = document.getElementById('loadComments');
 				loadCommentsButton.parentNode.removeChild(loadCommentsButton);
 			}, 200);
-			
-			
 		}
 	}
 	// Attach click event listener to the button

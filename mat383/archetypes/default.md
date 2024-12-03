@@ -8,6 +8,7 @@ centerdate: true
 datelabelupdated: false
 date: {{ .Date }}
 tags: []
+coverimg: ""
 summary: ""
 commentsenabled: true
 draft: true
