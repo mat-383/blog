@@ -21,7 +21,10 @@
 
 <nav class="navbar">
 	<div class="navbarcontent">
-		<a href="/" class="homelink h-card" rel="me" style="color:#ccc">mat383.com</a>
+		<a href="/" class="homelink h-card" rel="me" style="color:#ccc">
+			<style>.navbarm{fill:transparent}</style>
+			<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1348 1100" preserveAspectRatio="xMinYMin meet" style="width: 100%; height: 100%; max-height:65px; max-width:70px;"><path class="navbarm" d="m118 999l78-897h363l124 560 183-560h369l-23 897h-244l20-640-211 640h-241l-144-640-42 640z"/></svg>
+		</a>
 		<div class="otherlinks"> <!--If the current page is equal to this URL, give it a CSS class (might have to change this later)-->
 			<a href="/blog" style="color:#ccc" class="{{if or (hasPrefix .RelPermalink "/blog/") (hasPrefix .RelPermalink "/tags/")}}activepage{{end}}">Blog</a>
 			<a href="/projects" style="color:#ccc" class="{{if hasPrefix .RelPermalink "/projects/"}}activepage{{end}}">Projects</a>
