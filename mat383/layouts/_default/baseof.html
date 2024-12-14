@@ -155,8 +155,12 @@ comments partial/shortcode is loaded-->
 	<br>
 	<br>
 
-	<p class="footerhover">Made with <a href="https://gohugo.io/">Hugo</a> | <a href="https://github.com/mat-383/blog">Source code</a></p>
-	{{- if .Param "showrss" }}<a href="/index.xml"><img src="/rss.svg" class="sizeanimation" style="height:1.5em; width: 1.5em;" alt="RSS Feed" title="Subscribe via RSS for new blog posts!"></a>{{ end }}
+	<div class="footersocials">
+		<a href="https://youtube.com/@Mat383"><img src="/images/youtube.svg" class="sizeanimation" style="height:1.75em; width: 1.75em;" alt="Youtube" title="I post videos on YouTube"></a>
+		<a href="https://odysee.com/@Mat383"><img src="/images/odyssey.png" class="sizeanimation" style="height:1.75em; width: 1.75em;" alt="Odyssey" title="I post videos to Odyssey too!"></a>
+		<a href="/index.xml"><img src="/rss.svg" class="sizeanimation" style="height:1.75em; width: 1.75em;" alt="RSS Feed" title="Subscribe via RSS for new blog posts!"></a>
+	</div>
+
 	<br>
 
 	<div class="footerbadges">
@@ -167,6 +171,8 @@ comments partial/shortcode is loaded-->
 		<br>
 		<a href="http://250kb.club/" class="sizeanimation"><img src="/images/250kb-club.png" alt="The 250KB Club", style="width:160px; height: 24px;"></a>
 	</div>
+
+	<p class="footerhover">Made with <a href="https://gohugo.io/">Hugo</a> | <a href="https://github.com/mat-383/blog">Source code</a></p>
 </footer>
 {{ end }}
 
