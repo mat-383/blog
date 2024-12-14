@@ -478,11 +478,11 @@ svg{
 
 	background-color:#00000057;
 	box-shadow:0px 0px 20px 10px #0000006c;
-	transition:0.25s scale cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition:0.4s scale cubic-bezier(0.075, 0.82, 0.165, 1);
 
 }
 .postpreview:hover{
-	scale:0.95;
+	scale:1.025;
 	.postpreviewtitle {text-decoration:underline;}
 }
 .postpreviewtext{
