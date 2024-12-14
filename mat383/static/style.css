@@ -12,6 +12,7 @@ selectbg:rgb(240, 240, 240, 0.2);
 /* TODO:
 - add support for @media (prefers-reduced-motion)
 - double check graceful degradation
+- add lite mode support
 */
 
 html{
@@ -536,6 +537,7 @@ svg{
 	aspect-ratio: 2/1;
 	margin:0;
 	display:inline;
+	object-fit:cover;
 }
 .postpreviewtitle{
 	color:rgb(0, 180, 0);
