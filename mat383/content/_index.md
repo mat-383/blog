@@ -77,4 +77,6 @@ I'll write more about myself in this page when I've gotten used to this whole pe
 
 {{< guestbook >}}
 
+<br>
+
 </div>
