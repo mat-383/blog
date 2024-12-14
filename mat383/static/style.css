@@ -973,7 +973,7 @@ footer a:hover{
 	.loadcommentsicon{display:none;}
 }
 @media (max-width:170px){
-	.navbar{height:160px;padding:5px;}
+	.navbar{height:180px;padding:5px;}
 	.homelink{font-size:100%;}
 	.otherlinks{
 		flex-direction:column;
