@@ -12,6 +12,7 @@ selectbg:rgb(240, 240, 240, 0.2);
 /* TODO:
 - add support for @media (prefers-reduced-motion)
 - double check graceful degradation
+- add lite mode support
 */
 
 html{
@@ -75,8 +76,8 @@ div.balls-bg{
 	background-color:#000000;
 	background-image:url("images/circles-bg.svg") !important;
     background-repeat:repeat;
-	background-size:100%;
-	filter:blur(4.5vw) brightness(125%) !important;
+	background-size:50vw;
+	filter:blur(6vw) brightness(125%) !important;
 }
 
 
@@ -147,6 +148,12 @@ div.balls-bg{
 @keyframes particle-motion2{from{transform:translate(0, 100vh);}to{transform:translate(80vw, -300vh);}}
 @keyframes particle-motion3{from{transform:translate(0,25vh);}to{transform:translate(20vw, -75vh);}}
 /* Make the background scale with the screen on lower resolutions */
+@media (max-width:3000px){
+	div.balls-bg{
+		background-size:65%;
+		filter:blur(6em) brightness(125%) !important;
+	}
+}
 @media (max-width:2000px){
 	div.balls-bg{
 		background-size:100em;
@@ -536,6 +543,7 @@ svg{
 	aspect-ratio: 2/1;
 	margin:0;
 	display:inline;
+	object-fit:cover;
 }
 .postpreviewtitle{
 	color:rgb(0, 180, 0);
