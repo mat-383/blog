@@ -5,9 +5,10 @@
     {{- range $k, $v := .Params.tags -}}
     {{- $url := printf "tags/%s" (. | urlize | lower) -}}
     <a class="tag
-        {{if eq (. | title) "Outside"}}tagoutside{{else}}
+        {{if eq (. | title) "Outside"}}tagoutside{{end}}
         {{if eq (. | title) "Website"}}tagwebsite{{end}}
-    {{end}}" style="display:inline-block;"id="tag_{{ . | lower }}" href="{{ $url | absURL }}">{{ . | title }}</a>
+        {{if eq (. | title) "Game Dev"}}taggamedev{{end}}
+    " style="display:inline-block;"id="tag_{{ . | lower }}" href="{{ $url | absURL }}">{{ . | title }}</a>
     {{- if lt $k (sub $tagsLen 1) }} {{ end -}}
     {{- end -}}
 {{- end -}}

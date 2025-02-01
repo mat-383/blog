@@ -10,6 +10,7 @@ date: {{ .Date }}
 tags: []
 coverimg: ""
 summary: ""
+ytvid: ""
 commentsenabled: true
 draft: true
 ---

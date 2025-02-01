@@ -331,6 +331,11 @@ a.activepage{
 	background:rgba(0, 180, 0, 0.2) !important;
 	a{color:rgb(0, 180, 0);}
 }
+.taggamedev{
+	color:rgb(172, 255, 39) !important;
+	background:rgba(140, 255, 0, 0.2) !important;
+	a{color:rgb(172, 255, 39);}
+}
 
 
 
@@ -495,20 +500,23 @@ svg{
 /* Post previews */
 .posts {
 	display: flex;
-	gap:50px;
-	margin: 40px 0 30px 0;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap:70px;
+	margin: 60px 0 60px 0;
+	align-items:center;
 	justify-content: center;
 }
 .postpreviewlink{
 	text-decoration-line:none;
 	color:#ccc;
-	flex: 1 1 0px;
-	max-width: 500px;
+	flex: 1 1 28%;
+	max-width: fit-content;
 }
 .postpreview{
 	display:flex;
 	flex-direction:column;
-	position: relative;
+	position:relative;
 
 	background-color:#00000057;
 	box-shadow:0px 0px 20px 10px #0000006c;
@@ -518,6 +526,7 @@ svg{
 .postpreview:hover{
 	scale:1.025;
 	.postpreviewtitle {text-decoration:underline;}
+	justify-content: left;
 }
 .postpreviewtext{
 	z-index: 1;
@@ -547,6 +556,9 @@ svg{
 }
 .postpreviewtitle{
 	color:rgb(0, 180, 0);
+	word-wrap: break-word;
+	width:fit-content;
+	
 }
 .postpreviewtimetags{
 	display:flex;
@@ -694,11 +706,73 @@ svg{
 
 
 
+/*--- Yt Button styling ---*/
+.ytbutton{
+	margin-top:-10px;
+	margin-left:auto;
+	margin-right:auto;
+	float:right;
+	text-align: right;
+	display:block;
+	padding:12px 13px 12px 13px;
+	max-width:800px;
+	border-radius:5px;
+	background-color:#08080862;
+	border:2px solid red;
+	text-decoration-color: transparent;
+	p{
+		color:white;
+		margin:0;
+	}
+}
+.ytbutton:not(:hover){
+	border:2px solid transparent;
+	p{
+		color:#ccc;
+		transition:0.3s color;
+	}
+	transition:border 0.3s;
+}
+.ytbutton:hover{
+	.ytbuttonicon{
+		animation:stretch-pop 0.2s both;
+		animation-timing-function:linear;
+	}
+}
+.ytbutton p{
+	display:inline-block;
+	text-align:center;
+	font-size:large;
+	vertical-align:middle;
+}
+.ytbuttonicon{
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:10px;
+	position:relative;
+}
+.ytbuttonicon img{
+	max-height:2.75em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /*--- Comments styling ---*/
-
 #commentSection{
 	text-align:center;
 }
@@ -852,6 +926,13 @@ footer a:hover{
 	80%{ transform:rotate(5deg); }
 	100%{ transform:rotate(0deg)  scale(1);}
 }
+@keyframes stretch-pop{
+	0%{ transform:scale(1, 1);}
+	2%{ transform:scale(0.7, 1.5); }
+	40%{ transform:scale(1.2, 0.8); }
+	70%{ transform:scale(0.9, 1.2); }
+	100%{ transform:scale(1);}
+}
 @keyframes shake{
 	0%{ transform:translate(0.5px, 0.5px); }
 	10%{ transform:translate(-0.5px, -1px); }
@@ -895,12 +976,23 @@ footer a:hover{
 	}
 	.hero svg{scale:1.4;}
 	.hero{margin-bottom:0px;}
+	.ytbutton {
+		padding:8px;
+	}
 }
 @media (max-width:650px){
 	.hero svg{scale:1.5;}
 	.hero p:nth-child(1){font-size:2em;}
 	.hero p:nth-child(2){font-size:1.15em;}
 	.hero p:nth-child(3){font-size:0.75em;}
+	.ytbutton {
+		p{display: block;}
+		padding:4px 12px 8px 12px;
+		margin:-20px -10px 0 0;
+		.ytbuttonicon{
+			margin: 5px 0 0 0;
+		}
+	}
 }
 @media (max-width:550px){
 	main {overflow:hidden;}
@@ -954,6 +1046,13 @@ footer a:hover{
 		width:100vw;
 		background-color:#00000036;
 		box-shadow:0px 0px 20px 5px #00000044;
+	}
+	.ytbutton {
+		p{display: inline;}
+		padding:8px;
+		float:none;
+		margin:0 auto 0 auto;
+		width:fit-content;
 	}
 }
 @media (max-width:400px){
