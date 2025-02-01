@@ -105,4 +105,8 @@ Not too proud of it, but it was fun and satisfying to make a game by myself even
 
 It's obvious what went wrong, I botched several weeks of my time and still only spent a couple hours a day on making the game after that. It was also my first time making content in years, so I was doing all this *while* recording it *and* writing a [video](https://www.youtube.com/watch?v=-yiM-IhRL6A) script *and* this blog post. I'll have to learn to doom-scroll less and better manage those different tasks.
 
+# Downloads
+
+You can download Windows and Linux builds of this game from [here](https://mega.nz/folder/zy4WzBQL#HMD0jEfG13QfAy44yGxFeA). It should work for everyone because it works on my machine ;)
+
 Thanks so much for reading this! In my next post, I will be improving this skeleton of a game and trying to finish it.
