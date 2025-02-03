@@ -19,17 +19,7 @@
 </head>
 <div class="balls-bg"></div>
 
-<!-- Particle background -->
-<div class="particle-container">
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-</div>
+
 {{if not (hasPrefix .RelPermalink "/blank/")}}
 <nav class="navbar">
 	<div class="navbarcontent">
@@ -205,6 +195,18 @@ comments partial/shortcode is loaded-->
 {{ if not (.Param "hidecontentbg")}}
 </div>
 {{end -}}
+{{else}}
+<!-- Particle background -->
+<div class="particle-container">
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+	<div class="particle"></div>
+</div>
 {{end}}
 
 </body>
