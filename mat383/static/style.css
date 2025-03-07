@@ -74,7 +74,9 @@ div.balls-bg{
 	position:fixed;
 	z-index:-100;
 	background-color:#000000;
-	background-image:url("images/circles-bg.svg") !important;
+	@supports (filter:blur()){ 
+		background-image:url("images/circles-bg.png") !important;
+	}
     background-repeat:repeat;
 	background-size:50vw;
 	filter:blur(6vw) brightness(125%) !important;
