@@ -7,6 +7,7 @@ date: 2025-02-01T12:36:12+00:00
 centerdate: true
 tags: [ 'game dev' ]
 coverimg: "learning-godot-in-30-days"
+coverimgmaintype: "png"
 summary: "I technically made a game!"
 ytvid: "-yiM-IhRL6A"
 commentsenabled: true

@@ -9,6 +9,7 @@ datelabelupdated: false
 date: {{ .Date }}
 tags: []
 coverimg: ""
+coverimgmaintype: "avif"
 summary: ""
 ytvid: ""
 commentsenabled: true

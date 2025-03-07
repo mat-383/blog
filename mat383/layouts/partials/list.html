@@ -6,7 +6,7 @@
 					<div class="postpreviewcoverimg">
 					<div class="postpreviewcoverimg2">
 						<picture>
-							<source srcset="/images/thumbnails/{{ .Params.coverimg }}.avif" type="image/avif">
+							<source srcset="/images/thumbnails/{{ .Params.coverimg }}.{{ .Params.coverimgmaintype }}" type="image/{{ .Params.coverimgmaintype }}">
 							<img src="/images/thumbnails/{{ .Params.coverimg }}.jpg" width="400" height="200">
 						</picture>
 					</div>
