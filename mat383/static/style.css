@@ -864,6 +864,7 @@ footer a:hover{
 }
 .footersocials a{
 	display:inline-block;
+	margin: 0 4px 0 4px;
 }
 .footerbadges a{
 	display:inline-block;
