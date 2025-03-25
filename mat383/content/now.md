@@ -13,9 +13,9 @@ draft: false
 ---
 # Right now, I am...
 
-Working hard on my uni assignments, all of with are related to game dev :D
+Working hard on my uni assignments, all of which are related to game dev :D
 
-Here's one of my experimental game prototypes I made as an assignment. In this one, you insult your enemies with your microphone.
+Here's one of my experimental game prototypes I made as an assignment. In this one, you insult your enemies through the microphone.
 
 <video src="/videos/now/idontlikeyourface.mp4" controls preload="metadata"></video>
 
