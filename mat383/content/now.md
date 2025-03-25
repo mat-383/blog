@@ -5,7 +5,7 @@ hidesummary: true
 hidedate: false
 centerdate: false
 datelabelupdated: true
-date: 2025-02-01T12:36:12+00:00
+date: 2025-03-25T06:51:29+00:00
 tags: []
 summary: ""
 commentsenabled: true
@@ -13,22 +13,26 @@ draft: false
 ---
 # Right now, I am...
 
-About to continue working on the platformer game that I [recently started](https://www.youtube.com/watch?v=-yiM-IhRL6A).
+Working hard on my uni assignments, all of with are related to game dev :D
 
-I'm pretty happy with how that video turned out and the blog post too.
+Here's one of my experimental game prototypes I made as an assignment. In this one, you insult your enemies with your microphone.
+
+<video src="/videos/now/idontlikeyourface.mp4" controls preload="metadata"></video>
+
+It is just a prototype so it's pretty frustrating to play but you can [get it here](https://mega.nz/file/TodxVJrA#hqgzlyt8QB57RuJxmetHqaDuhZDHHG5lbo8P93HLTGU). All the voice transcription is done offline, so don't worry about that. There will be more of these experimental prototypes later [(my live journal)](https://v3.pebblepad.com.au/spa/#/public/4jbrj5Mn6wsdGx4qztWhfmZGHr) and I'll make a post talking about them too. 
+
+And because of that, I'm not gonna be able to finish that platformer game for a while (*cries*).
 
 <br>
 
 <span style="opacity: 0.65">
-<p class="datewritten classicdatewritten">Date written: 14 Dec. 2024</p>
+<p class="datewritten classicdatewritten">Date written: 01 Feb. 2025</p>
 
 ## And before that, I was...
 
-About to start my first *real* project. I've been making and refining this website for prolly around half a year now, it's time to stop. I'm pretty happy with the look of it, but I've got nothing to display here.
+About to continue working on the platformer game that I [recently started](https://www.youtube.com/watch?v=-yiM-IhRL6A).
 
-Expect a cool blog post and video soon (in a couple months at this rate L).
-
-*I do want to make a lite version of my website later. These new visual changes, while cool, are laggy on old devices and slow browsers. It's NOT where I want to put my focus now though.*
+I'm pretty happy with how that video turned out and the blog post too.
 
 </span>
 
