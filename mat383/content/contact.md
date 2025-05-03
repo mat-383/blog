@@ -8,6 +8,6 @@ summary: "Here is my contact information."
 ---
 # Contact me
 
-**Email:** *still setting up an email address with this custom domain name :P*
-
 **Discord:** mat383
+
+**Email:** <img src="/images/cooltext.gif" alt="btw this is in an image so scraper bots can't see it easily" loading="lazy" height="60px" width="339px" style="display:inline; vertical-align: bottom;"/>
