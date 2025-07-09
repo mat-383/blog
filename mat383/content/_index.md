@@ -59,8 +59,6 @@ commentsenabled: false
 
 I'll write more about myself in this page when I've gotten used to this whole personal website thing. It's still in development, so keep watching this space.
 
-**Currently redesigning this site, don't be surprised if something looks weird!**
-
 </div>
 <div class="float-in homecontent contentmargin">
 
