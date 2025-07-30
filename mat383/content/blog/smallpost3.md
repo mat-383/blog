@@ -1,19 +1,19 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "Small Posttttttttt 3"
 hidecontentbg: false
 hidetitle: false
 hidesummary: false
 hidedate: false
 centerdate: true
 datelabelupdated: false
-date: {{ .Date }}
+date: 2025-07-13T21:39:26+10:00
 tags: []
 coverimg: ""
 coverimgmaintype: "avif"
 summary: ""
 ytvid: ""
-smallpost: false
+smallpost: true
 commentsenabled: true
-draft: true
+draft: false
 ---
 
