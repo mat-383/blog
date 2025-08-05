@@ -1,5 +1,5 @@
 ---
-title: "Small Postttttt 2"
+title: "Test Postttttt 2"
 hidecontentbg: false
 hidetitle: false
 hidesummary: false
