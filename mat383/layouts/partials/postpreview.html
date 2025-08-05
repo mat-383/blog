@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="postpreviewtimetags">
-            <div class="postpreviewtime">
+            <div class="postpreviewtime postpreviewindividualbackground">
                 {{- if .Param "datesinlist" -}}
                     <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
                 {{- end -}}
@@ -42,9 +42,9 @@
                 {{ partial "taglist2.html" . }}{{ if .Param "taglist" }}{{end -}}
             </div>
         </div>
-        <div class="postpreviewtitle">{{ .Title }}</div>
+        <div class="postpreviewtitle postpreviewindividualbackground">{{ .Title }}</div>
         {{ if .Params.summary }}
-        <div class="postpreviewsummary">{{ .Params.summary }}</div>
+        <div class="postpreviewsummary postpreviewindividualbackground">{{ .Params.summary }}</div>
         {{ end }}
     </div>
 </div>
