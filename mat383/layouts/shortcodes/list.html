@@ -94,6 +94,6 @@ Example usage:
 
 <div class="postscontainer">
 	{{ range where .Site.RegularPages "Section" $section }}
-	{{ partial "postpreview.html" . }}
+		{{ partial "postpreview.html" . }}
     {{ end }}
 </div>
