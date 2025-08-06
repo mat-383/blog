@@ -509,8 +509,6 @@ svg{
 	width:100%;
 
 	transition:0.3s scale cubic-bezier(0.075, 0.82, 0.165, 1);
-	.postpreviewcoverimg._1 {
-	}
 }
 .postpreviewlink:hover{
 	scale:1.05;
@@ -571,13 +569,13 @@ svg{
 }
 .postpreviewbackground{
 	width:100%;
-	opacity: 0.4;
-	height:calc(100% * 4.5);
+	opacity: 0.5;
+	height:100%;
 	position:absolute;
 	z-index: -1;
-	bottom:-20%;
+	bottom:-5%;
 	right:0;
-	background-image:linear-gradient(to top, transparent 0%, black 6%, transparent 70%);
+	background-image:linear-gradient(to top, transparent 0%, black 8%, transparent 100%);
 	mask-image: linear-gradient(to right, transparent 0%, white calc(0% + 25px), white calc(100% - 25px), transparent 100%);
 }
 .postpreviewtext.nocoverimg{
