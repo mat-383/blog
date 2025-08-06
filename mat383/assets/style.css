@@ -1238,17 +1238,33 @@ footer a:hover{
 	.particle-container .particle:nth-child(6){display:none;}
 	.particle-container .particle:nth-child(7){display:none;}
 	.particle-container .particle:nth-child(8){display:none;}
-	.posts{
+	.postscontainer{
 		flex-direction: column;
-		gap: 60px;
 	}
-	.postpreviewcoverimg2 {mask-image: none; width:115vw;}
+	.smallpost{
+		min-width: 50%;
+		width: fit-content;
+		max-width: 100%;
+	}
 	.postpreview {
-		margin-left:-25px;
-		width:100vw;
-		background-color:#00000036;
-		box-shadow:0px 0px 20px 5px #00000044;
 	}
+
+	.postpreviewcoverimg._2{
+		.mask2{
+			mask-image: none;
+		}
+	}
+	.postpreviewbackground{
+		width:100%;
+		background-image:linear-gradient(to top, transparent 0%, black 8%, transparent 100%);
+		mask-image: none;
+	}
+
+
+
+
+
+
 	.ytbutton {
 		p{display: inline;}
 		padding:8px;
