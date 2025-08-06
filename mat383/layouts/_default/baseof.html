@@ -63,8 +63,8 @@
 
 
 {{if not (hasPrefix .RelPermalink "/tags/")}}
-	<header class="{{if not .Params.coverimg}}headernocoverimg{{end -}}">
-		{{if .Params.coverimg}}
+	<header class="{{if or (not .Params.coverimg) (.Params.hidecoverimg)}}headernocoverimg{{end -}}">
+		{{if (and (.Params.coverimg) (not .Params.hidecoverimg))}}
 			<div class="coverimgcontainer">
 				<div class="coverimgcontainer2">
 					<div class="coverimg">

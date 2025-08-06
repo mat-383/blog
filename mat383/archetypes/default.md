@@ -10,6 +10,7 @@ date: {{ .Date }}
 tags: []
 coverimg: ""
 coverimgmaintype: "avif"
+hidecoverimg: false
 summary: ""
 ytvid: ""
 smallpost: false
