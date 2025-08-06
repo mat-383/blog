@@ -523,7 +523,7 @@ svg{
 }
 .smallpost{
 	width: 40%;
-	max-width: 50%;
+	max-width: 45%;
 }
 
 .postpreview{
@@ -578,8 +578,12 @@ svg{
 	background-image:linear-gradient(to top, transparent 0%, black 8%, transparent 100%);
 	mask-image: linear-gradient(to right, transparent 0%, white calc(0% + 25px), white calc(100% - 25px), transparent 100%);
 }
-.postpreviewtext.nocoverimg{
+.postpreview.nocoverimg{
 	position:relative;
+	.postpreviewtext{
+		padding:10px 20px 5px;
+		position:relative;
+	}
 	.postpreviewbackground{
 		opacity: 1;
 		height:100%;

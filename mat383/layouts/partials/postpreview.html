@@ -43,7 +43,7 @@
 </a>*/}}
 
 <a href="{{ .RelPermalink }}" class="postpreviewlink {{ if .Param "smallpost" }}smallpost{{end}}">
-    <div class="postpreview">
+    <div class="postpreview {{ if not .Params.coverimg }}nocoverimg{{ end }}">
         {{ if .Params.coverimg }}
         {{/*<div class="postpreviewcoverimg">
             <div class="postpreviewcoverimg2">
