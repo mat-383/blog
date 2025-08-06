@@ -510,14 +510,13 @@ svg{
 
 	transition:0.3s scale cubic-bezier(0.075, 0.82, 0.165, 1);
 	.postpreviewcoverimg._1 {
-		transition:0.3s filter cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 }
 .postpreviewlink:hover{
 	scale:1.05;
 	.postpreviewtitle {text-decoration:underline;}
-	.postpreviewcoverimg._1 {
-		filter:blur(20px) brightness(1.4) saturate(2);
+	.postpreviewcoverimg._2 {
+		animation: postpreviewhover 0.8s linear both;
 	}
 }
 .postpreviewlink:not(.smallpost){
@@ -1154,6 +1153,11 @@ footer a:hover{
     0%{opacity:0; transform:translateY(-30px)}
     100%{opacity:1;}
 }*/
+@keyframes postpreviewhover{
+	0%{filter: brightness(1) saturate(1.0)}
+	10%{filter: brightness(1.4) saturate(1.5)}
+	100%{filter: brightness(1.1) saturate(1.1)}
+}
 
 
 
