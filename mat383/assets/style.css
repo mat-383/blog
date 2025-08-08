@@ -75,11 +75,11 @@ div.balls-bg{
 	z-index:-100;
 	background-color:#000000;
 	@supports (filter:blur()){ 
-		background-image:url("images/circles-bg.png") !important;
+		background-image:url("images/circles-bg3.png") !important;
 	}
     background-repeat:repeat;
 	background-size:50vw;
-	filter:blur(6vw) brightness(125%) !important;
+	filter:blur(2.5vw) brightness(125%) !important;
 }
 
 
@@ -153,13 +153,13 @@ div.balls-bg{
 @media (max-width:3000px){
 	div.balls-bg{
 		background-size:65%;
-		filter:blur(6em) brightness(125%) !important;
+		filter:blur(4.5em) brightness(125%) !important;
 	}
 }
 @media (max-width:2000px){
 	div.balls-bg{
 		background-size:100em;
-		filter:blur(6em) brightness(125%) !important;
+		filter:blur(3.5em) brightness(125%) !important;
 	}
 	.particle-container .particle{
 		width:10em;
