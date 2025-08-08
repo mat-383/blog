@@ -8,6 +8,7 @@ date: 2024-07-27T14:20:48+10:00
 summary: "The personal website of Mat383, the amateur programmer, game dev, and human."
 tags: []
 commentsenabled: false
+autoloadcomments: false
 ---
 
 <div class="hero">

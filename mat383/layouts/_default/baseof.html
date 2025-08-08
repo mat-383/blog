@@ -165,7 +165,32 @@ comments partial/shortcode is loaded-->
 	document.getElementById('loadComments').addEventListener('click', function() {
 		loadRemark42();
 	});
+
 </script>
+
+{{/* Automatic comments loading */}}
+{{if .Param "autoloadcomments"}}
+	<script>
+		const options = {
+			root: null, // observe relative to viewport
+			rootMargin: '0px', // no margin
+			threshold: 0.1 // trigger when 10% visible
+		};
+		
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					loadRemark42();
+					observer.disconnect(); // prevent multiple loads
+				}
+			});
+		}, options);
+		
+		// Observe the comment section
+		observer.observe(document.getElementById('commentSection'));
+	</script>
+{{end}}
+
 </main>
 {{ block "footer" . }}
 <footer>

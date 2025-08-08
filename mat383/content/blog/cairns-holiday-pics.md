@@ -11,6 +11,7 @@ coverimg: "cairns-holiday-pics"
 coverimgmaintype: "avif"
 summary: "I took heaps of landscape pics while I was there. Here, take some!"
 commentsenabled: true
+autoloadcomments: true
 draft: false
 ---
 

@@ -15,6 +15,7 @@ summary: " "
 ytvid: ""
 smallpost: true
 commentsenabled: true
+autoloadcomments: true
 draft: false
 ---
 
