@@ -7,7 +7,7 @@ hidedate: false
 centerdate: true
 datelabelupdated: false
 date: 2025-07-16T21:39:26+10:00
-tags: []
+tags: ["outside"]
 coverimg: "test1"
 coverimgmaintype: "jpg"
 hidecoverimg: true

@@ -508,6 +508,16 @@ svg{
 	text-shadow: none;
 	}
 }
+.headersmallpost{
+	.posttags{
+		margin:20px auto 10px;
+	}
+	.pagetitle{
+		font-size:38px;
+		margin-top:0px;
+		margin-bottom:0px;
+	}
+}
 
 
 

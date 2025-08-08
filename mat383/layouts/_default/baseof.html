@@ -63,7 +63,7 @@
 
 
 {{if not (hasPrefix .RelPermalink "/tags/")}}
-	<header class="{{if or (not .Params.coverimg) (.Params.hidecoverimg)}}headernocoverimg{{end -}}">
+	<header class="{{if .Param "smallpost"}}headersmallpost {{end -}} {{if or (not .Params.coverimg) (.Params.hidecoverimg)}}headernocoverimg{{end -}}">
 		{{if (and (.Params.coverimg) (not .Params.hidecoverimg))}}
 			<div class="coverimgcontainer">
 				<div class="coverimgcontainer2">
@@ -79,7 +79,7 @@
 		{{if .Param "tags"}}<div class="posttags"><p>Tags: {{partial "taglist.html" .}}</p></div>{{else if not (.Param "hidetitle")}}<br>{{end -}}
 		{{if (and (not (.Param "hidetitle")) (not (hasPrefix .RelPermalink "/tags/")))}}<h1 id="tag_{{.Title}}" class="pagetitle">{{block "title" .}}{{end}}</h1>{{end}}
 		{{if not (.Param "hidesummary")}}<p class="pagesummary">{{.Summary}}</p>{{end}}
-		{{if (and (not (.Param "hidedate")) (not (hasPrefix .RelPermalink "/tags/")))}}<p class="datewritten {{if not (.Param "centerdate")}}classicdatewritten{{end}}"><time>{{if .Param "datelabelupdated"}}Updated{{else}}Date written{{end}}: {{.Date.Format "02 Jan. 2006"}}</time></p>{{end}}
+		{{if (and (not (.Param "hidedate")) (not (hasPrefix .RelPermalink "/tags/")))}}<p class="datewritten {{if not (.Param "centerdate")}}classicdatewritten{{end}}"><time>{{if .Param "datelabelupdated"}}Updated{{else}}Date posted{{end}}: {{.Date.Format "02 Jan. 2006"}}</time></p>{{end}}
 	</header>
 {{end}}
 {{if eq .RelPermalink "/tags/"}}
