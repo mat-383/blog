@@ -1351,6 +1351,8 @@ footer a:hover{
 	.loadcommentsicon{margin-left:4px;}
 	.loadcommentsicon img{max-height:2em;}
 	.contentbg{padding:5px;}
+	.postpreviewtext{padding-left:15px;padding-right:15px;}
+	.postpreviewtext{line-height:1.25;}
 }
 @media (max-width:200px){
 	.loadcommentsbutton p{margin:7px;}
