@@ -54,6 +54,9 @@
             </div>
         </div>*/}}
         <div class="postpreviewcoverimgcontainer">
+            {{ if .Params.isvideo }}
+                <img src="/icons/videoplayicon.svg" alt="This post is a video" class="videoplayicon">
+            {{end}}
             <div class="postpreviewcoverimg _1">
                 <div class="mask1">
                     <div class="mask2">
