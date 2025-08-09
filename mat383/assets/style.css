@@ -1010,6 +1010,11 @@ svg{
 #commentSection{
 	text-align:center;
 }
+.loadcommentsbuttoncontainer {
+	position: relative;
+	width:fit-content;
+	margin:auto;
+}
 .loadcommentsbutton{
 	margin-top:15px;
 	margin-left:auto;
@@ -1027,17 +1032,36 @@ svg{
 		filter:saturate(100%) brightness(100%);
 	}
 }
-.loadcommentsbutton:not(:hover){
-	border:2px solid transparent;
-	p{
-		color:#ccc;
-		transition:0.3s color;
+.loadcommentsbutton._2{
+	background-color: transparent;
+	filter:blur(5px) brightness(2) saturate(2);
+	z-index: -1;
+
+	opacity: 1;
+	position: absolute;
+	bottom:0;
+	pointer-events:visible;
+}
+.loadcommentsbutton._2:hover{
+	opacity: 1;
+}
+.loadcommentsbuttoncontainer:not(:hover){
+	.loadcommentsbutton._1{
+		border:2px solid transparent;
+		p{
+			color:#ccc;
+			transition:0.3s color;
+		}
+		.loadcommentsicon{
+			filter:saturate(0%) brightness(175%);
+			transition:0.3s filter;
+		}
+		transition:border 0.3s;
 	}
-	.loadcommentsicon{
-		filter:saturate(0%) brightness(175%);
-		transition:0.3s filter;
+	.loadcommentsbutton._2{
+		opacity: 0;
+		transition:0.3s opacity;
 	}
-	transition:border 0.3s;
 }
 .loadcommentsbutton:hover{
 	.loadcommentsicon{
