@@ -941,10 +941,13 @@ svg{
 
 
 /*--- Yt Button styling ---*/
+.ytbuttoncontainer{
+	height:fit-content;
+	width:fit-content;
+	float:right;
+	position:relative;
+}
 .ytbutton{
-	margin-top:-10px;
-	margin-left:auto;
-	margin-right:auto;
 	float:right;
 	text-align: right;
 	display:block;
@@ -953,20 +956,40 @@ svg{
 	border-radius:5px;
 	background-color:#08080862;
 	border:2px solid red;
-	text-decoration-color: transparent;
 	p{
 		color:white;
 		margin:0;
 	}
-}
-.ytbutton:not(:hover){
-	border:2px solid transparent;
-	p{
-		color:#ccc;
-		transition:0.3s color;
+	a{
+		text-decoration-color: transparent;
 	}
-	transition:border 0.3s;
 }
+.ytbutton._2{
+	pointer-events: none;
+	opacity: 1;
+	z-index: -1;
+	background-color: transparent;
+	position: absolute;
+	right:0;
+	filter: blur(5px) brightness(2) saturate(2);
+	border: 2px solid rgb(255, 50, 50);
+	outline: 2px solid rgb(255, 50, 50);
+}
+.ytbuttoncontainer:not(:hover){
+	.ytbutton._1{
+		border:2px solid transparent;
+		p{
+			color:#ccc;
+			transition:0.3s color;
+		}
+		transition:border 0.3s;
+	}
+	.ytbutton._2{
+		opacity: 0;
+		transition:opacity 0.3s;
+	}
+}
+
 .ytbutton:hover{
 	.ytbuttonicon{
 		animation:stretch-pop 0.2s both;
@@ -1322,7 +1345,11 @@ footer a:hover{
 		}
 	}
 
-
+	.ytbuttoncontainer{
+		margin-left: auto;
+		margin-right:auto;
+		float:none;
+	}
 
 	.ytbutton {
 		p{display: inline;}
@@ -1330,6 +1357,10 @@ footer a:hover{
 		float:none;
 		margin:0 auto 0 auto;
 		width:fit-content;
+	}
+	.ytbutton._2{
+		top:0;
+		p{display: inline-block;}
 	}
 }
 @media (max-width:400px){
@@ -1380,6 +1411,7 @@ footer a:hover{
 	.contentbg{padding:5px;}
 	.postpreviewtext{padding-left:15px;padding-right:15px;}
 	.postpreviewtext{line-height:1.25;}
+	.ytbutton p{display:block;}
 }
 @media (max-width:200px){
 	.loadcommentsbutton p{margin:7px;}

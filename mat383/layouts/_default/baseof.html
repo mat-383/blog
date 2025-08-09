@@ -94,10 +94,17 @@
 
 <!--The YouTube link button-->
 {{if .Param "ytvid"}}
-	<div id="ytbuttoncontainer">
-		<a class="ytbutton" href="https://www.youtube.com/watch?v={{.Param "ytvid"}}">
-			<p>Watch on </p><img class="ytbuttonicon" src="/icons/youtubefull.svg" alt="YouTube icon" style="height:25px; width: 108px;">
-		</a>
+	<div class="ytbuttoncontainer">
+		<div class="ytbutton _1">
+			<a href="https://www.youtube.com/watch?v={{.Param "ytvid"}}">
+				<p>Watch on </p><img class="ytbuttonicon" src="/icons/youtubefull.svg" alt="YouTube icon" style="height:25px; width: 108px;">
+			</a>
+		</div>
+		<div class="ytbutton _2">
+			<a href="https://www.youtube.com/watch?v={{.Param "ytvid"}}">
+				<p>Watch on </p><img class="ytbuttonicon" src="/icons/youtubefull.svg" alt="YouTube icon" style="height:25px; width: 108px;">
+			</a>
+		</div>
 	</div>
 {{ end }}
 
