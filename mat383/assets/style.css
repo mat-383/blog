@@ -56,7 +56,7 @@ a{
 	text-underline-offset:3px;
 	text-decoration-line:none;
 }
-a:not(.postpreviewlink, .navlink, .tag, .tagcloudtext, .ytbutton a){
+a:not(.postpreviewlink, .navlink, .tag, .tagcloudtext, .ytbutton a, .footerhover a:not(:hover)){
 	text-shadow: 0px 0px 4px rgba(0, 255, 0, 0.5);
 }
 h1, h2, h3, h4, h5, h6{
