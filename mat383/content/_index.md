@@ -41,6 +41,10 @@ autoloadcomments: false
                         <stop offset="70%" stop-color="rgb(17, 177, 0)" />
                         <stop offset="120%" stop-color="rgb(2, 99, 0)" />
                     </linearGradient>
+                    <linearGradient id="m-solid" x2="-0.15" y2="1">
+                        <stop offset="0%" stop-color="rgb(2, 99, 0)" />
+                        <stop offset="100%" stop-color="rgb(2, 99, 0)" />
+                    </linearGradient>
                     </defs>
                 </svg>
             </div>

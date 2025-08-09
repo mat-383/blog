@@ -838,19 +838,22 @@ svg{
 	position:relative;
 	flex-grow:2.75;
 	margin:auto;
-	aspect-ratio:1/1.045;
+	aspect-ratio:1/0.75;
 }
 .heroimagestack div{
 	position:absolute;
+	pointer-events: none;
 }
 .heroimage{
 	transition:0.25s scale;
 	animation-delay:0.5s;
 }
-.heroimage:hover{scale:1.05;}
-.hero svg{scale:1.5;}
+.heroimage:hover{
+	scale:1.05;
+}
+.hero svg{scale:1.5;pointer-events: none;translate: 0 -28px;}
 .hero .m{
-	fill:#026300;
+	fill:url(#m-solid) #026300;
 	stroke:white;
 	width:100%;
 	stroke-opacity:1;
