@@ -1,0 +1,21 @@
+<!--
+	class: class of the button container
+	link: url the image directs to
+	text: the text of the button
+    icon: link to the icon of the button
+    iconsize: maximum height of the icon in em units
+    color: the rgba colour of the button's text and border
+    glowcolor: the colour of the button's glow
+    paddingx: padding
+    paddingy: padding
+-->
+<div class="custombuttoncontainer {{ .Get "class"}}">
+    <a  href="{{ .Get "link"}}">
+        <button class="custombutton _1" style="--color:{{ if .Get "color" }}rgba({{ .Get "color" }}){{ else }}rgb(0, 180, 0){{ end }}; --paddingx:{{ if .Get "paddingx" }}{{ .Get "paddingx" }}px{{ else }}13px{{ end }}; --paddingy:{{ if .Get "paddingy" }}{{ .Get "paddingy" }}px{{ else }}18px{{ end }}">
+            <p>{{.Get "text"}}</p>{{ if .Get "icon" }}<img class="custombuttonicon" src="{{ .Get "icon"}}" alt="{{ .Get "text"}}" style="height:{{ if .Get "iconsize" }}{{ .Get "iconsize"}}{{else}}1.25{{end}}em; width: auto;"> {{ end }}
+        </button>
+        <button class="custombutton _2" style="--color:{{ if .Get "glowcolor" }}rgba({{ .Get "glowcolor" }}){{ else if .Get "color" }}rgba({{ .Get "color" }}){{ else }}rgb(0, 180, 0){{ end }}; --paddingx:{{ if .Get "paddingx" }}{{ .Get "paddingx" }}px{{ else }}13px{{ end }}; --paddingy:{{ if .Get "paddingy" }}{{ .Get "paddingy" }}px{{ else }}18px{{ end }}">
+            <p>{{ .Get "text"}}</p>{{ if .Get "icon" }}<img class="custombuttonicon" src="{{ .Get "icon"}}" alt="{{ .Get "text"}}" style="height:{{ if .Get "iconsize" }}{{ .Get "iconsize"}}{{else}}1.25{{end}}em; width: auto;"> {{ end }}
+        </button>
+    </a>
+</div>

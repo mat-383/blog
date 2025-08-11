@@ -60,16 +60,30 @@ autoloadcomments: false
 
 
 <div class="homecontent contentbg float-in">
-<p>Just kidding, I'm <i>also</i> an amateur programmer who's interested in making games and other cool things on screens. I started this website to document and share my journey.</p>
 
-I'll write more about myself in this page when I've gotten used to this whole personal website thing. It's still in development, so keep watching this space.
+I'm an amateur game developer / nerd who wants to make things that are very cool and a bit different. I yap more about myself in my [about](/about) page.
+
+On this website, I wanna share all the stuff I make. My [blog](/blog) is where I post all of that.
+
+You won't find much yet because I've been obsessing over programming this website instead of making content for it :P
+
+
 
 </div>
-<div class="float-in homecontent contentmargin">
 
-## Read my recent posts! ↓
+<br>
 
-{{< list section="blog" >}}
+<div class="float-in contentbg homecontent">
+
+<p>I also have a presence on these platforms:</p>
+
+<ul class="sociallist">
+    <li>{{< custombutton text="YouTube" link="https://youtube.com/@Mat383" icon="/icons/youtube-red.svg" iconsize="1.4" color="255, 0, 0" glowcolor="255, 70, 70" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="Odyssey" link="https://odysee.com/@Mat383" icon="/icons/odyssey-pink.png" iconsize="1.75" color="230, 30, 130" glowcolor="250, 30, 130" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="Reddit" link="https://www.reddit.com/u/mat383" icon="/icons/reddit-orange.png" iconsize="1.5" color="255, 85, 0" glowcolor="255, 85, 0" paddingx="10" paddingy="8">}}</li>
+</ul>
+
+<br>
 
 </div>
 

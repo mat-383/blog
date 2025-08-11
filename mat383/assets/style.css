@@ -281,6 +281,7 @@ a.activepage{
 
 
 
+
 /*--- Tags ---*/
 .tagcloud{
 	margin-top:16px;
@@ -543,8 +544,8 @@ svg{
 	flex-direction: row;
 	align-items:flex-start;
 	justify-content: center;
-	gap:70px 70px;
-	margin: 60px 0 60px 0;
+	gap:70px 60px;
+	margin: 60px -10px 60px -10px;
 }
 
 .postpreviewlink{
@@ -846,7 +847,7 @@ svg{
 
 
 
-/*--- Home page hero section ---*/
+/*--- Home page stuff ---*/
 .hero{
 	display:flex;
 	flex-direction:row;
@@ -942,6 +943,7 @@ svg{
 .hero p:nth-child(3){
 	font-size:0.75em;
 	margin-top:0.75em;
+	width:fit-content;
 }
 .hero p:nth-child(3):hover{
 	animation:shake 0.25s infinite; 
@@ -952,6 +954,15 @@ svg{
 }
 .homecontent{
 	animation-delay:0.25s;
+}
+.sociallist{
+	padding-left: 0;
+	list-style: none;
+	margin: 0 auto;
+	width:fit-content;
+	display:flex;
+	align-items:center;
+	gap:20px;
 }
 
 
@@ -1057,29 +1068,32 @@ svg{
 #commentSection{
 	text-align:center;
 }
-.loadcommentsbuttoncontainer {
+.loadcommentsbuttoncontainer, .custombuttoncontainer {
 	position: relative;
 	width:fit-content;
+}
+.loadcommentsbuttoncontainer{
 	margin:auto;
 }
-.loadcommentsbutton{
+.loadcommentsbutton, .custombutton{
 	margin-top:15px;
 	margin-left:auto;
 	margin-right:auto;
 	display:block;
-	padding:2px 13px 2px 13px;
+	padding:0px var(--paddingx);
 	max-width:800px;
 	border-radius:5px;
 	background-color:#08080862;
-	border:2px solid rgb(0, 180, 0);
-	p{
-		color:rgb(0, 180, 0);
+	border:2px solid var(--color);
+	p, a{
+		color: var(--color);
+		margin:var(--paddingy) 0;
 	}
-	.loadcommentsicon{
+	.loadcommentsicon, .custombuttonicon{
 		filter:saturate(100%) brightness(100%);
 	}
 }
-.loadcommentsbutton._2{
+.loadcommentsbutton._2, .custombutton._2{
 	background-color: transparent;
 	filter:blur(5px) brightness(2) saturate(2);
 	z-index: -1;
@@ -1089,47 +1103,47 @@ svg{
 	bottom:0;
 	pointer-events:visible;
 }
-.loadcommentsbutton._2:hover{
+.loadcommentsbutton._2:hover, .custombutton._2:hover{
 	opacity: 1;
 }
-.loadcommentsbuttoncontainer:not(:hover){
-	.loadcommentsbutton._1{
+.loadcommentsbuttoncontainer:not(:hover), .custombuttoncontainer:not(:hover){
+	.loadcommentsbutton._1, .custombutton._1{
 		border:2px solid transparent;
 		p{
 			color:#ccc;
 			transition:0.3s color;
 		}
-		.loadcommentsicon{
-			filter:saturate(0%) brightness(175%);
+		.loadcommentsicon, .custombuttonicon{
+			filter:saturate(0%) brightness(500%);
 			transition:0.3s filter;
 		}
 		transition:border 0.3s;
 	}
-	.loadcommentsbutton._2{
+	.loadcommentsbutton._2, .custombutton._2{
 		opacity: 0;
 		transition:0.3s opacity;
 	}
 }
-.loadcommentsbutton:hover{
-	.loadcommentsicon{
+.loadcommentsbutton:hover, .custombutton:hover{
+	.loadcommentsicon, .custombuttonicon{
 		animation:shake-pop 0.15s both;
 		animation-timing-function:linear;
 	}
 }
-.loadcommentsbutton p{
+.loadcommentsbutton p, .custombutton p{
 	display:inline-block;
 	text-align:center;
 	font-size:large;
 	vertical-align:middle;
 }
-.loadcommentsicon{
+.loadcommentsicon, .custombuttonicon{
 	display:inline-block;
 	vertical-align:middle;
 	margin-left:7px;
 	position:relative;
 	filter:saturate(0%) brightness(175%);
 }
-.loadcommentsicon img{
+.loadcommentsicon img, .custombuttonicon img{
 	max-height:2.75em;
 }
 /* TODO figure out how to style remark42 more */
