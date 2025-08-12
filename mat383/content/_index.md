@@ -61,9 +61,9 @@ autoloadcomments: false
 
 <div class="homecontent contentbg float-in">
 
-I'm an amateur game developer / nerd who wants to make things that are very cool and a bit different. I yap more about myself in my [about](/about) page.
+I'm an amateur game developer / nerd who wants to make things that are very cool and a bit different. I yap more about myself in my **[about](/about)** page.
 
-On this website, I wanna share all the stuff I make. My [blog](/blog) is where I post all of that.
+On this website, I wanna share all the stuff I make. My **[blog](/blog)** is where I post all of that.
 
 You won't find much yet because I've been obsessing over programming this website instead of making content for it :P
 
@@ -78,9 +78,14 @@ You won't find much yet because I've been obsessing over programming this websit
 <p>I also have a presence on these platforms:</p>
 
 <ul class="sociallist">
-    <li>{{< custombutton text="YouTube" link="https://youtube.com/@Mat383" icon="/icons/youtube-red.svg" iconsize="1.4" color="255, 0, 0" glowcolor="255, 70, 70" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="YouTube" link="https://youtube.com/@Mat383" icon="/icons/youtube-red.png" iconsize="1.4" color="255, 0, 0" glowcolor="255, 70, 70" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="Bluesky" link="https://bsky.app/profile/mat383.com" icon="/icons/bluesky.png" iconsize="1.6" color="22, 132, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="Reddit" link="https://www.reddit.com/u/mat383" icon="/icons/reddit-orange.png" iconsize="1.5" color="255, 85, 0" glowcolor="" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="Steam" link="https://steamcommunity.com/id/mat383/" icon="/icons/steam.png" iconsize="1.75" color="20, 150, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="HowLongToBeat" link="https://howlongtobeat.com/user/Mat383" icon="/icons/howlongtobeat.png" iconsize="1.5" color="255, 255, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
     <li>{{< custombutton text="Odyssey" link="https://odysee.com/@Mat383" icon="/icons/odyssey-pink.png" iconsize="1.75" color="230, 30, 130" glowcolor="250, 30, 130" paddingx="10" paddingy="8">}}</li>
-    <li>{{< custombutton text="Reddit" link="https://www.reddit.com/u/mat383" icon="/icons/reddit-orange.png" iconsize="1.5" color="255, 85, 0" glowcolor="255, 85, 0" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="piclog.blue" link="https://piclog.blue/profile.php?id=1330" icon="/icons/piclog.png" iconsize="1.75" color="75, 75, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="status.cafe" link="https://status.cafe/users/mat383" icon="/icons/statuscafe.png" iconsize="1.5" color="150, 150, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
 </ul>
 
 <br>
