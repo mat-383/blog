@@ -14,7 +14,7 @@ hidecoverimg: false
 summary: ""
 ytvid: ""
 smallpost: false
-isvideo: true
+isvideo: false
 commentsenabled: true
 autoloadcomments: true
 draft: true

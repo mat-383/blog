@@ -38,23 +38,8 @@
 		</div>
 	</div>
 </nav>
-<body style="visibility: hidden;">
-<script>
-	// Helper function
-	let domReady = (cb) => {
-		document.readyState === 'interactive' || document.readyState === 'complete'
-		? cb()
-		: document.addEventListener('DOMContentLoaded', cb);
-	};
-	
-	domReady(() => {
-		// Display body when DOM is loaded
-		document.body.style.visibility = 'visible';
-	});
-</script>
 <script>0</script>
 <noscript><style>body { visibility: visible; }</style></noscript>
-<!--{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}-->
 <main>
 
 {{ if not (.Param "hidecontentbg")}}
@@ -92,7 +77,7 @@
 {{ if .IsHome }}
 {{ end }}
 
-<!--The YouTube link button-->
+{{/* The YouTube link button */}}
 {{if .Param "ytvid"}}
 	<div class="ytbuttoncontainer">
 		<div class="ytbutton _1">
@@ -114,7 +99,7 @@
 {{if .IsHome}}
 	
 {{end}}
-<!-- Don't show comments in these pages -->
+{{/* Don't show comments in these pages */}}
 {{if or (and 
 	(not (hasPrefix .RelPermalink "/tags/"))
 	(not (eq .RelPermalink "/blog/"))
@@ -204,13 +189,6 @@ comments partial/shortcode is loaded-->
 	
 	<br>
 	<br>
-	
-	{{/*<div class="footersocials">
-		<a href="https://youtube.com/@Mat383"><img src="/icons/youtube.png" class="sizeanimation" style="height:1.5em;" alt="Youtube" title="I post videos on YouTube"></a>
-		<a href="https://odysee.com/@Mat383"><img src="/icons/odyssey.png" class="sizeanimation" style="height:1.75em; width: 1.75em;" alt="Odyssey" title="I post videos to Odyssey too!"></a>
-		<a href="https://www.reddit.com/u/mat383"><img src="/icons/reddit.png" class="sizeanimation" style="height:1.75em;" alt="Reddit" title="I post to Reddit, but only sometimes"></a>
-		<a href="/index.xml"><img src="/icons/rss.png" class="sizeanimation" style="height:1.75em; width: 1.75em;" alt="RSS Feed" title="Subscribe via RSS for new blog posts!"></a>
-	</div>*/}}
 
 	<br>
 
