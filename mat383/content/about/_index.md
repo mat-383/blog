@@ -10,11 +10,11 @@ commentsenabled: false
 ---
 # About me
 
-{{< img src="" width="300px" class="aboutmeimg _1">}}
+<!--{{< img src="" width="300px" class="aboutmeimg _1">}}-->
 
 Imagine a kid called Matt who comes up with a wack username to use online and never changes it. Then they grow up and buy a domain named after it. They are also obsessed with the colour green.
 
-{{< img src="" width="300px" class="aboutmeimg _2">}}
+<!--{{< img src="" width="300px" class="aboutmeimg _2">}}-->
 
 Surprise, I am that person. There is no saving me.
 
