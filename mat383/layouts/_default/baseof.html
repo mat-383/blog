@@ -151,7 +151,7 @@ comments partial/shortcode is loaded-->
 
 			// Remove the "Load Comments" button 200ms after it was pressed (so touchscreen users can see the cool animation)
 			setTimeout(function() { 
-				var loadCommentsButton = document.getElementById('loadCommentsContainer');
+				var loadCommentsButton = document.getElementById('commentSection');
 				loadCommentsButton.parentNode.removeChild(loadCommentsButton);
 			}, 200);
 		}
