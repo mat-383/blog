@@ -1,58 +1,6 @@
-{{/*<a href="{{ .RelPermalink }}" class="postpreviewlink">
-<div class="postpreview {{ if .Param "smallpost" }}smallpost{{end}}">
-    {{ if .Params.coverimg }}
-    <div class="postpreviewcoverimgcontainer">
-        <div class="postpreviewcoverimg1 mask1">
-            <div class="mask2">
-                <picture>
-                    <source srcset="/images/thumbnails/{{ .Params.coverimg }}.{{ .Params.coverimgmaintype }}" type="image/{{ .Params.coverimgmaintype }}">
-                    <img src="/images/thumbnails/{{ .Params.coverimg }}.jpg" width="" height="">
-                </picture>
-            </div>
-        </div>
-        <div class="postpreviewcoverimg postpreviewcoverimg2">
-            <picture>
-                <source srcset="/images/thumbnails/{{ .Params.coverimg }}.{{ .Params.coverimgmaintype }}" type="image/{{ .Params.coverimgmaintype }}">
-                <img src="/images/thumbnails/{{ .Params.coverimg }}.jpg" width="" height="">
-            </picture>
-        </div>
-    </div>
-    {{ end }}
-    <div class="postpreviewtext {{ if not .Params.coverimg }}postpreviewtextnocoverimg{{ end }}">
-        <div class="postpreviewtextbackground mask1">
-            <div class="mask2">
-                <div class="postpreviewtextbackground background"></div>
-            </div>
-        </div>
-        <div class="postpreviewtimetags">
-            <div class="postpreviewtime postpreviewindividualbackground">
-                {{- if .Param "datesinlist" -}}
-                    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
-                {{- end -}}
-            </div>
-            <div class="postpreviewtags">
-                {{ partial "taglist2.html" . }}{{ if .Param "taglist" }}{{end -}}
-            </div>
-        </div>
-        <div class="postpreviewtitle postpreviewindividualbackground">{{ .Title }}</div>
-        {{ if .Params.summary }}
-        <div class="postpreviewsummary postpreviewindividualbackground">{{ .Params.summary }}</div>
-        {{ end }}
-    </div>
-</div>
-</a>*/}}
-
 <a href="{{ .RelPermalink }}" class="postpreviewlink {{ if .Param "smallpost" }}smallpost{{end}} {{ if not .Params.coverimg }}nocoverimg{{ end }}">
     <div class="postpreview {{ if not .Params.coverimg }}nocoverimg{{ end }}">
         {{ if .Params.coverimg }}
-        {{/*<div class="postpreviewcoverimg">
-            <div class="postpreviewcoverimg2">
-                <picture>
-                    <source srcset="/images/thumbnails/{{ .Params.coverimg }}.{{ .Params.coverimgmaintype }}" type="image/{{ .Params.coverimgmaintype }}">
-                    <img src="/images/thumbnails/{{ .Params.coverimg }}.jpg" width="400" height="200">
-                </picture>
-            </div>
-        </div>*/}}
         <div class="postpreviewcoverimgcontainer">
             {{ if .Params.isvideo }}
                 <img src="/icons/videoplayicon.svg" alt="This post is a video" class="videoplayicon">

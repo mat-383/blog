@@ -47,51 +47,6 @@ Example usage:
 {{< list section="blog" >}}
 */}}
 
-
-<!-- Cool code that puts small posts and big posts in separate divs,
-	not needed anymore because that heirarchy is achieved with flexbox
-
-<div class="postscontainer">
-	{{/* Variable for keeping track of if we're in a smallpostcontainer or bigpostcontainer div */}}
-    {{ $currentSection := "" }}
-    
-    {{ range where .Site.RegularPages "Section" $section }}
-        {{ if .Param "smallpost" }}
-			{{/* End a bigpostcontainer div */}}
-            {{ if eq $currentSection "bigpost" }}
-                </div>
-            {{ end }}
-            
-			{{/* Start a smallpostcontainer div */}}
-            {{ if ne $currentSection "smallpost" }}
-                <div class="smallpostscontainer">
-                    {{ $currentSection = "smallpost" }}
-            {{ end }}
-            
-			{{/* Output the post */}}
-            {{ partial "postpreview.html" . }}
-            
-        {{ else }}
-			{{/* End a smallpostcontainer div */}}
-            {{ if eq $currentSection "smallpost" }}
-                </div>
-            {{ end }}
-            
-
-			{{/* Start a bigpostcontainer div */}}
-            {{ if ne $currentSection "bigpost" }}
-                <div class="bigpostscontainer">
-                    {{ $currentSection = "bigpost" }}
-            {{ end }}
-            
-			{{/* Output the post */}}
-            {{ partial "postpreview.html" . }}
-        {{ end }}
-    {{ end }}
-</div>
--->
-
-
 <div class="postscontainer">
 	{{ range where .Site.RegularPages "Section" $section }}
 		{{ partial "postpreview.html" . }}
