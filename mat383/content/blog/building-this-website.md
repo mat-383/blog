@@ -8,6 +8,7 @@ centerdate: true
 tags: [ 'website' ]
 summary: "Let me tell you why I made it and what tools I used."
 commentsenabled: true
+autoloadcomments: true
 draft: false
 ---
 

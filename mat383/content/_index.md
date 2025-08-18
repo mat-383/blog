@@ -8,6 +8,7 @@ date: 2024-07-27T14:20:48+10:00
 summary: "The personal website of Mat383, the amateur programmer, game dev, and human."
 tags: []
 commentsenabled: false
+autoloadcomments: false
 ---
 
 <div class="hero">
@@ -40,6 +41,10 @@ commentsenabled: false
                         <stop offset="70%" stop-color="rgb(17, 177, 0)" />
                         <stop offset="120%" stop-color="rgb(2, 99, 0)" />
                     </linearGradient>
+                    <linearGradient id="m-solid" x2="-0.15" y2="1">
+                        <stop offset="0%" stop-color="rgb(2, 99, 0)" />
+                        <stop offset="100%" stop-color="rgb(2, 99, 0)" />
+                    </linearGradient>
                     </defs>
                 </svg>
             </div>
@@ -55,16 +60,35 @@ commentsenabled: false
 
 
 <div class="homecontent contentbg float-in">
-<p>Just kidding, I'm <i>also</i> an amateur programmer who's interested in making games and other cool things on screens. I started this website to document and share my journey.</p>
 
-I'll write more about myself in this page when I've gotten used to this whole personal website thing. It's still in development, so keep watching this space.
+I'm an amateur game developer / nerd who wants to make things that are very cool and a bit different. I yap more about myself in my **[about](/about)** page.
+
+This website exists so I can share all the stuff I make. My **[blog](/blog)** is where you'll find all that.
+
+You won't find much yet because I've been obsessing over programming this website instead of making content for it :P
+
+
 
 </div>
-<div class="float-in homecontent contentmargin">
 
-## Read my recent posts! ↓
+<br>
 
-{{< list section="blog" >}}
+<div class="float-in contentbg homecontent">
+
+<p>I also have a presence on these platforms:</p>
+
+<ul class="sociallist">
+    <li>{{< custombutton text="YouTube" link="https://youtube.com/@Mat383" icon="/icons/youtube-red.png" iconsize="1.4" color="255, 0, 0" glowcolor="255, 70, 70" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="Bluesky" link="https://bsky.app/profile/mat383.com" icon="/icons/bluesky.png" iconsize="1.6" color="22, 132, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="Reddit" link="https://www.reddit.com/u/mat383" icon="/icons/reddit-orange.png" iconsize="1.5" color="255, 85, 0" glowcolor="" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="Steam" link="https://steamcommunity.com/id/mat383/" icon="/icons/steam.png" iconsize="1.75" color="20, 150, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="HowLongToBeat" link="https://howlongtobeat.com/user/Mat383" icon="/icons/howlongtobeat.png" iconsize="1.5" color="255, 255, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="Odyssey" link="https://odysee.com/@Mat383" icon="/icons/odyssey-pink.png" iconsize="1.75" color="230, 30, 130" glowcolor="250, 30, 130" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="piclog.blue" link="https://piclog.blue/profile.php?id=1330" icon="/icons/piclog.png" iconsize="1.75" color="75, 75, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
+    <li>{{< custombutton text="status.cafe" link="https://status.cafe/users/mat383" icon="/icons/statuscafe.png" iconsize="1.5" color="150, 150, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
+</ul>
+
+<br>
 
 </div>
 

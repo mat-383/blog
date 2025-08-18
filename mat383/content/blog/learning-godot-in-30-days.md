@@ -11,6 +11,7 @@ coverimgmaintype: "png"
 summary: "I technically made a game!"
 ytvid: "-yiM-IhRL6A"
 commentsenabled: true
+autoloadcomments: true
 draft: false
 ---
 
