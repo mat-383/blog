@@ -71,7 +71,7 @@
 	{{partial "tagsite.html" .}}
 	{{partial "list.html" .}}
 {{else if hasPrefix .RelPermalink "/tags/"}} {{/* to specify new tag colours, modify the line below, the one in tagcloud.html, and the one in taglist.html */}}
-	<h2 style="margin-bottom:50px">Showing all <b class="tag allpoststag {{if eq .Title "Outside"}}tagoutside{{else}}{{if eq .Title "Website"}}tagwebsite{{end}}{{end}}{{if eq .Title "Game Dev"}}taggamedev{{end}}">{{block "title" .}}{{end}}</b> posts:</h2>
+	<h2 style="margin-bottom:50px; padding-top:18px;" class="contentbg">Showing all <b class="tag allpoststag {{if eq .Title "Outside"}}tagoutside{{else}}{{if eq .Title "Website"}}tagwebsite{{end}}{{end}}{{if eq .Title "Game Dev"}}taggamedev{{end}}">{{block "title" .}}{{end}}</b> posts:</h2>
 	{{partial "list.html" .}}
 {{end}}
 {{ if .IsHome }}

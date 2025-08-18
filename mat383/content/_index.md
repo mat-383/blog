@@ -63,7 +63,7 @@ autoloadcomments: false
 
 I'm an amateur game developer / nerd who wants to make things that are very cool and a bit different. I yap more about myself in my **[about](/about)** page.
 
-On this website, I wanna share all the stuff I make. My **[blog](/blog)** is where I post all of that.
+This website exists so I can share all the stuff I make. My **[blog](/blog)** is where you'll find all that.
 
 You won't find much yet because I've been obsessing over programming this website instead of making content for it :P
 
