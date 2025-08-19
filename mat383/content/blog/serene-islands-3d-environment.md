@@ -51,4 +51,4 @@ Here is the description (lore) of the scene:
 
 </dd>
 
-You can download the game, models, and project file [here](https://mega.nz/folder/G9MwjQBT#vt7Evhvs5FxVzQiwNVqItg) and read the full dev journal / portfolio here [here](https://v3.pebblepad.com.au/spa/#/public/4jbrj5Mn6wsdwwghgzkh5sbpGc).
+You can download the game, models, and project file [here](https://mega.nz/folder/G9MwjQBT#vt7Evhvs5FxVzQiwNVqItg) and read the full dev journal / portfolio [here](https://v3.pebblepad.com.au/spa/#/public/4jbrj5Mn6wsdwwghgzkh5sbpGc).
