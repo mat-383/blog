@@ -82,10 +82,7 @@ You won't find much yet because I've been obsessing over programming this websit
     <li>{{< custombutton text="Bluesky" link="https://bsky.app/profile/mat383.com" icon="/icons/bluesky.png" iconsize="1.6" color="22, 132, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
     <li>{{< custombutton text="Reddit" link="https://www.reddit.com/u/mat383" icon="/icons/reddit-orange.png" iconsize="1.5" color="255, 85, 0" glowcolor="" paddingx="10" paddingy="8">}}</li>
     <li>{{< custombutton text="Steam" link="https://steamcommunity.com/id/mat383/" icon="/icons/steam.png" iconsize="1.75" color="20, 150, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
-    <li>{{< custombutton text="HowLongToBeat" link="https://howlongtobeat.com/user/Mat383" icon="/icons/howlongtobeat.png" iconsize="1.5" color="255, 255, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
     <li>{{< custombutton text="Odyssey" link="https://odysee.com/@Mat383" icon="/icons/odyssey-pink.png" iconsize="1.75" color="230, 30, 130" glowcolor="250, 30, 130" paddingx="10" paddingy="8">}}</li>
-    <li>{{< custombutton text="piclog.blue" link="https://piclog.blue/profile.php?id=1330" icon="/icons/piclog.png" iconsize="1.75" color="75, 75, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
-    <li>{{< custombutton text="status.cafe" link="https://status.cafe/users/mat383" icon="/icons/statuscafe.png" iconsize="1.5" color="150, 150, 255" glowcolor="" paddingx="10" paddingy="8">}}</li>
 </ul>
 
 <br>
