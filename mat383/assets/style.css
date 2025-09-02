@@ -181,9 +181,10 @@ div.balls-bg{
 
 /*--- Headerbar stuff ---*/
 .navbar{
-	background-color:#00000036;
+	position: sticky;
+	top: 0px;
+	background-color:#00000054;
 	padding-top:2px;
-	position:relative;
 	z-index:1000;
 	margin-bottom:80px;
 	height: 60px;
