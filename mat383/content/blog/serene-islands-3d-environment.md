@@ -10,7 +10,7 @@ date: 2025-06-01T15:53:35+10:00
 tags: [game dev]
 coverimg: "serene-islands-3d-environment"
 coverimgmaintype: "avif"
-hidecoverimg: false
+hidecoverimg: true
 summary: ""
 ytvid: ""
 smallpost: true

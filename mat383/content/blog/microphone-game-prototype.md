@@ -10,7 +10,7 @@ date: 2025-03-25T15:53:35+10:00
 tags: [game dev]
 coverimg: "microphone-game-prototype"
 coverimgmaintype: "avif"
-hidecoverimg: false
+hidecoverimg: true
 summary: ""
 ytvid: ""
 smallpost: true

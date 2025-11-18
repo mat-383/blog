@@ -10,7 +10,7 @@ date: 2025-04-10T15:53:35+10:00
 tags: [game dev]
 coverimg: "fast-ball-prototype"
 coverimgmaintype: "avif"
-hidecoverimg: false
+hidecoverimg: true
 summary: ""
 ytvid: ""
 smallpost: true
