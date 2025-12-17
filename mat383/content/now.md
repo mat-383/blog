@@ -19,7 +19,7 @@ Making a massive terrain system for my first big game project, <b>*FAST BALL GAM
 
 That terrain is not procedurally generated, it is 1:1 scale height data of Queensland, Australia. I'm running it at 1440p on a 3060 Ti with a render distance of roughly 22km (from the middle of the world).
 
-I made a prototype for this game [a while ago](http://localhost:38383/blog/fast-ball-prototype/) and told myself the final game existing hinges on the feasibility of making a massive terrain system like this. I didn't believe it's possible (not at my skill level at least) but HERE IT IS!
+I made a prototype for this game [a while ago](http://mat383.com/blog/fast-ball-prototype/) and told myself the final game existing hinges on the feasibility of making a massive terrain system like this. I didn't believe it's possible (not at my skill level at least) but HERE IT IS!
 
 I'm super excited to keep developing this. Once I finish enough of the terrain (adding collisions, basic textures, fixing seams) I'll make a full video on this and probably publish a demo project. ETA a few weeks, but knowing me it'll be months.
 
