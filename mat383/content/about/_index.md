@@ -3,22 +3,22 @@ title: "About me"
 hidetitle: true
 hidesummary: true
 hidedate: true
-date: 2025-08-09T00:15:40+10:00
+date: 2025-12-17T00:55:55+00:00
 summary: "A description of the guy behind all this."
 tags: []
 commentsenabled: false
 ---
 # About me
 
-<!--{{< img src="" width="300px" class="aboutmeimg _1">}}-->
+{{< img src="/images/about/the-thinker.jpg" width="250px" class="aboutmeimg _1" alt="Picture of Matt thinking">}}
 
 Imagine a kid called Matt who comes up with a wack username to use online and never changes it. Then they grow up and buy a domain named after it. They are also obsessed with the colour green.
 
-<!--{{< img src="" width="300px" class="aboutmeimg _2">}}-->
+{{< img src="/images/about/the-thinker.jpg" width="250px" class="aboutmeimg _2" alt="Picture of Matt thinking">}}
 
 Surprise, I am that person. There is no saving me.
 
-I'm a 21 year old male. I was born in Hungary and I moved to Australia with my family at a young age, where I still live.
+I'm a 21 year old guy who wants to be passionate about stuff. I was born in Hungary and I moved to Australia with my family at a young age, where I still live.
 
 ### Personality
 
@@ -40,11 +40,13 @@ I have so many that I'm gonna write an entire page just for this one, coming soo
 
 #### Music
 
-Ehhhh I'm not much of a music person. You won't catch me listening to the radio or subscribing to particular artists (with some exceptions).
+Drum and bass seems to be my favourite genre, and all the genres surrounding that are cool with me too. I'll assemble some of my fav playlists soon.
 
-I *do* however keep a big library of my favourite game soundtracks. I listen to tracks from them depending on my mood to relive the feelings I experienced when playing those games.
+I also keep a big library of my favourite game soundtracks. I listen to tracks from them depending on my mood to relive the feelings I experienced when playing those games.
 
-Other than that, energetic drum and bass is probably my comfort genre. Genres similar to that are also cool with me.
+#### Foods
+
+I eat food for sustenance lol. If it tastes good, that's a bonus.
 
 <br>
 
@@ -52,7 +54,7 @@ Other than that, energetic drum and bass is probably my comfort genre. Genres si
 
 ## Contact
 
-I'm always open for a chat, shoot me a message on any of these platforms. Even if you're just bored. Heck, *especially* if you're bored.
+I'm always open for a chat, send me a message on any of these platforms or my socials. Even if you're just bored. Shoot, *especially* if you're bored.
 
 <p style="margin-bottom:0"><b>Discord:</b> mat383</p>
 
