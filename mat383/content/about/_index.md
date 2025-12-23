@@ -18,7 +18,7 @@ Imagine a kid called Matt who comes up with a wack username to use online and ne
 
 Surprise, I am that person. There is no saving me.
 
-I'm a 21 year old guy who yearns to be passionate about stuff. I was born in Hungary and I moved to Australia with my family at a young age, where I still live.
+I'm a 22 year old guy who yearns to be passionate about stuff. I was born in Hungary and I moved to Australia with my family at a young age, where I still live.
 
 ### Personality
 
