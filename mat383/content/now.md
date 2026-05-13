@@ -5,13 +5,32 @@ hidesummary: true
 hidedate: false
 centerdate: false
 datelabelupdated: true
-date: 2025-12-17T00:55:55+00:00
+date: 2026-05-13T01:44:18+00:00
 tags: []
 summary: ""
 commentsenabled: true
 draft: false
 ---
 # Right now, I am...
+
+Taking a break from devving ig. I'm trying to lock in and get a job while I still can.
+
+That means FAST BALL GAME is on hiatus until further notice (it's a hefty project, but I DO want to see it finished).
+
+I attended another local game jam though, and my team actually won that! I'm making that video in my time off.
+
+{{< img src="/images/now/sunjam-peek-1.jpg" width="700px">}}
+
+{{< img src="/images/now/sunjam-peek-2.png" width="600px">}}
+
+And I've rediscovered my interest in hobby electronics too. I want to finish a project or two there before I get back into game dev. There will be videos about those of course.
+
+<br>
+
+<span style="opacity: 0.65">
+<p class="datewritten classicdatewritten">Date written: 17 Dec. 2025</p>
+
+## And before that, I was...
 
 Making a massive terrain system for my first big game project, <b>*FAST BALL GAME*</b>. Here is a preview of that:
 
@@ -24,19 +43,6 @@ I made a prototype for this game [a while ago](http://mat383.com/blog/fast-ball-
 I'm super excited to keep developing this. Once I finish enough of the terrain (adding collisions, basic textures, fixing seams) I'll make a full video on this and probably publish a demo project. ETA a few weeks, but knowing me it'll be months.
 
 I also threw together a placeholder of a website for this game at [FASTBALLGAME.com](https://fastballgame.com). It'll become much more of a thing once I establish the identity of this game later.
-
-<br>
-
-<span style="opacity: 0.65">
-<p class="datewritten classicdatewritten">Date written: 21 Aug. 2025</p>
-
-## And before that, I was...
-
-Editing the video of that game jam I attended a few months ago, here's an image from that.
-
-{{< img src="/images/now/sotd-game-jam-teaser.jpg" width="600px">}}
-
-Haven't edited a video in ages so I'm relearning some things. I wanna get this out of the way ASAP so I can move onto other projects.
 
 </span>
 
